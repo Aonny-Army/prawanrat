@@ -22,7 +22,7 @@
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- Navbar -->
+  <!-- Navbar (fixed at top) -->
   <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex justify-between items-center px-8 py-4">
     <h1 class="text-xl font-bold">Prawanrat</h1>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
@@ -44,8 +44,7 @@
     <!-- Cards -->
     <div class="mt-16 flex justify-center flex-wrap gap-10">
       <!-- Card 1 -->
-      <div class="w-72 h-[28rem] bg-[#4b2e15] text-white rounded-3xl p-6 shadow-2xl flex flex-col
-                  rotate-0 sm:rotate-[-8deg]"
+      <div class="w-72 h-[28rem] bg-[#4b2e15] text-white rounded-3xl p-6 rotate-[-8deg] shadow-2xl flex flex-col"
            data-aos="fade-up" data-aos-duration="1000">
         <h3 class="text-2xl font-semibold mb-4">Based in<br>New York</h3>
         <div class="h-[70%]">
@@ -56,9 +55,9 @@
 
       <!-- Card 2 -->
       <div id="card2"
-        class="w-72 h-[28rem] bg-black text-white rounded-3xl p-6 shadow-2xl flex flex-col
-               rotate-0 sm:rotate-[5deg]"
-        data-aos="zoom-in" data-aos-duration="1200"
+        class="w-72 h-[28rem] bg-black text-white rounded-3xl p-6 rotate-[5deg] shadow-2xl flex flex-col"
+        data-aos="zoom-in" 
+        data-aos-duration="1200"
       >
         <h3 class="text-2xl font-semibold mb-4 text-left ml-auto">
           I'm<br>Prawanrat Chaichanla
@@ -70,49 +69,55 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="w-72 h-[28rem] bg-[#a9a379] text-black rounded-3xl p-6 shadow-2xl flex flex-col
-                  rotate-0 sm:rotate-[-3deg]"
+      <div class="w-72 h-[28rem] bg-[#a9a379] text-black rounded-3xl p-6 rotate-[-3deg] shadow-2xl flex flex-col"
            data-aos="fade-up" data-aos-duration="1000">
-         <h3 class="text-2xl font-semibold mb-4 text-left ml-auto">
-          Design<br>Work
-        </h3>
+        <h3 class="text-2xl font-semibold mb-4">Digital<br>Designer</h3>
         <div class="h-[70%]">
-          <img src="images/iPhone.png" alt="Laptop Mockup" 
+          <img src="https://source.unsplash.com/600x800/?laptop,design" alt="Laptop Mockup" 
                class="w-full h-full object-cover rounded-2xl">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About me section -->
-  <div id="about" class="mt-32 text-lift px-6">
-    <h2 class="text-3xl font-bold mb-6">About me</h2>
-    <p class="max-w-2xl mx-auto text-lg leading-relaxed">
-      A highly motivated and detail-oriented Information Technology graduate with internship 
-      experience in UX/UI design. Skilled in using tools such as Figma, Adobe XD, Adobe Illustrator, 
-      and Photoshop to design user interfaces from wireframes to interactive prototypes, with a solid 
-      understanding of user-centered design principles.
-      <br><br>
-      Skilled in programming and web application development using Flutter, C, PHP, HTML, CSS, 
-      JavaScript, and MySQL, with experience in tools such as VS Code and Xampp. Eager to start a 
-      career in UX/UI and committed to continuous growth.
-    </p>
-  </div>
+  <!-- Profile Section -->
+  <section id="about" class="mt-32 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Profile</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/IMG_1693.JPG" alt="Profile Photo" 
+             class="w-full rounded-2xl shadow-lg object-cover">
+      </div>
+
+      <!-- Text -->
+      <div data-aos="fade-left" data-aos-duration="1000">
+        <p class="text-lg leading-relaxed mb-4">
+          A <span class="font-semibold">highly motivated and detail-oriented Information Technology graduate</span> with internship experience in <span class="font-semibold">UX/UI design</span>.
+        </p>
+        <p class="text-lg leading-relaxed mb-4">
+          Skilled in using tools such as <span class="font-semibold">Figma, Adobe XD, Adobe Illustrator, and Photoshop</span> to design user interfaces from wireframes to interactive prototypes, with a solid understanding of <span class="font-semibold">user-centered design principles</span>.
+        </p>
+        <p class="text-lg leading-relaxed mb-4">
+          Skilled in programming and web application development using <span class="font-semibold">Flutter, C, PHP, HTML, CSS, JavaScript, and MySQL</span>, with experience in tools such as VS Code and Xampp.
+        </p>
+        <p class="text-lg leading-relaxed">
+          <span class="font-semibold">Eager to start a career in UX/UI</span> and committed to continuous growth.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- AOS Animate On Scroll JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // parallax effect for card 2
+    // Parallax effect for card 2
     const card2 = document.getElementById("card2");
     window.addEventListener("scroll", () => {
       let scrollY = window.scrollY;
-      if (window.innerWidth >= 640) { // ใช้ parallax เฉพาะบนจอใหญ่
-        card2.style.transform = `translateY(${scrollY * 0.1}px) rotate(5deg)`; 
-      } else {
-        card2.style.transform = "rotate(0deg)";
-      }
+      card2.style.transform = `translateY(${scrollY * 0.1}px) rotate(5deg)`; 
     });
   </script>
 </body>
