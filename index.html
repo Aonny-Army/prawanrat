@@ -75,7 +75,7 @@
 
         <!-- ข้อความ -->
         <h3 class="text-2xl font-semibold mb-4 text-left">
-          Design<br>Work
+          UX/UI<br>Design
         </h3>
 
         <!-- รูป -->
@@ -88,32 +88,36 @@
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" class="mt-40 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <!-- รูป -->
-    <div class="relative w-full max-w-md mx-auto">
+<section id="profile" class="mt-40 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <!-- รูป -->
+  <div class="relative w-full max-w-md mx-auto group">
+    <div class="rounded-3xl overflow-hidden shadow-2xl">
       <img src="images/IMG_1693.JPG" alt="My Profile" 
-           class="rounded-3xl shadow-xl object-cover w-full h-[420px]">
-      <!-- ลูกเล่น overlay -->
-      <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full opacity-70"></div>
-      <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full opacity-70"></div>
+           class="object-cover w-full h-[420px] transform transition duration-500 group-hover:scale-105" />
     </div>
+    <!-- Gradient border effect -->
+    <div class="absolute inset-0 rounded-3xl border-4 border-transparent group-hover:border-blue-500 transition duration-500"></div>
+    <!-- Floating gradient circles -->
+    <div class="absolute -top-6 -right-6 w-28 h-28 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full opacity-70 blur-xl"></div>
+    <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full opacity-70 blur-xl"></div>
+  </div>
 
-    <!-- ข้อความ -->
-    <div>
-      <h2 class="text-3xl font-bold mb-6">Profile</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        A highly motivated and detail-oriented Information Technology graduate with internship 
-        experience in UX/UI design. Skilled in using tools such as Figma, Adobe XD, Adobe Illustrator, 
-        and Photoshop to design user interfaces from wireframes to interactive prototypes, with a solid 
-        understanding of user-centered design principles.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed text-gray-700">
-        Skilled in programming and web application development using Flutter, C, PHP, HTML, CSS, 
-        JavaScript, and MySQL, with experience in tools such as VS Code and Xampp. Eager to start a 
-        career in UX/UI and committed to continuous growth.
-      </p>
-    </div>
-  </section>
+  <!-- ข้อความ -->
+  <div>
+    <h2 class="text-3xl font-bold mb-6">Profile</h2>
+    <p class="text-lg leading-relaxed text-gray-700">
+      A highly motivated and detail-oriented Information Technology graduate with internship 
+      experience in UX/UI design. Skilled in using tools such as Figma, Adobe XD, Adobe Illustrator, 
+      and Photoshop to design user interfaces from wireframes to interactive prototypes, with a solid 
+      understanding of user-centered design principles.
+    </p>
+    <p class="mt-4 text-lg leading-relaxed text-gray-700">
+      Skilled in programming and web application development using Flutter, C, PHP, HTML, CSS, 
+      JavaScript, and MySQL, with experience in tools such as VS Code and Xampp. Eager to start a 
+      career in UX/UI and committed to continuous growth.
+    </p>
+  </div>
+</section>
 
   <!-- AOS Animate On Scroll JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
