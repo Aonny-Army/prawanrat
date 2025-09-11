@@ -33,7 +33,7 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.05);
       z-index: 0;
     }
 
@@ -59,7 +59,7 @@
 
     .full-divider {
       border: none;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #E5E7EB;
       width: 100vw;
       position: relative;
       left: 50%;
@@ -68,12 +68,11 @@
 
     /* Hover effect on cards */
     .card-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .card-hover:hover {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
@@ -81,8 +80,8 @@
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex justify-between items-center px-10 py-4">
-    <div class="text-xl font-bold">𝑷</div>
+  <header class="fixed top-0 left-0 w-full bg-white z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
+    <div class="text-xl font-bold text-blue-600">𝑷</div>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
       <a href="#home" class="hover:text-blue-600 transition">Home</a>
       <a href="#about" class="hover:text-blue-600 transition">About</a>
@@ -91,7 +90,7 @@
       <a href="#activities" class="hover:text-blue-600 transition">Activities</a>
       <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
     </nav>
-    <a href="#contact" class="border border-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 text-sm">
+    <a href="#contact" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 text-sm">
       Let's Connect
     </a>
   </header>
@@ -103,13 +102,13 @@
     <section id="home" class="mt-28 px-8 grid md:grid-cols-2 gap-12 items-center">
       <!-- Text -->
       <div class="flex flex-col justify-start">
-        <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3 text-gray-700">
+        <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3 text-blue-900">
           Portfolio
         </h2>
         <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-4 text-gray-900">
           Prawanrat<br>Chaichanla
         </h1>
-        <p class="text-lg leading-relaxed text-blue-900">
+        <p class="text-lg leading-relaxed text-gray-600">
           Welcome to my design journey. As a passionate UI/UX designer, I enjoy
           turning complex ideas into simple, elegant solutions. This portfolio
           showcases the projects that helped shape my skills and mindset.
@@ -120,7 +119,7 @@
       <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-6">
         <!-- Card 1 -->
         <div id="card1"
-          class="w-60 h-[22rem] bg-[#0e7490] text-white rounded-3xl p-5 shadow-2xl flex flex-col md:mt-12 card-hover"
+          class="w-60 h-[22rem] bg-blue-600 text-white rounded-3xl p-5 flex flex-col md:mt-12 card-hover"
           data-aos="zoom-in" data-aos-duration="1200">
           <h3 class="text-xl font-semibold mb-4 text-left">
             I'm<br>Prawanrat Chaichanla
@@ -133,7 +132,7 @@
 
         <!-- Card 2 -->
         <div id="card2"
-          class="w-60 h-[22rem] bg-[#a27b5c] text-white rounded-3xl p-5 shadow-2xl flex flex-col card-hover"
+          class="w-60 h-[22rem] bg-blue-900 text-white rounded-3xl p-5 flex flex-col card-hover"
           data-aos="fade-up" data-aos-duration="1000">
           <h3 class="text-xl font-semibold mb-4">Design<br>Work</h3>
           <div class="h-[70%]">
@@ -151,20 +150,20 @@
 
   <!-- Profile Section -->
   <section id="profile" class="px-8 max-w-6xl mx-auto my-16">
-    <h2 class="text-3xl font-bold text-center mb-10">Profile</h2>
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Profile</h2>
 
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <!-- Mockup Photo -->
       <div class="flex justify-center">
-        <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-200">
-          <img src="images/IMG_4467.HEIC" alt="Profile Photo"
+        <div class="bg-white p-4 rounded-2xl border border-gray-200">
+          <img src="images/IMG_4467.jpg" alt="Profile Photo"
             class="rounded-xl w-80 h-80 object-cover">
         </div>
       </div>
 
       <!-- Text -->
       <div>
-        <p class="text-lg text-gray-700 leading-relaxed">
+        <p class="text-lg text-gray-600 leading-relaxed">
           I’m an IT graduate with a passion for UX/UI design. I enjoy creating 
           user-centered interfaces using tools like Figma and Adobe XD. 
           With a background in both design and programming, I’m eager to grow 
@@ -172,7 +171,7 @@
         </p>
         <div class="mt-6">
           <a href="mailto:prawanrat@example.com"
-            class="inline-block bg-black text-white px-6 py-3 rounded-lg shadow hover:bg-gray-800">
+            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
             Contact Me
           </a>
         </div>
@@ -185,14 +184,14 @@
 
   <!-- Skills Section -->
   <section id="skills" class="px-12 ml-14 mr-14">
-    <h2 class="text-lg font-semibold mb-6">Programming Languages</h2>
+    <h2 class="text-lg font-semibold mb-6 text-gray-900">Programming Languages</h2>
     <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-left text-gray-400 text-xl font-medium">
-      <span class="hover:text-black">HTML</span>
-      <span class="hover:text-black">C</span>
-      <span class="hover:text-black">CSS</span>
-      <span class="hover:text-black">Java</span>
-      <span class="hover:text-black">Flutter</span>
-      <span class="hover:text-black">SQL</span>
+      <span class="hover:text-blue-600">HTML</span>
+      <span class="hover:text-blue-600">C</span>
+      <span class="hover:text-blue-600">CSS</span>
+      <span class="hover:text-blue-600">Java</span>
+      <span class="hover:text-blue-600">Flutter</span>
+      <span class="hover:text-blue-600">SQL</span>
     </div>
   </section>
 
@@ -201,10 +200,10 @@
 
   <!-- Contact -->
   <section id="contact" class="px-8 text-center mb-16">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <p class="text-gray-700 mb-6">Let’s connect! Reach out to me via email or LinkedIn.</p>
+    <h2 class="text-3xl font-bold mb-6 text-gray-900">Get in Touch</h2>
+    <p class="text-gray-600 mb-6">Let’s connect! Reach out to me via email or LinkedIn.</p>
     <a href="mailto:prawanrat@example.com"
-      class="bg-black text-white px-6 py-3 rounded-lg shadow hover:bg-gray-800">
+      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">
       Email Me
     </a>
   </section>
