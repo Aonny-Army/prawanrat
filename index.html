@@ -22,11 +22,11 @@
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- Navbar (fixed at top) -->
+  <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex justify-between items-center px-8 py-4">
     <h1 class="text-xl font-bold">Prawanrat</h1>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="#about" class="hover:text-blue-600 transition">About</a>
+      <a href="#profile" class="hover:text-blue-600 transition">Profile</a>
       <a href="#services" class="hover:text-blue-600 transition">Services</a>
       <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
       <a href="#review" class="hover:text-blue-600 transition">Review</a>
@@ -44,7 +44,8 @@
     <!-- Cards -->
     <div class="mt-16 flex justify-center flex-wrap gap-10">
       <!-- Card 1 -->
-      <div class="w-72 h-[28rem] bg-[#4b2e15] text-white rounded-3xl p-6 rotate-[-8deg] shadow-2xl flex flex-col"
+      <div class="w-72 h-[28rem] bg-[#4b2e15] text-white rounded-3xl p-6 shadow-2xl flex flex-col
+                  rotate-0 sm:rotate-[-8deg]"
            data-aos="fade-up" data-aos-duration="1000">
         <h3 class="text-2xl font-semibold mb-4">Based in<br>New York</h3>
         <div class="h-[70%]">
@@ -55,9 +56,9 @@
 
       <!-- Card 2 -->
       <div id="card2"
-        class="w-72 h-[28rem] bg-black text-white rounded-3xl p-6 rotate-[5deg] shadow-2xl flex flex-col"
-        data-aos="zoom-in" 
-        data-aos-duration="1200"
+        class="w-72 h-[28rem] bg-black text-white rounded-3xl p-6 shadow-2xl flex flex-col
+               rotate-0 sm:rotate-[5deg]"
+        data-aos="zoom-in" data-aos-duration="1200"
       >
         <h3 class="text-2xl font-semibold mb-4 text-left ml-auto">
           I'm<br>Prawanrat Chaichanla
@@ -69,42 +70,52 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="w-72 h-[28rem] bg-[#a9a379] text-black rounded-3xl p-6 rotate-[-3deg] shadow-2xl flex flex-col"
+      <div class="w-72 h-[28rem] bg-[#fef9c3] text-gray-900 rounded-3xl p-6 rotate-[-3deg] shadow-2xl flex flex-col relative overflow-hidden"
            data-aos="fade-up" data-aos-duration="1000">
-        <h3 class="text-2xl font-semibold mb-4">Digital<br>Designer</h3>
-        <div class="h-[70%]">
-          <img src="https://source.unsplash.com/600x800/?laptop,design" alt="Laptop Mockup" 
-               class="w-full h-full object-cover rounded-2xl">
+        <!-- ลูกเล่น มุมขวาบน -->
+        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-bl-full opacity-80"></div>
+        <!-- ลูกเล่น มุมซ้ายล่าง -->
+        <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-yellow-300 to-orange-400 rounded-tr-full opacity-80"></div>
+
+        <!-- ข้อความ -->
+        <h3 class="text-2xl font-semibold mb-4 text-left z-10 relative">
+          Design<br>Work
+        </h3>
+
+        <!-- รูป -->
+        <div class="h-[60%] relative z-10">
+          <img src="images/iPhone.png" alt="Laptop Mockup" 
+               class="w-full h-full object-contain rounded-2xl">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Profile Section -->
-  <section id="about" class="mt-32 px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Profile</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <!-- Image -->
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <img src="images/IMG_1693.JPG" alt="Profile Photo" 
-             class="w-full rounded-2xl shadow-lg object-cover">
-      </div>
+  <section id="profile" class="mt-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- รูป -->
+    <div class="relative w-full max-w-md mx-auto">
+      <img src="images/IMG_1693.JPG" alt="My Profile" 
+           class="rounded-3xl shadow-xl object-cover w-full h-[420px]">
+      <!-- ลูกเล่น overlay -->
+      <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full opacity-70"></div>
+      <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full opacity-70"></div>
+    </div>
 
-      <!-- Text -->
-      <div data-aos="fade-left" data-aos-duration="1000">
-        <p class="text-lg leading-relaxed mb-4">
-          A <span class="font-semibold">highly motivated and detail-oriented Information Technology graduate</span> with internship experience in <span class="font-semibold">UX/UI design</span>.
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-          Skilled in using tools such as <span class="font-semibold">Figma, Adobe XD, Adobe Illustrator, and Photoshop</span> to design user interfaces from wireframes to interactive prototypes, with a solid understanding of <span class="font-semibold">user-centered design principles</span>.
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-          Skilled in programming and web application development using <span class="font-semibold">Flutter, C, PHP, HTML, CSS, JavaScript, and MySQL</span>, with experience in tools such as VS Code and Xampp.
-        </p>
-        <p class="text-lg leading-relaxed">
-          <span class="font-semibold">Eager to start a career in UX/UI</span> and committed to continuous growth.
-        </p>
-      </div>
+    <!-- ข้อความ -->
+    <div>
+      <h2 class="text-3xl font-bold mb-6">Profile</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        A highly motivated and detail-oriented Information Technology graduate with internship 
+        experience in UX/UI design. Skilled in using tools such as Figma, Adobe XD, Adobe Illustrator, 
+        and Photoshop to design user interfaces from wireframes to interactive prototypes, with a solid 
+        understanding of user-centered design principles.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-gray-700">
+        Skilled in programming and web application development using Flutter, C, PHP, HTML, CSS, 
+        JavaScript, and MySQL, with experience in tools such as VS Code and Xampp. Eager to start a 
+        career in UX/UI and committed to continuous growth.
+      </p>
     </div>
   </section>
 
@@ -113,11 +124,15 @@
   <script>
     AOS.init();
 
-    // Parallax effect for card 2
+    // parallax effect for card 2
     const card2 = document.getElementById("card2");
     window.addEventListener("scroll", () => {
       let scrollY = window.scrollY;
-      card2.style.transform = `translateY(${scrollY * 0.1}px) rotate(5deg)`; 
+      if (window.innerWidth >= 640) { // ใช้ parallax เฉพาะบนจอใหญ่
+        card2.style.transform = `translateY(${scrollY * 0.1}px) rotate(5deg)`; 
+      } else {
+        card2.style.transform = "rotate(0deg)";
+      }
     });
   </script>
 </body>
