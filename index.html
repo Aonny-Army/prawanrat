@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
-    h1 { color: #4CAF50; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kate.M Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Hello, I'm [Prawanrat]</h1>
-  <p>Welcome to my portfolio website 🚀</p>
+<body class="bg-white text-black font-sans">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-6">
+    <h1 class="text-xl font-bold">Kate.M</h1>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#experience" class="hover:underline">Experience</a>
+      <a href="#review" class="hover:underline">Review</a>
+      <a href="#faq" class="hover:underline">FAQ</a>
+    </nav>
+    <a href="#contact" class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 text-sm">Contact now →</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center mt-16 px-6">
+    <h2 class="text-5xl md:text-6xl font-extrabold">
+      Hello there <span class="inline-block">👋</span>
+    </h2>
+
+    <!-- Cards -->
+    <div class="mt-16 flex justify-center flex-wrap gap-6">
+      <!-- Card 1 -->
+      <div class="w-60 h-80 bg-[#4b2e15] text-white rounded-2xl p-4 rotate-[-8deg] shadow-lg flex flex-col justify-end">
+        <h3 class="text-lg font-semibold mb-3">Based in<br>New York</h3>
+        <img src="https://source.unsplash.com/300x400/?newyork,city" alt="NYC" class="rounded-lg">
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-60 h-80 bg-black text-white rounded-2xl p-4 rotate-[5deg] shadow-lg flex flex-col justify-end">
+        <h3 class="text-lg font-semibold mb-3">I'm<br>Kate Morrison</h3>
+        <img src="https://source.unsplash.com/300x400/?portrait,face" alt="Kate" class="rounded-lg">
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-60 h-80 bg-[#a9a379] text-black rounded-2xl p-4 rotate-[-3deg] shadow-lg flex flex-col justify-end">
+        <h3 class="text-lg font-semibold mb-3">Digital<br>Designer</h3>
+        <img src="https://source.unsplash.com/300x400/?laptop,design" alt="Laptop Mockup" class="rounded-lg">
+      </div>
+    </div>
+  </section>
 </body>
 </html>
