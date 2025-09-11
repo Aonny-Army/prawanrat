@@ -27,13 +27,12 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.15);
       z-index: 0;
     }
     .site-frame::before { left: 0; }
     .site-frame::after  { right: 0; }
 
-    /* ไม่ให้เกะกะมือถือ */
     @media (max-width: 768px) {
       .site-frame::before,
       .site-frame::after {
@@ -43,6 +42,17 @@
     .site-frame > * {
       position: relative;
       z-index: 10;
+    }
+
+    /* ตัดขอบรูปเว้า */
+    .profile-clip {
+      clip-path: path("M 0 0 H 100% V 100% H 0 V 0 Z 
+                      M calc(100% - 40px) 0 
+                      A 40 40 0 0 1 100% 40 
+                      V 0 Z 
+                      M 0 calc(100% - 40px) 
+                      A 40 40 0 0 1 40 100% 
+                      H 0 Z");
     }
   </style>
 </head>
@@ -83,11 +93,11 @@
 
       <!-- Profile Card -->
       <div class="flex justify-center">
-        <div class="relative w-72 rounded-2xl overflow-hidden shadow-lg">
-          <!-- Main Image -->
+        <div class="relative w-72 rounded-2xl overflow-hidden shadow-lg border border-gray-300">
+          <!-- Main Image (เว้าขอบ) -->
           <img src="images/IMG_1693.JPG" 
                alt="Profile Photo" 
-               class="w-full h-96 object-cover">
+               class="w-full h-96 object-cover profile-clip">
 
           <!-- Camera Button -->
           <button class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:bg-gray-100">
