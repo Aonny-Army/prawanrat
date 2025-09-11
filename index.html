@@ -11,164 +11,115 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animate On Scroll CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
     }
 
-    /* ------- added: vertical edge lines wrapper ------- */
+    /* เส้นแนวตั้งซ้าย-ขวา */
     .site-frame {
       position: relative;
-      /* max-width is controlled by utility classes as well */
     }
-
     .site-frame::before,
     .site-frame::after {
       content: "";
       position: absolute;
-      top: 4.5rem;       /* เริ่มใต้ header (header fixed) */
-      bottom: 2rem;     /* เว้นระยะด้านล่างหน่อย */
+      top: 0;
+      bottom: 0;
       width: 1px;
-      background: rgba(0,0,0,0.06);
-      pointer-events: none;
+      background: rgba(0, 0, 0, 0.1);
       z-index: 0;
     }
-
-    /* left / right lines placed at padding edge of the centered container */
     .site-frame::before { left: 0; }
     .site-frame::after  { right: 0; }
 
-    /* ให้เนื้อหาอยู่ด้านบนเส้น (ไม่ถูกบัง) */
-    .site-frame > * {
-      position: relative;
-      z-index: 10;
-    }
-
-    /* ซ่อนเส้นบนหน้าจอเล็ก (responsive) */
+    /* ไม่ให้เกะกะมือถือ */
     @media (max-width: 768px) {
       .site-frame::before,
       .site-frame::after {
         display: none;
       }
     }
-    /* -------------------------------------------------- */
+    .site-frame > * {
+      position: relative;
+      z-index: 10;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex justify-between items-center px-8 py-4">
-    <h1 class="text-xl font-bold">Prawanrat</h1>
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex justify-between items-center px-10 py-4">
+    <div class="text-xl font-bold">𝑷</div>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="#profile" class="hover:text-blue-600 transition">Profile</a>
-      <a href="#services" class="hover:text-blue-600 transition">Services</a>
-      <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-      <a href="#review" class="hover:text-blue-600 transition">Review</a>
-      <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+      <a href="#home" class="hover:text-blue-600 transition">Home</a>
+      <a href="#about" class="hover:text-blue-600 transition">About</a>
+      <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
+      <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+      <a href="#activities" class="hover:text-blue-600 transition">Activities</a>
+      <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
     </nav>
-    <a href="#contact" class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 text-sm">Contact now →</a>
+    <a href="#contact" class="border border-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 text-sm">
+      Let's Connect
+    </a>
   </header>
 
-  <!-- WRAPPER that adds the vertical lines -->
-  <div class="site-frame max-w-6xl mx-auto px-6">
+  <!-- WRAPPER site-frame -->
+  <div class="site-frame max-w-7xl mx-auto">
 
-  <!-- Hero Section -->
-  <section class="text-center mt-32 px-6">
-    <h2 class="text-6xl md:text-7xl font-extrabold">
-      Hello there <span class="inline-block">👋</span>
-    </h2>
-
-    <!-- Cards -->
-    <div class="mt-16 flex justify-center flex-wrap gap-10">
-      <!-- Card 1 -->
-      <div class="w-72 h-[28rem] bg-[#4b2e15] text-white rounded-3xl p-6 shadow-2xl flex flex-col
-                  rotate-0 sm:rotate-[-8deg]"
-           data-aos="fade-up" data-aos-duration="1000">
-        <h3 class="text-2xl font-semibold mb-4">UX / UI Designer</h3>
-        <div class="h-[70%]">
-          <img src="https://source.unsplash.com/600x800/?ui,design" alt="UI Design" 
-               class="w-full h-full object-cover rounded-2xl">
-        </div>
+    <!-- Hero Section -->
+    <section id="home" class="mt-32 px-8 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
+      <div>
+        <h2 class="text-sm uppercase tracking-wider mb-3">Portfolio</h2>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Prawanrat Chaichanla</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Welcome to my design journey. As a passionate UI/UX designer, I enjoy turning 
+          complex ideas into simple, elegant solutions. This portfolio showcases the projects 
+          that helped shape my skills and mindset.
+        </p>
+        <h3 class="text-2xl font-semibold mt-8">UI-UX Design</h3>
       </div>
 
-      <!-- Card 2 -->
-      <div id="card2"
-        class="w-72 h-[28rem] bg-[#0e7490] text-white rounded-3xl p-6 shadow-2xl flex flex-col
-               rotate-0 sm:rotate-[5deg]"
-        data-aos="zoom-in" data-aos-duration="1200"
-      >
-        <h3 class="text-2xl font-semibold mb-4 text-left ml-auto">
-          I'm<br>Prawanrat Chaichanla
-        </h3>
-        <div class="h-[70%]">
+      <!-- Image -->
+      <div class="flex justify-center">
+        <div class="relative w-64 h-64">
           <img src="images/IMG_1693.JPG" alt="My Photo" 
-            class="w-full h-full object-cover rounded-2xl">
+               class="rounded-full border-4 border-gray-200 shadow-lg object-cover w-full h-full">
         </div>
       </div>
+    </section>
 
-      <!-- Card 3 (Skills/Dev placeholder) -->
-      <div class="w-72 h-[28rem] bg-[#a27b5c] text-white rounded-3xl p-6 rotate-[-3deg] shadow-2xl flex flex-col"
-           data-aos="fade-up" data-aos-duration="1000">
-        <h3 class="text-2xl font-semibold mb-4 text-left">
-          Design<br>Work
-        </h3>
-        <div class="h-[70%]">
-          <img src="images/iPhone.png" alt="Laptop Mockup" 
-               class="w-full h-full object-cover rounded-2xl">
-        </div>
+    <!-- Divider -->
+    <hr class="border-t-2 border-gray-200 my-16">
+
+    <!-- Skills Section -->
+    <section id="skills" class="px-8">
+      <h2 class="text-lg font-semibold mb-8">Programming Languages</h2>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-center text-gray-400 text-xl font-medium">
+        <span class="hover:text-black">HTML</span>
+        <span class="hover:text-black">C</span>
+        <span class="hover:text-black">CSS</span>
+        <span class="hover:text-black">Java</span>
+        <span class="hover:text-black">Flutter</span>
+        <span class="hover:text-black">SQL</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Profile Section -->
-  <section id="profile" class="mt-40 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <!-- รูป -->
-    <div class="relative w-full max-w-md mx-auto">
-      <img src="images/IMG_1693.JPG" alt="My Profile" 
-           class="rounded-3xl shadow-xl object-cover w-full h-[420px]">
-      <!-- ลูกเล่น overlay -->
-      <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full opacity-70"></div>
-      <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full opacity-70"></div>
-    </div>
+    <!-- Divider -->
+    <hr class="border-t-2 border-gray-200 my-16">
 
-    <!-- ข้อความ -->
-    <div>
-      <h2 class="text-3xl font-bold mb-6">Profile</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        A highly motivated and detail-oriented Information Technology graduate with internship 
-        experience in UX/UI design. Skilled in using tools such as Figma, Adobe XD, Adobe Illustrator, 
-        and Photoshop to design user interfaces from wireframes to interactive prototypes, with a solid 
-        understanding of user-centered design principles.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed text-gray-700">
-        Skilled in programming and web application development using Flutter, C, PHP, HTML, CSS, 
-        JavaScript, and MySQL, with experience in tools such as VS Code and Xampp. Eager to start a 
-        career in UX/UI and committed to continuous growth.
-      </p>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="px-8 text-center mb-16">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="text-gray-700 mb-6">Let’s connect! Reach out to me via email or LinkedIn.</p>
+      <a href="mailto:prawanrat@example.com" 
+         class="bg-black text-white px-6 py-3 rounded-lg shadow hover:bg-gray-800">
+         Email Me
+      </a>
+    </section>
 
-  <!-- AOS Animate On Scroll JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    // parallax effect for card 2
-    const card2 = document.getElementById("card2");
-    window.addEventListener("scroll", () => {
-      let scrollY = window.scrollY;
-      if (window.innerWidth >= 640) { // ใช้ parallax เฉพาะบนจอใหญ่
-        card2.style.transform = `translateY(${scrollY * 0.1}px) rotate(5deg)`; 
-      } else {
-        card2.style.transform = "rotate(0deg)";
-      }
-    });
-  </script>
-
-  </div> <!-- end .site-frame -->
+  </div><!-- /site-frame -->
 
 </body>
 </html>
