@@ -106,51 +106,53 @@
   <div class="site-frame">
 
     <!-- Hero Section -->
-    <section id="home" class="mt-20 px-8 grid md:grid-cols-2 gap-12 items-center">
-      <!-- Text -->
-      <div class="flex flex-col justify-start">
-        <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3" style="color:#6DB5CA;">
-          Portfolio
-        </h2>
-        <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-4 text-gray-900">
-          Prawanrat<br>Chaichanla
-        </h1>
-        <p class="text-lg leading-relaxed text-gray-600">
-          Welcome to my design journey. As a passionate UI/UX designer, I enjoy
-          turning complex ideas into simple, elegant solutions. This portfolio
-          showcases the projects that helped shape my skills and mindset.
-        </p>
-      </div>
+<section id="home" class="mt-20 px-8 grid md:grid-cols-2 gap-12 items-center">
+  <!-- Text -->
+  <div class="flex flex-col justify-start text-left">
+    <h2 class="text-2xl md:text-3xl font-light leading-snug mb-6 text-[#6DB5CA]">
+      Portfolio
+    </h2>
+    <h1 class="text-5xl md:text-6xl font-light leading-tight mb-6">
+      <span class="text-[#2A7A8C]">Prawanrat</span><br>
+      <span class="text-[#151f4a] pl-8">Chaichanla</span>
+    </h1>
+    <p class="text-lg leading-relaxed text-gray-600 font-light">
+      Welcome to my design journey. As a passionate UI/UX designer, 
+      I enjoy turning complex ideas into simple, elegant solutions. 
+      This portfolio showcases the projects that helped shape my skills and mindset.
+    </p>
+  </div>
 
-      <!-- Cards -->
-      <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-6">
-        <!-- Card 1 -->
-        <div id="card1"
-          class="w-60 h-[22rem] rounded-3xl p-5 flex flex-col md:mt-12 card-hover"
-          style="background-color:#6DB5CA; color:white;"
-          data-aos="zoom-in" data-aos-duration="1200">
-          <h3 class="text-xl font-semibold mb-4 text-left">
-            I'm<br>Prawanrat Chaichanla
-          </h3>
-          <div class="h-[70%]">
-            <img src="images/IMG_1693.JPG" alt="My Photo"
-              class="w-full h-full object-cover rounded-2xl">
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div id="card2"
-          class="w-60 h-[22rem] rounded-3xl p-5 flex flex-col card-hover"
-          style="background-color:#B8D8E0; color:white;"
-          data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="text-xl font-semibold mb-4">Design<br>Work</h3>
-          <div class="h-[70%]">
-            <img src="images/iPhone.png" alt="Design Work"
-              class="w-full h-full object-cover rounded-2xl">
-          </div>
-        </div>
+  <!-- Cards -->
+  <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-6 items-center">
+    
+    <!-- Card 1 (ต่ำกว่าเล็กน้อย) -->
+    <div id="card1"
+      class="w-64 h-[24rem] rounded-3xl p-5 flex flex-col shadow-lg transition transform hover:-translate-y-2 hover:shadow-2xl md:mt-12"
+      style="background-color:#6DB5CA; color:white;"
+      data-aos="zoom-in" data-aos-duration="1200">
+      <h3 class="text-lg font-light mb-4 text-left">
+        I'm<br>Prawanrat Chaichanla
+      </h3>
+      <div class="h-[70%]">
+        <img src="images/IMG_1693.JPG" alt="My Photo"
+          class="w-full h-full object-cover rounded-2xl">
       </div>
-    </section>
+    </div>
+
+    <!-- Card 2 -->
+    <div id="card2"
+      class="w-64 h-[24rem] rounded-3xl p-5 flex flex-col shadow-lg transition transform hover:-translate-y-2 hover:shadow-2xl"
+      style="background-color:#B8D8E0; color:white;"
+      data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-lg font-light mb-4">Design<br>Work</h3>
+      <div class="h-[70%]">
+        <img src="images/iPhone.png" alt="Design Work"
+          class="w-full h-full object-cover rounded-2xl">
+      </div>
+    </div>
+  </div>
+</section>
 
   </div><!-- /site-frame -->
 
