@@ -342,13 +342,10 @@
   </div>
 </section>
 
-
-
   <!-- Divider -->
   <hr class="full-divider my-10">
-
 <!-- Competitions and Activities Section -->
-<section id="activities" class="px-6 md:px-12 max-w-3xl mx-auto my-20">
+<section id="activities" class="px-6 md:px-12 max-w-5xl mx-auto my-20">
   <!-- Heading -->
   <h2 class="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide text-[#2A7A8C]">
     Competitions and Activities
@@ -357,16 +354,13 @@
 
   <!-- Tabs -->
   <div class="flex justify-center gap-8 border-b border-gray-200 mb-12">
-    <button onclick="showTab('hackathon2023')" 
-      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition active-tab">
+    <button onclick="showTab('hackathon2023', event)" class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition active-tab">
       YEP Hackathon 2023
     </button>
-    <button onclick="showTab('hackathon2024')" 
-      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
+    <button onclick="showTab('hackathon2024', event)" class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
       YEP Hackathon 2024
     </button>
-    <button onclick="showTab('start2024')" 
-      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
+    <button onclick="showTab('start2024', event)" class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
       INFORMATICE START 2024 & BCG
     </button>
   </div>
@@ -383,18 +377,32 @@
         </div>
       </div>
       <!-- Carousel -->
-      <div class="relative">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+      <div class="relative group">
+        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
+             data-carousel="hackathon2023" onscroll="updateDots('hackathon2023')">
           <img src="images/Hackathon 20231.JPG" class="w-full h-80 object-cover snap-center flex-shrink-0">
           <img src="images/Hackathon 2023.JPG" class="w-full h-80 object-cover snap-center flex-shrink-0">
+        </div>
+        <!-- Arrows -->
+        <button onclick="scrollCarousel('hackathon2023', -1)" 
+          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="scrollCarousel('hackathon2023', 1)" 
+          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <!-- Dots -->
+        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
+          <span class="dot hackathon2023-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
+          <span class="dot hackathon2023-dot w-2 h-2 rounded-full bg-gray-300"></span>
         </div>
       </div>
       <!-- Caption -->
       <div class="px-4 py-3">
         <p class="text-gray-700 text-sm leading-relaxed">
-          Competed in a business plan competition under the theme 
-          <span class="font-semibold">"Creative Isaan"</span> with an innovation on furniture 
-          made from water hyacinths as an eco-friendly alternative.
+          <span class="font-semibold">Prawanrat-</span> YEP Hackathon 2023: Competed in a business plan competition under the theme 
+          <span class="font-semibold">"Creative Isaan"</span> with an innovation on furniture made from water hyacinths as an eco-friendly alternative.
         </p>
       </div>
     </div>
@@ -410,17 +418,31 @@
           <p class="text-xs text-gray-500">Young Entrepreneur Project</p>
         </div>
       </div>
-      <div class="relative">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+      <div class="relative group">
+        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
+             data-carousel="hackathon2024" onscroll="updateDots('hackathon2024')">
           <img src="images/Hackathon 20241.jpg" class="w-full h-80 object-cover snap-center flex-shrink-0">
           <img src="images/Hackathon 2024.jpg" class="w-full h-80 object-cover snap-center flex-shrink-0">
+        </div>
+        <button onclick="scrollCarousel('hackathon2024', -1)" 
+          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="scrollCarousel('hackathon2024', 1)" 
+          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <!-- Dots -->
+        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
+          <span class="dot hackathon2024-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
+          <span class="dot hackathon2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
         </div>
       </div>
       <div class="px-4 py-3">
         <p class="text-gray-700 text-sm leading-relaxed">
-          Participated in a business plan competition under the theme 
-          <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span>, 
-          presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.
+          <span class="font-semibold">Prawanrat-</span> YEP Hackathon 2024: Participated in a business plan competition under the theme 
+          <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span>, presenting 
+          <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.
         </p>
       </div>
     </div>
@@ -433,19 +455,34 @@
         <div class="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
         <div>
           <p class="font-semibold text-sm text-gray-800">INFORMATICE START 2024 & BCG</p>
-          <p class="text-xs text-gray-500">Economy Model</p>
+          <p class="text-xs text-gray-500">Startup & Business Plan Competition</p>
         </div>
       </div>
-      <div class="relative">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+      <div class="relative group">
+        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
+             data-carousel="start2024" onscroll="updateDots('start2024')">
           <img src="images/IT (1).jpg" class="w-full h-80 object-cover snap-center flex-shrink-0">
           <img src="images/IT (2).jpg" class="w-full h-80 object-cover snap-center flex-shrink-0">
           <img src="images/IT (3).jpg" class="w-full h-80 object-cover snap-center flex-shrink-0">
         </div>
+        <button onclick="scrollCarousel('start2024', -1)" 
+          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="scrollCarousel('start2024', 1)" 
+          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <!-- Dots -->
+        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
+          <span class="dot start2024-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
+          <span class="dot start2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
+          <span class="dot start2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
+        </div>
       </div>
       <div class="px-4 py-3">
         <p class="text-gray-700 text-sm leading-relaxed">
-          Joined a startup business plan competition and won 
+          <span class="font-semibold">Prawanrat-</span> INFORMATICE START 2024 & BCG: Joined a startup business plan competition and won 
           <span class="font-semibold">first runner-up</span> with the 
           <span class="font-semibold">Mind LIFT</span> AI mental health consultation service.
         </p>
@@ -454,6 +491,7 @@
   </div>
 </section>
 
+<!-- Tailwind helper -->
 <style>
   .active-tab {
     color: #6DB5CA !important;
@@ -465,19 +503,33 @@
 </style>
 
 <script>
-  function showTab(tabId) {
+  function showTab(tabId, e) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
     document.getElementById(tabId).classList.remove('hidden');
     document.querySelectorAll('[onclick^="showTab"]').forEach(btn => btn.classList.remove('active-tab'));
-    event.currentTarget.classList.add('active-tab');
+    e.currentTarget.classList.add('active-tab');
+  }
+
+  function scrollCarousel(id, direction) {
+    const container = document.querySelector(`[data-carousel="${id}"]`);
+    const width = container.clientWidth;
+    container.scrollBy({ left: direction * width, behavior: 'smooth' });
+  }
+
+  function updateDots(id) {
+    const container = document.querySelector(`[data-carousel="${id}"]`);
+    const dots = document.querySelectorAll(`.${id}-dot`);
+    const index = Math.round(container.scrollLeft / container.clientWidth);
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-[#6DB5CA]', i === index);
+      dot.classList.toggle('bg-gray-300', i !== index);
+    });
   }
 </script>
 
-<!-- Tailwind helper to hide scrollbar -->
-<style>
-  .scrollbar-hide::-webkit-scrollbar { display: none; }
-  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
 
   <!-- Divider -->
   <hr class="full-divider my-10">
