@@ -80,7 +80,7 @@
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
+  <header class="w-full bg-white z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
     <div class="text-xl font-bold text-blue-600">𝑷</div>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
       <a href="#home" class="hover:text-blue-600 transition">Home</a>
@@ -99,7 +99,7 @@
   <div class="site-frame">
 
     <!-- Hero Section -->
-    <section id="home" class="mt-28 px-8 grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="mt-20 px-8 grid md:grid-cols-2 gap-12 items-center">
       <!-- Text -->
       <div class="flex flex-col justify-start">
         <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3 text-blue-900">
@@ -214,8 +214,8 @@
         <span>Android Studio</span>
       </div>
       <div class="flex flex-col items-center">
-        <img src="images/githup.png" alt="Githup" class="w-12 h-12 mb-2">
-        <span>Android Studio</span>
+        <img src="images/githup.png" alt="Github" class="w-12 h-12 mb-2">
+        <span>Github</span>
       </div>
     </div>
   </section>
@@ -235,170 +235,156 @@
       <span class="hover:text-blue-600">SQL</span>
     </div>
   </section>
-<!-- Divider -->
-<hr class="full-divider my-10">
-
-<!-- Latest Projects Section -->
-<section id="projects" class="px-8 max-w-6xl mx-auto my-16">
-  <!-- Section Title -->
-  <div class="mb-12">
-    <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">
-      Latest Projects
-    </p>
-    <h2 class="text-3xl font-bold text-gray-900">Projects and practice</h2>
-  </div>
-
-  <!-- Project Cards -->
-  <div class="grid md:grid-cols-3 gap-8">
-    <!-- Project 1 -->
-    <div class="bg-blue-200 rounded-3xl p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">01</h3>
-        <h4 class="text-xl font-bold text-blue-900 mb-4">ECM (eCoachManager) Mobile</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
-        </div>
-        <img src="images/ecm.png" alt="ECM Mobile" class="w-full h-48 object-contain">
-      </div>
-      <button class="mt-6 bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
-        View project
-      </button>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="bg-yellow-200 rounded-3xl p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-lg font-semibold text-yellow-900 mb-2">02</h3>
-        <h4 class="text-xl font-bold text-yellow-900 mb-4">Omni Alarm</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
-        </div>
-        <img src="images/omni.png" alt="Omni Alarm" class="w-full h-48 object-contain">
-      </div>
-      <button class="mt-6 bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
-        View project
-      </button>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="bg-green-200 rounded-3xl p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-lg font-semibold text-green-900 mb-2">03</h3>
-        <h4 class="text-xl font-bold text-green-900 mb-4">Pet Health Log</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
-        </div>
-        <img src="images/petlog.png" alt="Pet Health Log" class="w-full h-48 object-contain">
-      </div>
-      <button class="mt-6 bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
-        View project
-      </button>
-    </div>
-  </div>
-</section>
 
   <!-- Divider -->
   <hr class="full-divider my-10">
-  <!-- Competitions and Activities Section -->
-<section id="activities" class="px-8 max-w-6xl mx-auto my-16">
-  <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">
-    Competitions and Activities
-  </h2>
 
-  <!-- Tabs -->
-  <div class="flex justify-center space-x-4 mb-8">
-    <button onclick="showTab('hackathon2023')" 
-            class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100 active-tab">
-      YEP Hackathon 2023
-    </button>
-    <button onclick="showTab('hackathon2024')" 
-            class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
-      YEP Hackathon 2024
-    </button>
-    <button onclick="showTab('other')" 
-            class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
-      Other Activities
-    </button>
-  </div>
+  <!-- Latest Projects Section (ใหม่) -->
+  <section id="projects" class="px-8 max-w-6xl mx-auto my-16">
+    <div class="mb-12">
+      <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">
+        Latest Projects
+      </p>
+      <h2 class="text-3xl font-bold text-gray-900">Projects and Practice</h2>
+    </div>
 
-  <!-- Tab Contents -->
-  <div id="hackathon2023" class="tab-content grid md:grid-cols-2 gap-12 items-center">
-    <div class="flex justify-center">
-      <div class="bg-white p-4 rounded-2xl border border-gray-200">
-        <img src="images/hackathon2023.jpg" alt="Hackathon 2023"
-          class="rounded-xl w-80 h-80 object-cover">
+    <!-- Project Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer">
+        <div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">01</h3>
+          <h4 class="text-xl font-bold text-blue-900 mb-4">ECM (eCoachManager) Mobile</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/ecm.png" alt="ECM Mobile" class="w-full h-48 object-contain">
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer">
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-900 mb-2">02</h3>
+          <h4 class="text-xl font-bold text-yellow-900 mb-4">Omni Alarm</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/omni.png" alt="Omni Alarm" class="w-full h-48 object-contain">
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer">
+        <div>
+          <h3 class="text-lg font-semibold text-green-900 mb-2">03</h3>
+          <h4 class="text-xl font-bold text-green-900 mb-4">Pet Health Log</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/petlog.png" alt="Pet Health Log" class="w-full h-48 object-contain">
+        </div>
       </div>
     </div>
-    <div class="bg-white p-6 rounded-2xl border border-gray-200">
-      <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2023</h3>
-      <p class="text-gray-700">Competed in a business plan competition under the theme 
-        <span class="font-semibold">"Creative Isaan"</span> with an innovation on 
-        eco-friendly furniture made from water hyacinths.</p>
-    </div>
-  </div>
+  </section>
 
-  <div id="hackathon2024" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
-    <div class="flex justify-center">
-      <div class="bg-white p-4 rounded-2xl border border-gray-200">
-        <img src="images/hackathon2024.jpg" alt="Hackathon 2024"
-          class="rounded-xl w-80 h-80 object-cover">
-      </div>
-    </div>
-    <div class="bg-white p-6 rounded-2xl border border-gray-200">
-      <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2024</h3>
-      <p class="text-gray-700">Participated under the theme 
-        <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span> 
-        by presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.</p>
-    </div>
-  </div>
-
-  <div id="other" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
-    <div class="flex justify-center">
-      <div class="bg-white p-4 rounded-2xl border border-gray-200">
-        <img src="images/other.jpg" alt="Other Activities"
-          class="rounded-xl w-80 h-80 object-cover">
-      </div>
-    </div>
-    <div class="bg-white p-6 rounded-2xl border border-gray-200">
-      <h3 class="text-2xl font-bold mb-4">Other Activities</h3>
-      <p class="text-gray-700">Participated in workshops, design competitions, and online courses 
-        to expand knowledge in UX/UI and business innovation.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Script -->
-<script>
-  function showTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-    document.querySelectorAll('button').forEach(btn => btn.classList.remove('active-tab'));
-    document.getElementById(tabId).classList.remove('hidden');
-    event.target.classList.add('active-tab');
-  }
-</script>
-
-<style>
-  .active-tab {
-    background-color: #f3f4f6; /* Tailwind gray-100 */
-    border-color: #4b5563; /* Tailwind gray-700 */
-    font-weight: bold;
-  }
-</style>
-
-    <!-- Divider -->
+  <!-- Divider -->
   <hr class="full-divider my-10">
 
-  <!-- Contact -->
-  <section id="contact" class="px-8 text-center mb-16">
-    <h2 class="text-3xl font-bold mb-6 text-gray-900">Get in Touch</h2>
-    <p class="text-gray-600 mb-6">Let’s connect! Reach out to me via email or LinkedIn.</p>
-    <a href="mailto:prawanrat@example.com"
-      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">
-      Email Me
-    </a>
+  <!-- Competitions and Activities Section -->
+  <section id="activities" class="px-8 max-w-6xl mx-auto my-16">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">
+      Competitions and Activities
+    </h2>
+
+    <!-- Tabs -->
+    <div class="flex justify-center space-x-4 mb-8">
+      <button onclick="showTab('hackathon2023')" 
+              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100 active-tab">
+        YEP Hackathon 2023
+      </button>
+      <button onclick="showTab('hackathon2024')" 
+              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
+        YEP Hackathon 2024
+      </button>
+      <button onclick="showTab('other')" 
+              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
+        Other Activities
+      </button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="hackathon2023" class="tab-content grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center">
+        <div class="bg-white p-4 rounded-2xl border border-gray-200">
+          <img src="images/hackathon2023.jpg" alt="Hackathon 2023"
+            class="rounded-xl w-80 h-80 object-cover">
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-gray-200">
+        <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2023</h3>
+        <p class="text-gray-700">Competed in a business plan competition under the theme 
+          <span class="font-semibold">"Creative Isaan"</span> with an innovation on 
+          eco-friendly furniture made from water hyacinths.</p>
+      </div>
+    </div>
+
+    <div id="hackathon2024" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center">
+        <div class="bg-white p-4 rounded-2xl border border-gray-200">
+          <img src="images/hackathon2024.jpg" alt="Hackathon 2024"
+            class="rounded-xl w-80 h-80 object-cover">
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-gray-200">
+        <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2024</h3>
+        <p class="text-gray-700">Participated under the theme 
+          <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span> 
+          by presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.</p>
+      </div>
+    </div>
+
+    <div id="other" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center">
+        <div class="bg-white p-4 rounded-2xl border border-gray-200">
+          <img src="images/other.jpg" alt="Other Activities"
+            class="rounded-xl w-80 h-80 object-cover">
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-gray-200">
+        <h3 class="text-2xl font-bold mb-4">Other Activities</h3>
+        <p class="text-gray-700">Participated in workshops, design competitions, and online courses 
+          to expand knowledge in UX/UI and business innovation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <hr class="full-divider my-10">
+
+  <!-- Contact Information (ใหม่แทน Get in Touch) -->
+  <section id="contact" class="px-8 max-w-6xl mx-auto my-16">
+    <h2 class="text-3xl font-bold mb-10 text-center text-gray-900">Contact Information</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <!-- Email -->
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+        <a href="mailto:prawanrat@example.com" class="text-blue-600 hover:underline">prawanrat@example.com</a>
+      </div>
+      <!-- LinkedIn -->
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a>
+      </div>
+      <!-- Phone -->
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Phone</h3>
+        <p class="text-gray-600">+66 1234 56789</p>
+      </div>
+    </div>
   </section>
 
   <!-- AOS Animate On Scroll JS -->
@@ -416,7 +402,22 @@
         card1.style.transform = "translateY(0)";
       }
     });
+
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('button').forEach(btn => btn.classList.remove('active-tab'));
+      document.getElementById(tabId).classList.remove('hidden');
+      event.target.classList.add('active-tab');
+    }
   </script>
+
+  <style>
+    .active-tab {
+      background-color: #f3f4f6;
+      border-color: #4b5563;
+      font-weight: bold;
+    }
+  </style>
 </body>
 
 </html>
