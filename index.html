@@ -7,7 +7,7 @@
   <title>Prawanrat Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,7 @@
 
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
 
     .site-frame {
@@ -74,6 +74,13 @@
     .card-hover:hover {
       transform: translateY(-8px) scale(1.02);
     }
+
+    .active-tab {
+      background-color: #f3f4f6;
+      border-color: #6DB5CA;
+      font-weight: bold;
+      color: #6DB5CA;
+    }
   </style>
 </head>
 
@@ -81,16 +88,16 @@
 
   <!-- Navbar -->
   <header class="w-full bg-white z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
-    <div class="text-xl font-bold text-blue-600">𝑷</div>
+    <div class="text-xl font-bold" style="color:#6DB5CA;">𝑷</div>
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="#home" class="hover:text-blue-600 transition">Home</a>
-      <a href="#about" class="hover:text-blue-600 transition">About</a>
-      <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
-      <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-      <a href="#activities" class="hover:text-blue-600 transition">Activities</a>
-      <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+      <a href="#home" class="hover:text-[#FF7235] transition">Home</a>
+      <a href="#about" class="hover:text-[#FF7235] transition">About</a>
+      <a href="#portfolio" class="hover:text-[#FF7235] transition">Portfolio</a>
+      <a href="#skills" class="hover:text-[#FF7235] transition">Skills</a>
+      <a href="#activities" class="hover:text-[#FF7235] transition">Activities</a>
+      <a href="#contact" class="hover:text-[#FF7235] transition">Contact</a>
     </nav>
-    <a href="#contact" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 text-sm">
+    <a href="#contact" class="border border-[#6DB5CA] text-[#6DB5CA] px-4 py-2 rounded-full hover:bg-[#B8D8E0] text-sm">
       Let's Connect
     </a>
   </header>
@@ -102,7 +109,7 @@
     <section id="home" class="mt-20 px-8 grid md:grid-cols-2 gap-12 items-center">
       <!-- Text -->
       <div class="flex flex-col justify-start">
-        <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3 text-blue-900">
+        <h2 class="text-2xl md:text-3xl font-light leading-snug mb-3" style="color:#6DB5CA;">
           Portfolio
         </h2>
         <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-4 text-gray-900">
@@ -119,7 +126,8 @@
       <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-6">
         <!-- Card 1 -->
         <div id="card1"
-          class="w-60 h-[22rem] bg-blue-600 text-white rounded-3xl p-5 flex flex-col md:mt-12 card-hover"
+          class="w-60 h-[22rem] rounded-3xl p-5 flex flex-col md:mt-12 card-hover"
+          style="background-color:#6DB5CA; color:white;"
           data-aos="zoom-in" data-aos-duration="1200">
           <h3 class="text-xl font-semibold mb-4 text-left">
             I'm<br>Prawanrat Chaichanla
@@ -132,7 +140,8 @@
 
         <!-- Card 2 -->
         <div id="card2"
-          class="w-60 h-[22rem] bg-blue-900 text-white rounded-3xl p-5 flex flex-col card-hover"
+          class="w-60 h-[22rem] rounded-3xl p-5 flex flex-col card-hover"
+          style="background-color:#B8D8E0; color:white;"
           data-aos="fade-up" data-aos-duration="1000">
           <h3 class="text-xl font-semibold mb-4">Design<br>Work</h3>
           <div class="h-[70%]">
@@ -171,13 +180,15 @@
         </p>
         <div class="mt-6">
           <a href="mailto:prawanrat@example.com"
-            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            class="inline-block px-6 py-3 rounded-lg text-white hover:bg-[#FF7235]"
+            style="background-color:#6DB5CA;">
             Contact Me
           </a>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Divider -->
   <hr class="full-divider my-10">
 
@@ -226,78 +237,79 @@
   <!-- Skills Section -->
   <section id="skills" class="px-12 ml-14 mr-14">
     <h2 class="text-lg font-semibold mb-6 text-gray-900">Programming Languages</h2>
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-left text-gray-400 text-xl font-medium">
-      <span class="hover:text-blue-600">HTML</span>
-      <span class="hover:text-blue-600">C</span>
-      <span class="hover:text-blue-600">CSS</span>
-      <span class="hover:text-blue-600">Java</span>
-      <span class="hover:text-blue-600">Flutter</span>
-      <span class="hover:text-blue-600">SQL</span>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-left text-xl font-medium" style="color:#6DB5CA;">
+      <span class="hover:text-[#FF7235]">HTML</span>
+      <span class="hover:text-[#FF7235]">C</span>
+      <span class="hover:text-[#FF7235]">CSS</span>
+      <span class="hover:text-[#FF7235]">Java</span>
+      <span class="hover:text-[#FF7235]">Flutter</span>
+      <span class="hover:text-[#FF7235]">SQL</span>
     </div>
   </section>
 
- <!-- Divider -->
-<hr class="full-divider my-10">
+  <!-- Divider -->
+  <hr class="full-divider my-10">
 
-<!-- Latest Projects Section (ใหม่) -->
-<section id="projects" class="px-8 max-w-6xl mx-auto my-16">
-  <div class="mb-12">
-    <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">
-      Latest Projects
-    </p>
-    <h2 class="text-3xl font-bold text-gray-900">Projects and Practice</h2>
-  </div>
+  <!-- Latest Projects Section -->
+  <section id="projects" class="px-8 max-w-6xl mx-auto my-16">
+    <div class="mb-12">
+      <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">
+        Latest Projects
+      </p>
+      <h2 class="text-3xl font-bold text-gray-900">Projects and Practice</h2>
+    </div>
 
-  <!-- Project Cards -->
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <!-- Project 1 -->
-    <a href="project1.html" 
-       class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block">
-      <div>
-        <h3 class="text-lg font-semibold text-blue-900 mb-2">01</h3>
-        <h4 class="text-xl font-bold text-blue-900 mb-4">ECM (eCoachManager) Mobile</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+    <!-- Project Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <a href="project1.html" 
+        class="rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block"
+        style="background: linear-gradient(135deg, #B8D8E0, #6DB5CA);">
+        <div>
+          <h3 class="text-lg font-semibold mb-2" style="color:#6DB5CA;">01</h3>
+          <h4 class="text-xl font-bold mb-4" style="color:#6DB5CA;">ECM (eCoachManager) Mobile</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/ecm.png" alt="ECM Mobile" class="w-full h-48 object-contain">
         </div>
-        <img src="images/ecm.png" alt="ECM Mobile" class="w-full h-48 object-contain">
-      </div>
-    </a>
+      </a>
 
-    <!-- Project 2 -->
-    <a href="project2.html" 
-       class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block">
-      <div>
-        <h3 class="text-lg font-semibold text-yellow-900 mb-2">02</h3>
-        <h4 class="text-xl font-bold text-yellow-900 mb-4">Omni Alarm</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+      <!-- Project 2 -->
+      <a href="project2.html" 
+        class="rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block"
+        style="background: linear-gradient(135deg, #FCF5EF, #FF7235);">
+        <div>
+          <h3 class="text-lg font-semibold mb-2" style="color:#FF7235;">02</h3>
+          <h4 class="text-xl font-bold mb-4" style="color:#FF7235;">Omni Alarm</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/omni.png" alt="Omni Alarm" class="w-full h-48 object-contain">
         </div>
-        <img src="images/omni.png" alt="Omni Alarm" class="w-full h-48 object-contain">
-      </div>
-    </a>
+      </a>
 
-    <!-- Project 3 -->
-    <a href="project3.html" 
-       class="bg-gradient-to-br from-green-100 to-green-200 rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block">
-      <div>
-        <h3 class="text-lg font-semibold text-green-900 mb-2">03</h3>
-        <h4 class="text-xl font-bold text-green-900 mb-4">Pet Health Log</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+      <!-- Project 3 -->
+      <a href="project3.html" 
+        class="rounded-3xl p-6 flex flex-col justify-between card-hover cursor-pointer block"
+        style="background: linear-gradient(135deg, #B8D8E0, #FCF5EF);">
+        <div>
+          <h3 class="text-lg font-semibold mb-2" style="color:#6DB5CA;">03</h3>
+          <h4 class="text-xl font-bold mb-4" style="color:#6DB5CA;">Pet Health Log</h4>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 bg-white rounded-full text-sm">UI-UX Designer</span>
+            <span class="px-3 py-1 bg-white rounded-full text-sm">Product Design</span>
+          </div>
+          <img src="images/petlog.png" alt="Pet Health Log" class="w-full h-48 object-contain">
         </div>
-        <img src="images/petlog.png" alt="Pet Health Log" class="w-full h-48 object-contain">
-      </div>
-    </a>
+      </a>
+    </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- Divider -->
-<hr class="full-divider my-10">
+  <!-- Divider -->
+  <hr class="full-divider my-10">
 
   <!-- Competitions and Activities Section -->
   <section id="activities" class="px-8 max-w-6xl mx-auto my-16">
@@ -308,15 +320,15 @@
     <!-- Tabs -->
     <div class="flex justify-center space-x-4 mb-8">
       <button onclick="showTab('hackathon2023')" 
-              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100 active-tab">
+        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0] active-tab">
         YEP Hackathon 2023
       </button>
       <button onclick="showTab('hackathon2024')" 
-              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
+        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0]">
         YEP Hackathon 2024
       </button>
       <button onclick="showTab('other')" 
-              class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-gray-100">
+        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0]">
         Other Activities
       </button>
     </div>
@@ -330,7 +342,7 @@
         </div>
       </div>
       <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2023</h3>
+        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">YEP Hackathon 2023</h3>
         <p class="text-gray-700">Competed in a business plan competition under the theme 
           <span class="font-semibold">"Creative Isaan"</span> with an innovation on 
           eco-friendly furniture made from water hyacinths.</p>
@@ -345,7 +357,7 @@
         </div>
       </div>
       <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4">YEP Hackathon 2024</h3>
+        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">YEP Hackathon 2024</h3>
         <p class="text-gray-700">Participated under the theme 
           <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span> 
           by presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.</p>
@@ -360,7 +372,7 @@
         </div>
       </div>
       <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4">Other Activities</h3>
+        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">Other Activities</h3>
         <p class="text-gray-700">Participated in workshops, design competitions, and online courses 
           to expand knowledge in UX/UI and business innovation.</p>
       </div>
@@ -370,19 +382,19 @@
   <!-- Divider -->
   <hr class="full-divider my-10">
 
-  <!-- Contact Information (ใหม่แทน Get in Touch) -->
+  <!-- Contact Information -->
   <section id="contact" class="px-8 max-w-6xl mx-auto my-16">
     <h2 class="text-3xl font-bold mb-10 text-center text-gray-900">Contact Information</h2>
     <div class="grid md:grid-cols-3 gap-8 text-center">
       <!-- Email -->
       <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-        <a href="mailto:prawanrat@example.com" class="text-blue-600 hover:underline">prawanrat@example.com</a>
+        <a href="mailto:prawanrat@example.com" class="text-[#6DB5CA] hover:text-[#FF7235]">prawanrat@example.com</a>
       </div>
       <!-- LinkedIn -->
       <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
         <h3 class="text-lg font-semibold text-gray-800 mb-2">LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-[#6DB5CA] hover:text-[#FF7235]">linkedin.com/in/yourprofile</a>
       </div>
       <!-- Phone -->
       <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
@@ -415,14 +427,6 @@
       event.target.classList.add('active-tab');
     }
   </script>
-
-  <style>
-    .active-tab {
-      background-color: #f3f4f6;
-      border-color: #4b5563;
-      font-weight: bold;
-    }
-  </style>
 </body>
 
 </html>
