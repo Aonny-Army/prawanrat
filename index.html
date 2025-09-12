@@ -256,22 +256,24 @@
 <!-- Divider -->
   <hr class="full-divider my-10">
 
-  <!-- Skills Section -->
-  <section id="skills" class="px-12 ml-14 mr-14">
-    <div class="flex items-center justify-center mb-10">
+ <!-- Skills Section -->
+  <section id="skills" class="px-6 md:px-12 my-16">
+  <div class="flex items-center justify-center mb-10">
     <div class="h-0.5 w-12 bg-gray-200 mr-3"></div>
     <h2 class="text-lg font-normal tracking-wide text-[#151f4a]">Programming Languages</h2>
     <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
   </div>
-    <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-left text-xl font-medium" style="color:#6DB5CA;">
-      <span class="hover:text-[#FF7235]">HTML</span>
-      <span class="hover:text-[#FF7235]">C</span>
-      <span class="hover:text-[#FF7235]">CSS</span>
-      <span class="hover:text-[#FF7235]">Java</span>
-      <span class="hover:text-[#FF7235]">Flutter</span>
-      <span class="hover:text-[#FF7235]">SQL</span>
-    </div>
-  </section>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-xl font-medium">
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">HTML</span>
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">C</span>
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">CSS</span>
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">Java</span>
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">Flutter</span>
+    <span class="text-gray-400 hover:text-[#6DB5CA] transition">SQL</span>
+  </div>
+</section>
+
 
   <!-- Divider -->
   <hr class="full-divider my-10">
@@ -347,74 +349,94 @@
   <!-- Divider -->
   <hr class="full-divider my-10">
 
-  <!-- Competitions and Activities Section -->
-  <section id="activities" class="px-8 max-w-6xl mx-auto my-16">
-   <h2 class="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide text-[#2A7A8C]">
+<!-- Competitions and Activities Section -->
+<section id="activities" class="px-6 md:px-12 max-w-6xl mx-auto my-20">
+  <!-- Heading -->
+  <h2 class="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide text-[#2A7A8C]">
     Competitions and Activities
   </h2>
-  <div class="w-16 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
+  <div class="w-20 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-4 mb-8">
-      <button onclick="showTab('hackathon2023')" 
-        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0] active-tab">
-        YEP Hackathon 2023
-      </button>
-      <button onclick="showTab('hackathon2024')" 
-        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0]">
-        YEP Hackathon 2024
-      </button>
-      <button onclick="showTab('other')" 
-        class="px-6 py-2 rounded-xl border border-gray-300 bg-white hover:bg-[#B8D8E0]">
-        Other Activities
-      </button>
-    </div>
+  <!-- Tabs -->
+  <div class="flex justify-center gap-8 border-b border-gray-200 mb-12">
+    <button onclick="showTab('hackathon2023')" 
+      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition active-tab">
+      YEP Hackathon 2023
+    </button>
+    <button onclick="showTab('hackathon2024')" 
+      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
+      YEP Hackathon 2024
+    </button>
+    <button onclick="showTab('other')" 
+      class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition">
+      Other Activities
+    </button>
+  </div>
 
-    <!-- Tab Contents -->
-    <div id="hackathon2023" class="tab-content grid md:grid-cols-2 gap-12 items-center">
-      <div class="flex justify-center">
-        <div class="bg-white p-4 rounded-2xl border border-gray-200">
-          <img src="images/Hackathon 2023.JPG" alt="Hackathon 2023"
-            class="rounded-xl w-80 h-80 object-cover">
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">YEP Hackathon 2023</h3>
-        <p class="text-gray-700">Competed in a business plan competition under the theme 
-          <span class="font-semibold">"Creative Isaan"</span> with an innovation on 
-          eco-friendly furniture made from water hyacinths.</p>
-      </div>
+  <!-- Hackathon 2023 IG Style -->
+  <div id="hackathon2023" class="tab-content space-y-6">
+    <!-- Images Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="images/hackathon2023-1.jpg" alt="Hackathon 2023 Pic 1" 
+           class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
+      <img src="images/hackathon2023-2.jpg" alt="Hackathon 2023 Pic 2" 
+           class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
+      <img src="images/hackathon2023-3.jpg" alt="Hackathon 2023 Pic 3" 
+           class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
     </div>
+    <!-- Caption -->
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-[#6DB5CA] mb-2">YEP Hackathon 2023</h3>
+      <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        Competed in a business plan competition under the theme 
+        <span class="font-semibold">"Creative Isaan"</span> with an innovation on 
+        eco-friendly furniture made from water hyacinths.
+      </p>
+    </div>
+  </div>
 
-    <div id="hackathon2024" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
-      <div class="flex justify-center">
-        <div class="bg-white p-4 rounded-2xl border border-gray-200">
-          <img src="images/Hackathon 2024.jpg" alt="Hackathon 2024"
-            class="rounded-xl w-80 h-80 object-cover">
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">YEP Hackathon 2024</h3>
-        <p class="text-gray-700">Participated under the theme 
-          <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span> 
-          by presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.</p>
-      </div>
+  <!-- Hackathon 2024 IG Style -->
+  <div id="hackathon2024" class="tab-content hidden space-y-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="images/hackathon2024.jpg" alt="Hackathon 2024"
+           class="w-full h-72 object-cover rounded-lg hover:opacity-90 transition">
+      <img src="images/hackathon2024-extra.jpg" alt="Hackathon 2024 Extra"
+           class="w-full h-72 object-cover rounded-lg hover:opacity-90 transition">
     </div>
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-[#6DB5CA] mb-2">YEP Hackathon 2024</h3>
+      <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        Participated under the theme 
+        <span class="font-semibold">"Digitalizing the Locals: Turning Dirt into Clouds"</span> 
+        by presenting <span class="font-semibold">Mind LIFT</span>, an AI-based mental health consulting service.
+      </p>
+    </div>
+  </div>
 
-    <div id="other" class="tab-content hidden grid md:grid-cols-2 gap-12 items-center">
-      <div class="flex justify-center">
-        <div class="bg-white p-4 rounded-2xl border border-gray-200">
-          <img src="images/Hackathon 20231.JPG" alt="Other Activities"
-            class="rounded-xl w-80 h-80 object-cover">
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl border border-gray-200">
-        <h3 class="text-2xl font-bold mb-4" style="color:#6DB5CA;">Other Activities</h3>
-        <p class="text-gray-700">Participated in workshops, design competitions, and online courses 
-          to expand knowledge in UX/UI and business innovation.</p>
-      </div>
+  <!-- Other IG Style -->
+  <div id="other" class="tab-content hidden space-y-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="images/other1.jpg" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
+      <img src="images/other2.jpg" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
+      <img src="images/other3.jpg" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition">
     </div>
-  </section>
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-[#6DB5CA] mb-2">Other Activities</h3>
+      <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        Participated in workshops, design competitions, and online courses 
+        to expand knowledge in UX/UI and business innovation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .active-tab {
+    color: #6DB5CA !important;
+    border-bottom: 2px solid #6DB5CA;
+    font-weight: 500;
+  }
+</style>
 
   <!-- Divider -->
   <hr class="full-divider my-10">
@@ -469,5 +491,5 @@
     }
   </script>
 </body>
-
+  
 </html>
