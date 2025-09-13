@@ -369,7 +369,7 @@
     <div class="bg-white rounded-xl shadow-sm border border-gray-200">
       <!-- Header -->
       <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
+        <img src="images/Profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
         <div>
           <p class="font-semibold text-sm text-gray-800">YEP Hackathon 2023</p>
           <p class="text-xs text-gray-500">Young Entrepreneur Project</p>
@@ -412,7 +412,7 @@
   <div id="hackathon2024" class="tab-content hidden space-y-12">
     <div class="bg-white rounded-xl shadow-sm border border-gray-200">
       <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
+        <img src="images/Profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
         <div>
           <p class="font-semibold text-sm text-gray-800">YEP Hackathon 2024</p>
           <p class="text-xs text-gray-500">Young Entrepreneur Project</p>
@@ -452,7 +452,7 @@
   <div id="start2024" class="tab-content hidden space-y-12">
     <div class="bg-white rounded-xl shadow-sm border border-gray-200">
       <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
+        <img src="images/Profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
         <div>
           <p class="font-semibold text-sm text-gray-800">INFORMATICE START 2024 & BCG</p>
           <p class="text-xs text-gray-500">Startup & Business Plan Competition</p>
@@ -530,36 +530,90 @@
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
-
-
   <!-- Divider -->
   <hr class="full-divider my-10">
-
-  <!-- Contact Information -->
-  <section id="contact" class="px-8 max-w-6xl mx-auto my-16">
-    <div class="flex items-center justify-center mb-10">
-    <div class="h-0.5 w-8 bg-gray-200 mr-3"></div>
-    <h2 class="text-lg font-normal tracking-wide">Contact Information</h2>
-    <div class="h-0.5 w-8 bg-gray-200 ml-3"></div>
+ 
+ <!-- Contact Section -->
+<section id="contact" class="px-6 md:px-12 my-16">
+  <!-- Heading -->
+  <div class="flex items-center justify-center mb-10">
+    <div class="h-0.5 w-12 bg-gray-200 mr-3"></div>
+    <h2 class="text-lg font-normal tracking-wide text-[#151f4a]">Get in Touch</h2>
+    <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
   </div>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
-      <!-- Email -->
-      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-        <a href="mailto:prawanrat@example.com" class="text-[#6DB5CA] hover:text-[#FF7235]">prawanrat@example.com</a>
-      </div>
-      <!-- LinkedIn -->
-      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-[#6DB5CA] hover:text-[#FF7235]">linkedin.com/in/yourprofile</a>
-      </div>
-      <!-- Phone -->
-      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">Phone</h3>
-        <p class="text-gray-600">+66 1234 56789</p>
-      </div>
-    </div>
-  </section>
+
+  <!-- Contact Links -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center text-lg font-medium">
+    <!-- Email -->
+    <button onclick="showEmail()" 
+            class="text-gray-400 hover:text-[#6DB5CA] transition">
+       Email
+    </button>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/AonnyIArmy/" target="_blank" 
+       class="text-gray-400 hover:text-[#6DB5CA] transition">
+       Facebook
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/prawanrat-chaichanla-83a5a3327/" target="_blank" 
+       class="text-gray-400 hover:text-[#6DB5CA] transition">
+       LinkedIn
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/aonny_army_/" target="_blank" 
+       class="text-gray-400 hover:text-[#6DB5CA] transition">
+       Instagram
+    </a>
+
+    <!-- Phone -->
+    <button onclick="showPhone()" 
+            class="text-gray-400 hover:text-[#6DB5CA] transition">
+       Phone
+    </button>
+  </div>
+</section>
+
+<!-- Email Popup -->
+<div id="emailModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+    <h3 class="text-lg font-medium text-gray-800 mb-4">My Email</h3>
+    <p class="text-lg font-semibold text-[#6DB5CA]">aonny.prawanrat@gmail.com</p>
+    <button onclick="closeEmail()" class="mt-6 px-4 py-2 bg-[#6DB5CA] text-white rounded hover:bg-[#558f9d]">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- Phone Popup -->
+<div id="phoneModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+    <h3 class="text-lg font-medium text-gray-800 mb-4">My Phone Number</h3>
+    <p class="text-xl font-semibold text-[#6DB5CA]">098-197-7899</p>
+    <button onclick="closePhone()" class="mt-6 px-4 py-2 bg-[#6DB5CA] text-white rounded hover:bg-[#558f9d]">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function showEmail() {
+    document.getElementById('emailModal').classList.remove('hidden');
+  }
+  function closeEmail() {
+    document.getElementById('emailModal').classList.add('hidden');
+  }
+  function showPhone() {
+    document.getElementById('phoneModal').classList.remove('hidden');
+  }
+  function closePhone() {
+    document.getElementById('phoneModal').classList.add('hidden');
+  }
+</script>
+
 
   <!-- AOS Animate On Scroll JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
