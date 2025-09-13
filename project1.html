@@ -2,36 +2,138 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECM Project - Prawanrat Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 01 – ECM Mobile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .site-frame {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .site-frame::before,
+    .site-frame::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+    }
+
+    .site-frame::before {
+      left: 80px;
+    }
+
+    .site-frame::after {
+      right: 80px;
+    }
+
+    @media (max-width: 1280px) {
+      .site-frame::before,
+      .site-frame::after {
+        display: none;
+      }
+    }
+
+    .site-frame>* {
+      position: relative;
+      z-index: 10;
+    }
+
+    .full-divider {
+      border: none;
+      border-bottom: 1px solid #E5E7EB;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-  <div class="max-w-5xl mx-auto px-6 py-12">
-    <a href="index.html" class="text-blue-600 hover:underline">&larr; Back to Portfolio</a>
+<body class="bg-[#FCF5EF] text-gray-900">
 
-    <h1 class="text-4xl font-bold mt-6 mb-4">ECM (eCoachManager) System for Mobile</h1>
-    <p class="text-gray-600 mb-8">An internship project focused on UX/UI design for mobile and iPad platforms.</p>
+  <!-- Navbar -->
+  <header class="w-full bg-[#FCF5EF] z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
+    <div class="text-xl font-bold text-[#6DB5CA]">𝑷</div>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="index.html#home" class="hover:text-[#6DB5CA] transition">Home</a>
+      <a href="index.html#portfolio" class="hover:text-[#6DB5CA] transition">Portfolio</a>
+      <a href="index.html#contact" class="hover:text-[#6DB5CA] transition">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="border border-[#6DB5CA] text-[#6DB5CA] px-4 py-2 rounded-full hover:bg-[#B8D8E0]/30 text-sm">
+      Let's Connect
+    </a>
+  </header>
 
-    <h2 class="text-2xl font-semibold mb-3">Project Overview</h2>
-    <p class="text-gray-700 leading-relaxed mb-6">
-      The ECM (eCoachManager) Mobile System is an internship project focused on UX/UI design for mobile and iPad
-      platforms...
-    </p>
+  <!-- Wrapper -->
+  <div class="site-frame px-8 my-16">
 
-    <h2 class="text-2xl font-semibold mb-3">Problem Statement</h2>
-    <p class="text-gray-700 leading-relaxed mb-6">
-      The original ECM system was designed primarily for desktop use, making it inconvenient for users...
-    </p>
-
-    <div class="flex flex-wrap gap-6">
-      <img src="images/ecm.png" alt="ECM Screenshot" class="w-80 rounded-xl shadow">
-      <img src="images/omni.png" alt="Mockup" class="w-80 rounded-xl shadow">
+    <!-- Project Title -->
+    <div class="mb-12">
+      <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">Project 01</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2A7A8C] mb-4">
+        ECM (eCoachManager) System for Mobile
+        <span class="bg-[#430135] text-white text-sm px-2 py-1 rounded-md ml-2">Xd</span>
+      </h1>
+      <a href="mailto:prawanrat@example.com" class="inline-block bg-gray-800 text-white px-5 py-2 rounded-full text-sm hover:bg-gray-700">
+        Start a Project
+      </a>
     </div>
-  </div>
+
+    <!-- Overview Section -->
+    <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <!-- Text -->
+      <div>
+        <h3 class="text-lg font-bold text-[#6DB5CA] mb-4">PROJECT OVERVIEW</h3>
+        <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+          The ECM (eCoachManager) Mobile System is an internship project focused on UX/UI design for mobile and iPad platforms. 
+          The goal was to improve user convenience and system accessibility. 
+          My responsibilities included wireframing, creating user journeys, prototyping, and designing user interfaces that are visually consistent and user-friendly. 
+          I conducted usability testing with real users and refined the design based on feedback. 
+          I also worked closely with the development team to ensure design feasibility and implemented responsive layouts to ensure smooth usage across both mobile phones and tablets.
+        </p>
+      </div>
+      <!-- Images -->
+      <div class="flex justify-center gap-6">
+        <img src="images/ecm-mobile1.png" alt="ECM Mobile Login" class="w-40 h-auto object-contain shadow-md rounded-lg">
+        <img src="images/ecm-mobile2.png" alt="ECM Mobile Dashboard" class="w-40 h-auto object-contain shadow-md rounded-lg">
+      </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <!-- Images -->
+      <div class="flex justify-center gap-6">
+        <img src="images/ecm-tablet.png" alt="ECM Tablet" class="w-72 h-auto object-contain shadow-md rounded-lg">
+        <img src="images/ecm-mobile3.png" alt="ECM Mobile" class="w-28 h-auto object-contain shadow-md rounded-lg">
+      </div>
+      <!-- Text -->
+      <div>
+        <h3 class="text-lg font-bold text-[#2A7A8C] mb-4">PROBLEM <span class="text-[#6DB5CA]">STATEMENT</span></h3>
+        <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+          The original ECM (eCoachManager) system was designed primarily for desktop use, making it inconvenient for users to access while away from the office. 
+          This led to delays in retrieving important data and reduced overall workflow efficiency. 
+          Therefore, a mobile solution was needed to improve accessibility and support on-the-go usage.
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /site-frame -->
+
 </body>
-
 </html>
-
