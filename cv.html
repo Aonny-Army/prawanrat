@@ -6,35 +6,56 @@
   <title>My CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-sans">
 
   <!-- Navbar -->
-  <header class="bg-white shadow-md py-4 px-8 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Prawanrat Portfolio</h1>
-    <nav class="space-x-6 text-sm font-medium">
-      <a href="index.html" class="hover:text-blue-600">Home</a>
-      <a href="cv.html" class="text-blue-600 font-semibold">CV</a>
-    </nav>
+  <header class="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-4">
+      <h1 class="text-xl font-semibold tracking-wide text-[#2A7A8C]">
+        Prawanrat<span class="text-[#FF7235]"> Portfolio</span>
+      </h1>
+      <nav class="flex space-x-6 text-sm font-light">
+        <a href="index.html" class="hover:text-[#2A7A8C] transition">Home</a>
+        <a href="cv.html" class="text-[#2A7A8C] font-medium border-b-2 border-[#2A7A8C] pb-1">Resume</a>
+      </nav>
+    </div>
   </header>
 
   <!-- CV Section -->
-  <main class="max-w-4xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold mb-6">Curriculum Vitae</h2>
-    <p class="text-gray-700 mb-6">
-      You can view my CV below or download it as a PDF.
-    </p>
-
-    <!-- Preview CV -->
-    <div class="border rounded-lg shadow bg-white mb-8">
-      <iframe src="files/CV Prawanrat Chaichanla.pdf" class="w-full h-[600px]" frameborder="0"></iframe>
+  <main class="max-w-5xl mx-auto py-20 px-6">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-light text-[#2A7A8C] mb-3">
+        Curriculum Vitae
+      </h2>
+      <div class="w-16 h-1 bg-[#FF7235] mx-auto mb-6 rounded-full"></div>
+      <p class="text-gray-600 text-lg font-light">
+        View my professional CV or download the PDF version below.
+      </p>
     </div>
 
-    <!-- Download Button -->
-    <a href="files/CV.pdf" download 
-       class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
-      Download CV (PDF)
-    </a>
+    <!-- CV Preview Card -->
+    <div class="rounded-2xl bg-white overflow-hidden border border-gray-200 mb-12 shadow-sm hover:shadow-md transition">
+      <iframe src="files/CV.pdf" class="w-full h-[700px]" frameborder="0"></iframe>
+    </div>
+
+    <!-- Button Group -->
+    <div class="flex justify-center gap-6">
+      <a href="files/CV.pdf" download
+         class="px-8 py-3 rounded-full bg-[#2A7A8C] text-white font-light shadow hover:bg-[#1F5F6E] transition">
+        Download CV (PDF)
+      </a>
+      <a href="index.html#profile"
+         class="px-8 py-3 rounded-full border border-[#2A7A8C] text-[#2A7A8C] font-light hover:bg-[#F1FAFB] transition">
+        ← Back to Portfolio
+      </a>
+    </div>
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-6 mt-20 text-center text-sm text-gray-500">
+    © 2025 Prawanrat. All rights reserved.
+  </footer>
 
 </body>
 </html>
