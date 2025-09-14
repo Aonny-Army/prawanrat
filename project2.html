@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 - Omni Alarm</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .site-frame {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .site-frame::before,
+    .site-frame::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+    }
+
+    .site-frame::before {
+      left: 80px;
+    }
+
+    .site-frame::after {
+      right: 80px;
+    }
+
+    @media (max-width: 1280px) {
+      .site-frame::before,
+      .site-frame::after {
+        display: none;
+      }
+    }
+
+    .site-frame>* {
+      position: relative;
+      z-index: 10;
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="w-full bg-white z-50 border-b border-gray-200">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-10 py-4">
+      <div class="text-xl font-semibold text-[#f7aa09]">Portfolio</div>
+      <nav class="flex space-x-6 text-sm font-light pr-6">
+        <a href="index.html" class="hover:text-[#f7aa09] transition">Back to Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Wrapper -->
+  <div class="site-frame">
+
+    <!-- Project Title -->
+    <div class="mb-20 flex flex-col md:flex-row md:items-center md:justify-between">
+      <!-- Left Title -->
+      <div>
+        <p class="text-sm uppercase tracking-wide font-light text-gray-500 mb-2">Project 02</p>
+        <h1 class="text-3xl md:text-4xl font-light text-[#f7aa09] mb-4">
+          Accident Situation Notification Application (Omni Alarm)
+          <span class="bg-[#FF7235] text-white text-sm px-2 py-1 rounded-md ml-2 font-normal">Figma</span>
+        </h1>
+      </div>
+
+      <!-- Right Button -->
+      <div class="flex gap-3 mt-4 md:mt-0">
+        <a href="#"
+          target="_blank"
+          class="inline-block bg-[#f7aa09] text-white px-5 py-2 rounded-full text-sm font-light shadow-md hover:bg-[#FF7235] transition">
+          View Mobile Prototype
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16 border-b border-gray-200 pb-16">
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="images/omni_overview.png" alt="Omni Alarm Overview" class="w-full max-w-lg h-auto object-contain">
+      </div>
+
+      <!-- Text -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#f7aa09]">
+          <span class="text-black font-medium">Project</span> Overview
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          Omni Alarm is a senior project in which the creator was responsible for both UX/UI design 
+          and actual application development. The app aims to provide 
+          <span class="font-medium text-[#f7aa09]">real-time accident and emergency notifications</span> 
+          to nearby users, helping them stay informed and avoid danger efficiently. <br><br>
+          The system enables users to receive alerts, get emergency instructions, and access assistance details 
+          via a mobile interface. Built using Dart (Flutter) and PHP (with a local database), the application 
+          was fully implemented and tested using <span class="font-medium text-[#FF7235]">black-box testing</span> 
+          to ensure functional reliability.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Problem Statement -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16 border-b border-gray-200 pb-16">
+      <!-- Text -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#f7aa09]">Problem Statement</h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          Currently, accident and emergency notifications often lack 
+          <span class="font-medium text-[#FF7235]">real-time delivery and accessibility</span>, 
+          especially in areas without advanced alert systems. <br><br>
+          As a result, people may not be aware of or prepared for sudden incidents, 
+          increasing the risk of harm to life and property. Moreover, there is no 
+          all-in-one mobile application that provides timely alerts, safety guidance, 
+          and emergency support information in an integrated and user-friendly format.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="images/omni_problem.png" alt="Omni Alarm Problem" class="w-full max-w-lg h-auto object-contain">
+      </div>
+    </section>
+
+    <!-- Section 3: Design Showcase -->
+    <section class="my-20 border-b border-gray-200 pb-16">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#f7aa09]">Design Showcase</h2>
+      <div class="w-20 h-1 bg-[#f7aa09] mx-auto mb-12 rounded-full"></div>
+
+      <!-- Prototype Section -->
+      <section id="prototype" class="px-6 md:px-12 my-20">
+        <div class="flex items-center justify-center mb-10">
+          <div class="h-0.5 w-12 bg-gray-200 mr-3"></div>
+          <h2 class="text-lg font-normal tracking-wide text-[#151f4a]">Prototypes</h2>
+          <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <img src="images/omni_proto1.png" alt="Omni Prototype 1" class="w-full h-auto object-contain">
+          <img src="images/omni_proto2.png" alt="Omni Prototype 2" class="w-full h-auto object-contain">
+        </div>
+      </section>
+    </section>
+
+    <!-- Section 4: Typography & Color -->
+    <section class="my-20 border-b border-gray-200 pb-16">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#f7aa09]">
+        Typography & Color System
+      </h2>
+      <div class="w-20 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
+        <!-- Colors -->
+        <div>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#f7aa09]"></span>
+            <span class="text-gray-700">Color <span class="text-[#f7aa09] font-medium">Used</span></span>
+          </p>
+
+          <div class="flex">
+            <!-- Color Bar -->
+            <div class="rounded-2xl overflow-hidden w-20 sm:w-28">
+              <div class="h-12 sm:h-16" style="background:#f7aa09;"></div>
+              <div class="h-12 sm:h-16" style="background:#fecb86;"></div>
+              <div class="h-12 sm:h-16" style="background:#e7e7e6;"></div>
+              <div class="h-12 sm:h-16" style="background:#bcc1c2;"></div>
+              <div class="h-12 sm:h-16" style="background:#525654;"></div>
+              <div class="h-12 sm:h-16" style="background:#202121;"></div>
+            </div>
+
+            <!-- Labels -->
+            <div class="ml-4 space-y-5 sm:ml-6 text-gray-700 text-sm sm:text-base">
+              <div>
+                <p class="font-medium">Sun</p>
+                <p class="text-gray-500">#f7aa09</p>
+              </div>
+              <div>
+                <p class="font-medium">Flax</p>
+                <p class="text-gray-500">#fecb86</p>
+              </div>
+              <div>
+                <p class="font-medium">Desert Storm</p>
+                <p class="text-gray-500">#e7e7e6</p>
+              </div>
+              <div>
+                <p class="font-medium">Silver Sand</p>
+                <p class="text-gray-500">#bcc1c2</p>
+              </div>
+              <div>
+                <p class="font-medium">Nandor</p>
+                <p class="text-gray-500">#525654</p>
+              </div>
+              <div>
+                <p class="font-medium">Shark</p>
+                <p class="text-gray-500">#202121</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#f7aa09]"></span>
+            <span class="text-gray-700">Front <span class="text-[#f7aa09] font-medium">Used</span></span>
+          </p>
+
+          <!-- Font Showcase -->
+          <div class="space-y-6">
+            <h3 class="text-3xl sm:text-4xl font-semibold text-gray-800">Inter</h3>
+
+            <!-- Large Preview -->
+            <p class="text-5xl sm:text-7xl font-light text-gray-800 mb-4">Ag</p>
+
+            <!-- Samples -->
+            <p class="text-lg sm:text-xl tracking-wide text-gray-800">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </p>
+            <p class="text-lg sm:text-xl text-gray-800">
+              abcdefghijklmnopqrstuvwxyz
+            </p>
+            <p class="text-lg sm:text-xl text-gray-800">
+              0123456789 !@#$%^&*()
+            </p>
+            <p class="text-lg sm:text-xl text-gray-800">
+              ฟหกด่าสว
+            </p>
+          </div>
+        </div>
+
+        <!-- Mockup Image -->
+        <div class="flex justify-center lg:justify-end items-start">
+          <img src="images/omni_mockup.png" alt="Omni Alarm Mockup" class="w-64 sm:w-80 lg:w-96 h-auto object-contain">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Next Project -->
+    <section class="my-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-light text-[#f7aa09] mb-6">Next Project</h2>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="project1.html"
+           class="block bg-white border border-[#f7aa09] rounded-2xl px-8 py-6 shadow-sm hover:shadow-md transition card-hover w-72">
+          <h3 class="text-lg font-semibold text-[#f7aa09] mb-2">Project 01</h3>
+          <p class="text-gray-700 font-light">ECM Mobile System</p>
+        </a>
+        <a href="index.html"
+           class="block bg-white border border-[#FF7235] rounded-2xl px-8 py-6 shadow-sm hover:shadow-md transition card-hover w-72">
+          <h3 class="text-lg font-semibold text-[#FF7235] mb-2">All Projects</h3>
+          <p class="text-gray-700 font-light">Back to portfolio overview</p>
+        </a>
+      </div>
+    </section>
+
+  </div><!-- /site-frame -->
+
+</body>
+</html>
 
