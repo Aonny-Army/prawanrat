@@ -7,14 +7,14 @@
   <title>Project 3 - Pet Health Log</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     .site-frame {
@@ -74,18 +74,22 @@
   <div class="site-frame">
 
     <!-- Project Title -->
-    <div class="mt-10 mb-20 flex flex-col md:flex-row md:items-center md:justify-between">
+    <div class="mb-24 flex flex-col md:flex-row md:items-center md:justify-between">
+      <!-- Left Title -->
       <div>
         <p class="text-sm uppercase tracking-wide font-light text-gray-500 mb-2">Project 03</p>
-        <h1 class="text-3xl md:text-4xl font-light text-[#6DBE45] mb-4 flex items-center">
+        <h1 class="text-3xl md:text-4xl font-light text-[#6DBE45] mb-4">
           Pet Health Log
-          <img src="images/Figma-logo.png" alt="Figma Logo" class="w-7 h-7 ml-3 inline-block">
+          <img src="images/Figma-logo.png" alt="Figma Logo"
+            class="inline-block w-6 h-6 ml-2 align-middle">
         </h1>
       </div>
+
+      <!-- Right Button -->
       <div class="flex gap-3 mt-4 md:mt-0">
-        <a href="#"
+        <a href="https://www.figma.com/proto/eXuiaNw1LP0sKIxTuYpRw3/APP?node-id=3-4&p=f&t=RStpBtYXYJMoGBZW-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
           target="_blank"
-          class="inline-block border border-[#6DBE45] text-[#6DBE45] px-5 py-2 rounded-full text-sm font-light hover:bg-[#6DBE45] hover:text-white transition">
+          class="inline-block border border-[#6DBE45] text-[#6DBE45] bg-white px-5 py-2 rounded-full text-sm font-light shadow-sm hover:bg-[#6DBE45] hover:text-white transition">
           View Mobile Prototype
         </a>
       </div>
@@ -215,8 +219,21 @@
            class="px-6 py-3 border border-[#6DBE45] text-[#6DBE45] rounded-full text-sm font-light hover:bg-[#6DBE45] hover:text-white transition">
           Go to Project 2 →
         </a>
+        <a href="index.html"
+          class="px-6 py-3 border border-[#6DBE45] text-[#6DBE45] rounded-full text-sm font-light hover:bg-[#6DBE45] hover:text-white transition">
+          Back to Home
+        </a>
       </div>
     </section>
+
+        <!-- Footer -->
+    <footer class="w-full border-t border-gray-200 mt-20 py-6">
+      <div class="max-w-[1280px] mx-auto flex justify-end items-center px-10">
+        <nav class="flex space-x-6 text-sm font-light">
+          <a href="index.html" class="hover:text-[#6DBE45] transition">Back to Home</a>
+        </nav>
+      </div>
+    </footer>
 
   </div><!-- /site-frame -->
 
