@@ -63,16 +63,6 @@
     .card-hover:hover {
       transform: translateY(-8px) scale(1.02);
     }
-
-    /* เส้นคั่นเต็มหน้าจอ */
-    .full-divider {
-      border: none;
-      border-bottom: 1px solid #e5e7eb; /* เทาอ่อน */
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   </style>
 </head>
 
@@ -82,7 +72,7 @@
   <header class="w-full bg-white z-50 border-b border-gray-200">
     <div class="max-w-[1280px] mx-auto flex justify-between items-center px-10 py-4">
       <div class="text-xl font-semibold text-[#2A7A8C]">Portfolio</div>
-      <nav class="flex space-x-6 text-sm font-light pr-6">
+      <nav class="flex space-x-6 text-sm font-light pr-16">
         <a href="index.html" class="hover:text-[#2A7A8C] transition">Back to Home</a>
       </nav>
     </div>
@@ -118,7 +108,7 @@
     </div>
 
     <!-- Section 1: Overview -->
-    <section class="grid md:grid-cols-2 gap-12 items-center my-16 pb-16">
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16">
       <!-- Text -->
       <div>
         <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#2A7A8C]">
@@ -133,15 +123,15 @@
 
       <!-- Image -->
       <div class="flex justify-center">
-        <img src="images/ecm.png.png" alt="ECM Mobile" class="w-96 h-auto object-contain">
+        <img src="images/ecm.png.png" alt="ECM Mobile" class="w-full max-w-[1000px]">
       </div>
     </section>
 
     <!-- Section 2: Problem Statement -->
-    <section class="grid md:grid-cols-2 gap-12 items-center my-16 pb-16">
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16">
       <!-- Image -->
       <div class="flex justify-center order-2 md:order-1">
-        <img src="images/iPhoneiPad.png.png" alt="Problem Statement" class="w-96 h-auto object-contain">
+        <img src="images/iPhoneiPad.png.png" alt="Problem Statement" class="w-full max-w-[1000px]">
       </div>
 
       <!-- Text -->
@@ -156,11 +146,11 @@
       </div>
     </section>
 
-    <!-- Divider ก่อน Design Showcase -->
-    <hr class="full-divider my-20">
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200 my-20"></div>
 
     <!-- Section 3: Design Showcase -->
-    <section class="my-20 pb-16">
+    <section class="my-20">
       <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">Design Showcase</h2>
       <div class="w-20 h-1 bg-[#6DB5CA] mx-auto mb-12 rounded-full"></div>
       
@@ -172,8 +162,8 @@
           <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <img src="images/wireframe1.png" alt="Wireframe 1" class="rounded-lg shadow-md">
-          <img src="images/wireframe2.png" alt="Wireframe 2" class="rounded-lg shadow-md">
+          <img src="images/wireframe1.png" alt="Wireframe 1" class="w-full max-w-[1000px]">
+          <img src="images/wireframe2.png" alt="Wireframe 2" class="w-full max-w-[1000px]">
         </div>
       </section>
 
@@ -185,17 +175,17 @@
           <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <img src="images/prototype1.png" alt="Prototype 1" class="rounded-lg shadow-md">
-          <img src="images/prototype2.png" alt="Prototype 2" class="rounded-lg shadow-md">
+          <img src="images/prototype1.png" alt="Prototype 1" class="w-full max-w-[1000px]">
+          <img src="images/prototype2.png" alt="Prototype 2" class="w-full max-w-[1000px]">
         </div>
       </section>
     </section>
 
-    <!-- Divider ก่อน Typography & Color -->
-    <hr class="full-divider my-20">
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200 my-20"></div>
 
     <!-- Section 4: Typography & Color -->
-    <section class="my-20 pb-16">
+    <section class="my-20">
       <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">
         Typography & Color System
       </h2>
@@ -254,7 +244,7 @@
         <div>
           <p class="text-lg font-light mb-6 flex items-center gap-2">
             <span class="w-3 h-3 rounded-full bg-[#6DB5CA]"></span>
-            <span class="text-gray-700">Font <span class="text-[#6DB5CA] font-medium">Used</span></span>
+            <span class="text-gray-700">Front <span class="text-[#6DB5CA] font-medium">Used</span></span>
           </p>
 
           <!-- Font Showcase -->
@@ -282,13 +272,13 @@
 
         <!-- Mockup Image -->
         <div class="flex justify-center lg:justify-end items-start">
-          <img src="images/Mockupall.png" alt="Mockup All" class="w-64 sm:w-80 lg:w-96 h-auto object-contain shadow-md rounded-xl">
+          <img src="images/Mockupall.png" alt="Mockup All" class="w-full max-w-[1000px]">
         </div>
       </div>
     </section>
 
-    <!-- Divider ก่อน Next Project -->
-    <hr class="full-divider my-20">
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200 my-20"></div>
 
     <!-- Section 5: Next Project -->
     <section class="my-20 text-center">
