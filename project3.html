@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3 - Pet Health Log</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .site-frame {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .site-frame::before,
+    .site-frame::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+    }
+
+    .site-frame::before {
+      left: 80px;
+    }
+
+    .site-frame::after {
+      right: 80px;
+    }
+
+    @media (max-width: 1280px) {
+      .site-frame::before,
+      .site-frame::after {
+        display: none;
+      }
+    }
+
+    .site-frame>* {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="w-full bg-white z-50 border-b border-gray-200">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-10 py-4">
+      <div class="text-xl font-semibold text-[#6DBE45]">Portfolio</div>
+      <nav class="flex space-x-6 text-sm font-light pr-6">
+        <a href="index.html" class="hover:text-[#6DBE45] transition">Back to Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Wrapper -->
+  <div class="site-frame">
+
+    <!-- Project Title -->
+    <div class="mt-10 mb-20 flex flex-col md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="text-sm uppercase tracking-wide font-light text-gray-500 mb-2">Project 03</p>
+        <h1 class="text-3xl md:text-4xl font-light text-[#6DBE45] mb-4 flex items-center">
+          Pet Health Log
+          <img src="images/Figma-logo.png" alt="Figma Logo" class="w-7 h-7 ml-3 inline-block">
+        </h1>
+      </div>
+      <div class="flex gap-3 mt-4 md:mt-0">
+        <a href="#"
+          target="_blank"
+          class="inline-block border border-[#6DBE45] text-[#6DBE45] px-5 py-2 rounded-full text-sm font-light hover:bg-[#6DBE45] hover:text-white transition">
+          View Mobile Prototype
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16 border-b border-gray-200 pb-16">
+      <div class="flex justify-center">
+        <img src="images/pet_overview.png" alt="Pet Health Log Overview" class="w-full max-w-2xl h-auto object-contain">
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#6DBE45]">
+          <span class="text-black font-medium">Project</span> Overview
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          Pet Health Log is a conceptual app designed to resemble a personal note-taking application,
+          but specifically tailored for pet owners to log important information about their beloved pets.
+          It includes basic features such as health notes, vet appointments, and pet profiles. <br><br>
+          A preliminary idea for a pet product shopping section was also explored to suggest future expansion.
+          This project focuses on <span class="font-medium text-[#6DBE45]">early stage UI/UX design</span>,
+          covering the core user flow and key interactions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Problem Statement -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16 pb-16">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#6DBE45]">Problem Statement</h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          There is currently a lack of simple and dedicated tools for pet owners to log and organize
+          pet-related information in the same convenient way people use general note-taking apps. <br><br>
+          As a result, many owners rely on scattered or manual methods, which makes tracking appointments
+          or health updates inefficient. <br><br>
+          The Pet Health Log concept was designed to address this gap by providing a structured,
+          <span class="font-medium text-[#6DBE45]">user-friendly way</span> to record and access pet information.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <img src="images/pet_problem.png" alt="Pet Health Log Problem" class="w-full max-w-2xl h-auto object-contain">
+      </div>
+    </section>
+
+    <!-- Section 3: Design Showcase -->
+    <section class="my-20 border-t border-gray-200 pt-16">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#6DBE45]">Design Showcase</h2>
+      <div class="w-20 h-1 bg-[#6DBE45] mx-auto mb-12 rounded-full"></div>
+      <section id="prototype" class="px-6 md:px-12 my-20">
+        <div class="flex items-center justify-center mb-10">
+          <div class="h-0.5 w-12 bg-gray-200 mr-3"></div>
+          <h2 class="text-lg font-normal tracking-wide text-[#151f4a]">Prototypes</h2>
+          <div class="h-0.5 w-12 bg-gray-200 ml-3"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <img src="images/pet_prototype1.png" alt="Prototype 1" class="shadow-md rounded-lg">
+          <img src="images/pet_prototype2.png" alt="Prototype 2" class="shadow-md rounded-lg">
+        </div>
+      </section>
+    </section>
+
+    <!-- Section 4: Typography & Color -->
+    <section class="my-20 border-t border-gray-200 pt-16">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#6DBE45]">
+        Typography & Color System
+      </h2>
+      <div class="w-20 h-1 bg-[#6DBE45] mx-auto mb-12 rounded-full"></div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
+        <!-- Colors -->
+        <div>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#6DBE45]"></span>
+            <span class="text-gray-700">Color <span class="text-[#6DBE45] font-medium">Used</span></span>
+          </p>
+
+          <div class="flex">
+            <div class="rounded-2xl overflow-hidden w-20 sm:w-28">
+              <div class="h-12 sm:h-16" style="background:#359D9E;"></div>
+              <div class="h-12 sm:h-16" style="background:#55C595;"></div>
+              <div class="h-12 sm:h-16" style="background:#7CE495;"></div>
+              <div class="h-12 sm:h-16" style="background:#61A6CD;"></div>
+              <div class="h-12 sm:h-16" style="background:#9E9E9E;"></div>
+              <div class="h-12 sm:h-16" style="background:#E5E5E5;"></div>
+            </div>
+            <div class="ml-4 space-y-5 sm:ml-6 text-gray-700 text-sm sm:text-base">
+              <div><p class="font-medium">Keppel</p><p class="text-gray-500">#359D9E</p></div>
+              <div><p class="font-medium">Emerald</p><p class="text-gray-500">#55C595</p></div>
+              <div><p class="font-medium">Pastel Green</p><p class="text-gray-500">#7CE495</p></div>
+              <div><p class="font-medium">Danube</p><p class="text-gray-500">#61A6CD</p></div>
+              <div><p class="font-medium">Silver Chalice</p><p class="text-gray-500">#9E9E9E</p></div>
+              <div><p class="font-medium">Mercury</p><p class="text-gray-500">#E5E5E5</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#6DBE45]"></span>
+            <span class="text-gray-700">Font <span class="text-[#6DBE45] font-medium">Used</span></span>
+          </p>
+          <div class="space-y-6">
+            <h3 class="text-3xl sm:text-4xl font-semibold text-gray-800">DM Sans / Inter</h3>
+            <p class="text-5xl sm:text-7xl font-light text-gray-800 mb-4">Ag</p>
+            <p class="text-lg sm:text-xl tracking-wide text-gray-800">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p class="text-lg sm:text-xl text-gray-800">abcdefghijklmnopqrstuvwxyz</p>
+            <p class="text-lg sm:text-xl text-gray-800">0123456789 !@#$%^&*()</p>
+          </div>
+        </div>
+
+        <!-- Mockup Image -->
+        <div class="flex justify-center lg:justify-end items-start">
+          <img src="images/pet_typography.png" alt="Mockup All" class="w-64 sm:w-80 lg:w-96 h-auto object-contain shadow-md rounded-xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Next Project -->
+    <section class="my-20 border-t border-gray-200 pt-16 text-center">
+      <h2 class="text-2xl md:text-3xl font-light text-[#6DBE45] mb-10">Next Project</h2>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="project1.html"
+           class="px-6 py-3 border border-gray-300 rounded-full text-gray-700 text-sm font-light hover:bg-gray-100 transition">
+          ← Back to Project 1
+        </a>
+        <a href="project2.html"
+           class="px-6 py-3 border border-[#6DBE45] text-[#6DBE45] rounded-full text-sm font-light hover:bg-[#6DBE45] hover:text-white transition">
+          Go to Project 2 →
+        </a>
+      </div>
+    </section>
+
+  </div><!-- /site-frame -->
+
+</body>
+</html>
 
