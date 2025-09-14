@@ -21,6 +21,8 @@
       position: relative;
       max-width: 1280px;
       margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .site-frame::before,
@@ -77,7 +79,7 @@
   </header>
 
   <!-- Wrapper -->
-  <div class="site-frame px-6 md:px-12">
+  <div class="site-frame">
 
     <!-- Project Title -->
     <div class="mb-12 flex flex-col md:flex-row md:items-center md:justify-between">
@@ -109,7 +111,9 @@
     <section class="grid md:grid-cols-2 gap-12 items-center my-16">
       <!-- Text -->
       <div>
-        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#2A7A8C]">Overview</h2>
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#2A7A8C]">
+          <span class="text-black font-medium">PROJECT</span> OVERVIEW
+        </h2>
         <p class="text-gray-700 leading-relaxed font-light">
           ECM (eCoachManager) is a transportation management system adapted for mobile use. 
           This project involved creating a <span class="font-medium text-[#6DB5CA]">user-friendly interface</span> 
@@ -119,8 +123,7 @@
 
       <!-- Image -->
       <div class="flex justify-center">
-        <img src="images/ecm.png.png" alt="ECM Mobile" 
-          class="rounded-2xl shadow-md w-72 h-auto object-contain">
+        <img src="images/ecm.png.png" alt="ECM Mobile" class="w-72 h-auto object-contain">
       </div>
     </section>
 
@@ -128,8 +131,7 @@
     <section class="grid md:grid-cols-2 gap-12 items-center my-16">
       <!-- Image -->
       <div class="flex justify-center order-2 md:order-1">
-        <img src="images/iPhoneiPad.png.png" alt="Problem Statement" 
-          class="rounded-2xl shadow-md w-72 h-auto object-contain">
+        <img src="images/iPhoneiPad.png.png" alt="Problem Statement" class="w-72 h-auto object-contain">
       </div>
 
       <!-- Text -->
@@ -149,51 +151,95 @@
       <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">Design Showcase</h2>
       <div class="w-20 h-1 bg-[#6DB5CA] mx-auto mb-12 rounded-full"></div>
       <div class="grid md:grid-cols-2 gap-6">
-        <img src="images/wireframe1.png" alt="Wireframe" class="rounded-lg shadow-md object-cover">
-        <img src="images/wireframe2.png" alt="Wireframe" class="rounded-lg shadow-md object-cover">
+        <img src="images/wireframe1.png" alt="Wireframe" class="object-cover">
+        <img src="images/wireframe2.png" alt="Wireframe" class="object-cover">
       </div>
     </section>
 
-    <!-- Section 4: Typography & Color -->
+        <!-- Section 4: Typography & Color -->
     <section class="my-20">
-      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">Typography & Color System</h2>
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">
+        Typography & Color System
+      </h2>
       <div class="w-20 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
         <!-- Colors -->
         <div>
-          <p class="text-lg font-light mb-4 text-gray-700">Color Used</p>
-          <div class="space-y-3">
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#1A87C1] rounded"></div>
-              <span class="text-sm text-gray-600">Eastern Blue - #1A87C1</span>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#6DB5CA]"></span>
+            <span class="text-gray-700">Color <span class="text-[#6DB5CA] font-medium">Used</span></span>
+          </p>
+
+          <div class="flex">
+            <!-- Color Bar -->
+            <div class="rounded-2xl overflow-hidden w-28">
+              <div class="h-16" style="background:#1A87C1;"></div>
+              <div class="h-16" style="background:#76B5D8;"></div>
+              <div class="h-16" style="background:#525654;"></div>
+              <div class="h-16" style="background:#696B6E;"></div>
+              <div class="h-16" style="background:#252654;"></div>
+              <div class="h-16" style="background:#202121;"></div>
             </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#7685DB] rounded"></div>
-              <span class="text-sm text-gray-600">Viking - #7685DB</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#525654] rounded"></div>
-              <span class="text-sm text-gray-600">Bali Hai - #525654</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#696B6E] rounded"></div>
-              <span class="text-sm text-gray-600">Nevada - #696B6E</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#252654] rounded"></div>
-              <span class="text-sm text-gray-600">Nandor - #252654</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-[#202121] rounded"></div>
-              <span class="text-sm text-gray-600">Shark - #202121</span>
+
+            <!-- Labels -->
+            <div class="ml-6 space-y-7 text-gray-700 flex flex-col justify-between">
+              <div>
+                <p class="font-medium">Eastern Blue</p>
+                <p class="text-sm text-gray-500">#1A87C1</p>
+              </div>
+              <div>
+                <p class="font-medium">Viking</p>
+                <p class="text-sm text-gray-500">#76B5D8</p>
+              </div>
+              <div>
+                <p class="font-medium">Bali Hai</p>
+                <p class="text-sm text-gray-500">#525654</p>
+              </div>
+              <div>
+                <p class="font-medium">Nevada</p>
+                <p class="text-sm text-gray-500">#696B6E</p>
+              </div>
+              <div>
+                <p class="font-medium">Nandor</p>
+                <p class="text-sm text-gray-500">#252654</p>
+              </div>
+              <div>
+                <p class="font-medium">Shark</p>
+                <p class="text-sm text-gray-500">#202121</p>
+              </div>
             </div>
           </div>
         </div>
+
         <!-- Typography -->
         <div>
-          <p class="text-lg font-light mb-4 text-gray-700">Font Used</p>
-          <h3 class="text-4xl font-light mb-2">Roboto</h3>
-          <p class="text-gray-600">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%^&*()</p>
+          <p class="text-lg font-light mb-6 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#6DB5CA]"></span>
+            <span class="text-gray-700">Front <span class="text-[#6DB5CA] font-medium">Used</span></span>
+          </p>
+
+          <!-- Font Showcase -->
+          <div class="space-y-6">
+            <h3 class="text-4xl font-semibold text-gray-800">Roboto</h3>
+
+            <!-- Large Preview -->
+            <p class="text-7xl font-light text-gray-800 mb-4">Ag</p>
+
+            <!-- Samples -->
+            <p class="text-xl tracking-wide text-gray-800">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </p>
+            <p class="text-xl text-gray-800">
+              abcdefghijklmnopqrstuvwxyz
+            </p>
+            <p class="text-xl text-gray-800">
+              0123456789 !@#$%^&*()
+            </p>
+            <p class="text-xl text-gray-800">
+              ฟหกด่าสว
+            </p>
+          </div>
         </div>
       </div>
     </section>
