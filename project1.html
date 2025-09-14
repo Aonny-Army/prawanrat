@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 01 – ECM Mobile</title>
+  <title>Project 1 - ECM Mobile</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -54,82 +54,164 @@
       z-index: 10;
     }
 
-    .full-divider {
-      border: none;
-      border-bottom: 1px solid #E5E7EB;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+    .card-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
     }
   </style>
 </head>
 
-<body class="bg-[#FCF5EF] text-gray-900">
+<body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="w-full bg-[#FCF5EF] z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
-    <div class="text-xl font-bold text-[#6DB5CA]">𝑷</div>
-    <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="index.html#home" class="hover:text-[#6DB5CA] transition">Home</a>
-      <a href="index.html#portfolio" class="hover:text-[#6DB5CA] transition">Portfolio</a>
-      <a href="index.html#contact" class="hover:text-[#6DB5CA] transition">Contact</a>
-    </nav>
-    <a href="index.html#contact" class="border border-[#6DB5CA] text-[#6DB5CA] px-4 py-2 rounded-full hover:bg-[#B8D8E0]/30 text-sm">
-      Let's Connect
-    </a>
+  <header class="w-full bg-white z-50 border-b border-gray-200">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-10 py-4">
+      <div class="text-xl font-semibold text-[#2A7A8C]">Portfolio</div>
+      <nav class="flex space-x-6 text-sm font-light pr-6">
+        <a href="index.html" class="hover:text-[#2A7A8C] transition">Back to Home</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Wrapper -->
-  <div class="site-frame px-8 my-16">
+  <div class="site-frame px-6 md:px-12">
 
     <!-- Project Title -->
-    <div class="mb-12">
-      <p class="text-sm uppercase tracking-wide font-medium text-gray-500 mb-2">Project 01</p>
-      <h1 class="text-3xl md:text-4xl font-bold text-[#2A7A8C] mb-4">
-        ECM (eCoachManager) System for Mobile
-        <span class="bg-[#430135] text-white text-sm px-2 py-1 rounded-md ml-2">Xd</span>
-      </h1>
-      <a href="mailto:prawanrat@example.com" class="inline-block bg-gray-800 text-white px-5 py-2 rounded-full text-sm hover:bg-gray-700">
-        Start a Project
-      </a>
+    <div class="mb-12 flex flex-col md:flex-row md:items-center md:justify-between">
+      <!-- Left Title -->
+      <div>
+        <p class="text-sm uppercase tracking-wide font-light text-gray-500 mb-2">Project 01</p>
+        <h1 class="text-3xl md:text-4xl font-light text-[#2A7A8C] mb-4">
+          ECM (eCoachManager) System for Mobile
+          <span class="bg-[#430135] text-white text-sm px-2 py-1 rounded-md ml-2 font-normal">Xd</span>
+        </h1>
+      </div>
+
+      <!-- Right Buttons -->
+      <div class="flex gap-3 mt-4 md:mt-0">
+        <a href="https://xd.adobe.com/view/51b2daa2-a639-41a5-b721-f0424ec91a04-04e1/"
+          target="_blank"
+          class="inline-block bg-[#6DB5CA] text-white px-5 py-2 rounded-full text-sm font-light shadow-md hover:bg-[#2A7A8C] transition">
+          View Mobile Prototype
+        </a>
+        <a href="https://xd.adobe.com/view/2d5cba52-25c8-404b-9198-4147ada78a03-780f/"
+          target="_blank"
+          class="inline-block border border-[#6DB5CA] text-[#2A7A8C] px-5 py-2 rounded-full text-sm font-light hover:bg-[#6DB5CA] hover:text-white transition">
+          View iPad Prototype
+        </a>
+      </div>
     </div>
 
-    <!-- Overview Section -->
-    <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
+    <!-- Section 1: Overview -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16">
       <!-- Text -->
       <div>
-        <h3 class="text-lg font-bold text-[#6DB5CA] mb-4">PROJECT OVERVIEW</h3>
-        <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-          The ECM (eCoachManager) Mobile System is an internship project focused on UX/UI design for mobile and iPad platforms. 
-          The goal was to improve user convenience and system accessibility. 
-          My responsibilities included wireframing, creating user journeys, prototyping, and designing user interfaces that are visually consistent and user-friendly. 
-          I conducted usability testing with real users and refined the design based on feedback. 
-          I also worked closely with the development team to ensure design feasibility and implemented responsive layouts to ensure smooth usage across both mobile phones and tablets.
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#2A7A8C]">Overview</h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          ECM (eCoachManager) is a transportation management system adapted for mobile use. 
+          This project involved creating a <span class="font-medium text-[#6DB5CA]">user-friendly interface</span> 
+          that enables staff to manage bookings, schedules, and customer information on the go.
         </p>
       </div>
-      <!-- Images -->
-      <div class="flex justify-center gap-6">
-        <img src="images/ecm-mobile1.png" alt="ECM Mobile Login" class="w-40 h-auto object-contain shadow-md rounded-lg">
-        <img src="images/ecm-mobile2.png" alt="ECM Mobile Dashboard" class="w-40 h-auto object-contain shadow-md rounded-lg">
+
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="images/ecm.png" alt="ECM Mobile" 
+          class="rounded-2xl shadow-md w-72 h-auto object-contain">
       </div>
     </section>
 
-    <!-- Problem Statement Section -->
-    <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <!-- Images -->
-      <div class="flex justify-center gap-6">
-        <img src="images/ecm-tablet.png" alt="ECM Tablet" class="w-72 h-auto object-contain shadow-md rounded-lg">
-        <img src="images/ecm-mobile3.png" alt="ECM Mobile" class="w-28 h-auto object-contain shadow-md rounded-lg">
+    <!-- Section 2: Problem Statement -->
+    <section class="grid md:grid-cols-2 gap-12 items-center my-16">
+      <!-- Image -->
+      <div class="flex justify-center order-2 md:order-1">
+        <img src="images/iPhone.png" alt="Problem Statement" 
+          class="rounded-2xl shadow-md w-72 h-auto object-contain">
       </div>
+
       <!-- Text -->
-      <div>
-        <h3 class="text-lg font-bold text-[#2A7A8C] mb-4">PROBLEM <span class="text-[#6DB5CA]">STATEMENT</span></h3>
-        <p class="text-gray-700 leading-relaxed text-sm md:text-base">
-          The original ECM (eCoachManager) system was designed primarily for desktop use, making it inconvenient for users to access while away from the office. 
-          This led to delays in retrieving important data and reduced overall workflow efficiency. 
-          Therefore, a mobile solution was needed to improve accessibility and support on-the-go usage.
+      <div class="order-1 md:order-2">
+        <h2 class="text-2xl md:text-3xl font-light mb-4 text-[#2A7A8C]">Problem Statement</h2>
+        <p class="text-gray-700 leading-relaxed font-light">
+          The original desktop system was <span class="font-medium text-[#FF7235]">not optimized for mobile</span>, 
+          leading to inefficiencies in on-site operations. 
+          Staff needed a responsive, portable solution to access data quickly. 
+          This redesign focuses on <span class="font-medium text-[#6DB5CA]">clarity, speed, and accessibility</span>.
         </p>
+      </div>
+    </section>
+
+    <!-- Section 3: Design Showcase -->
+    <section class="my-20">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">Design Showcase</h2>
+      <div class="w-20 h-1 bg-[#6DB5CA] mx-auto mb-12 rounded-full"></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <img src="images/wireframe1.png" alt="Wireframe" class="rounded-lg shadow-md object-cover">
+        <img src="images/wireframe2.png" alt="Wireframe" class="rounded-lg shadow-md object-cover">
+      </div>
+    </section>
+
+    <!-- Section 4: Typography & Color -->
+    <section class="my-20">
+      <h2 class="text-2xl md:text-3xl font-light text-center mb-6 text-[#2A7A8C]">Typography & Color System</h2>
+      <div class="w-20 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Colors -->
+        <div>
+          <p class="text-lg font-light mb-4 text-gray-700">Color Used</p>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#1A87C1] rounded"></div>
+              <span class="text-sm text-gray-600">Eastern Blue - #1A87C1</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#7685DB] rounded"></div>
+              <span class="text-sm text-gray-600">Viking - #7685DB</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#525654] rounded"></div>
+              <span class="text-sm text-gray-600">Bali Hai - #525654</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#696B6E] rounded"></div>
+              <span class="text-sm text-gray-600">Nevada - #696B6E</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#252654] rounded"></div>
+              <span class="text-sm text-gray-600">Nandor - #252654</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-[#202121] rounded"></div>
+              <span class="text-sm text-gray-600">Shark - #202121</span>
+            </div>
+          </div>
+        </div>
+        <!-- Typography -->
+        <div>
+          <p class="text-lg font-light mb-4 text-gray-700">Font Used</p>
+          <h3 class="text-4xl font-light mb-2">Roboto</h3>
+          <p class="text-gray-600">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%^&*()</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Next Project -->
+    <section class="my-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-light text-[#2A7A8C] mb-6">Next Project</h2>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="project2.html"
+           class="block bg-white border border-[#B8D8E0] rounded-2xl px-8 py-6 shadow-sm hover:shadow-md transition card-hover w-72">
+          <h3 class="text-lg font-semibold text-[#6DB5CA] mb-2">Project 02</h3>
+          <p class="text-gray-700 font-light">Omni Alarm – Smart Alerting System</p>
+        </a>
+        <a href="index.html"
+           class="block bg-white border border-[#FF7235] rounded-2xl px-8 py-6 shadow-sm hover:shadow-md transition card-hover w-72">
+          <h3 class="text-lg font-semibold text-[#FF7235] mb-2">All Projects</h3>
+          <p class="text-gray-700 font-light">Back to portfolio overview</p>
+        </a>
       </div>
     </section>
 
