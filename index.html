@@ -85,28 +85,46 @@
 </head>
 
 <body class="bg-white text-gray-900">
+    <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+      
+      <!-- Logo -->
+      <div class="text-3xl font-bold tracking-wide text-[#6DB5CA] ml-[-24px]">
+        𝓟
+      </div>
 
-  <!-- Navbar -->
-  <header class="w-full bg-white z-50 flex justify-between items-center px-10 py-4 border-b border-gray-200">
-    <div class="text-xl font-bold" style="color:#6DB5CA;">𝑷</div>
-    <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="#home" class="hover:text-[#FF7235] transition">Home</a>
-      <a href="#about" class="hover:text-[#FF7235] transition">About</a>
-      <a href="#portfolio" class="hover:text-[#FF7235] transition">Portfolio</a>
-      <a href="#skills" class="hover:text-[#FF7235] transition">Skills</a>
-      <a href="#activities" class="hover:text-[#FF7235] transition">Activities</a>
-      <a href="#contact" class="hover:text-[#FF7235] transition">Contact</a>
-    </nav>
-    <a href="#contact" class="border border-[#6DB5CA] text-[#6DB5CA] px-4 py-2 rounded-full hover:bg-[#B8D8E0] text-sm">
-      Let's Connect
-    </a>
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+        <a href="#home" 
+           class="hover:text-[#6DB5CA] transition relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+          Home
+        </a>
+        <a href="#profile" 
+           class="hover:text-[#6DB5CA] transition relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+          Profile
+        </a>
+        <a href="#projects" 
+           class="hover:text-[#6DB5CA] transition relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+          Projects
+        </a>
+        <a href="#activities" 
+           class="hover:text-[#6DB5CA] transition relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+          Activities
+        </a>
+        <a href="#contact" 
+           class="hover:text-[#6DB5CA] transition relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+          Contact
+        </a>
+      </nav>
+    </div>
   </header>
 
   <!-- Wrapper -->
   <div class="site-frame">
     
     <!-- Hero Section -->
-<section id="home" class="mt-12 px-8 grid md:grid-cols-2 gap-12 items-center font-['Roboto']">
+<section id="home" class="mt-32 px-8 grid md:grid-cols-2 gap-12 items-center font-['Roboto']">
   <!-- Text -->
   <div class="flex flex-col justify-start text-left">
     <h2 class="text-xl md:text-2xl font-light tracking-[0.15em] uppercase mb-3 text-[#2A7A8C]">
@@ -131,7 +149,7 @@
     
 <!-- Card 1 -->
 <div id="card1"
-  class="w-64 h-[24rem] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:-translate-y-2 md:mt-12 
+  class="w-64 h-[24rem] mt-12 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:-translate-y-2
          bg-gradient-to-b from-[#6DB5CA] to-[#B8D8E0] relative">
   <div class="absolute inset-0 bg-white/10"></div> <!-- overlay โปร่งแสง -->
   <div class="relative z-10 p-5 flex flex-col h-full">
@@ -163,7 +181,6 @@
   </div>
 </div>
 </section>
-
   </div><!-- /site-frame -->
 
   <!-- Divider -->
@@ -632,7 +649,6 @@
     document.getElementById('phoneModal').classList.add('hidden');
   }
 </script>
-
 
   <!-- AOS Animate On Scroll JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
