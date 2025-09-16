@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My CV</title>
+  <title>Curriculum Vitae - Prawanrat</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
@@ -16,7 +16,7 @@
       </h1>
       <nav class="flex space-x-6 text-sm font-light">
         <a href="index.html" class="hover:text-[#2A7A8C] transition">Home</a>
-        <a href="resume.html" class="text-[#2A7A8C] font-medium border-b-2 border-[#2A7A8C] pb-1">Resume</a>
+        <a href="resume.html" class="hover:text-[#2A7A8C] transition">Resume</a>
       </nav>
     </div>
   </header>
@@ -30,24 +30,27 @@
       </h2>
       <div class="w-16 h-1 bg-[#FF7235] mx-auto mb-6 rounded-full"></div>
       <p class="text-gray-600 text-lg font-light">
-        View my professional CV or download the PDF version below.
+        View my professional CV below or download the PDF version.
       </p>
     </div>
 
-    <!-- CV Preview Card -->
-    <div class="rounded-2xl bg-white overflow-hidden border border-gray-200 mb-12 shadow-sm hover:shadow-md transition">
+    <!-- CV Preview Card with vertical borders -->
+    <div class="rounded-2xl bg-white overflow-hidden border-x border-gray-300 mb-12 shadow-sm hover:shadow-md transition">
       <iframe src="files/CV Prawanrat Chaichanla.pdf" class="w-full h-[700px]" frameborder="0"></iframe>
     </div>
 
     <!-- Button Group -->
-    <div class="flex justify-center gap-6">
-      <a href="files/CV Prawanrat Chaichanla.pdf" download
-         class="px-8 py-3 rounded-full bg-[#2A7A8C] text-white font-light shadow hover:bg-[#1F5F6E] transition">
-        Download CV (PDF)
-      </a>
+    <div class="flex justify-between items-center flex-wrap">
+      <!-- Back Button -->
       <a href="index.html#profile"
          class="px-8 py-3 rounded-full border border-[#2A7A8C] text-[#2A7A8C] font-light hover:bg-[#F1FAFB] transition">
         ← Back to Portfolio
+      </a>
+
+      <!-- Download Button -->
+      <a href="files/CV%20Prawanrat%20Chaichanla.pdf" download
+         class="px-8 py-3 rounded-full bg-[#2A7A8C] text-white font-light shadow hover:bg-[#1F5F6E] transition">
+        Download CV (PDF)
       </a>
     </div>
   </main>
