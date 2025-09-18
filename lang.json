@@ -1,1 +1,17 @@
+{
+  "en": {
+    "home": "Home",
+    "profile": "Profile",
+    "projects": "Projects",
+    "activities": "Activities",
+    "contact": "Contact"
+  },
+  "th": {
+    "home": "หน้าแรก",
+    "profile": "โปรไฟล์",
+    "projects": "ผลงาน",
+    "activities": "กิจกรรม",
+    "contact": "ติดต่อ"
+  }
+}
 
