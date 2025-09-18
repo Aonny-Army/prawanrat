@@ -87,40 +87,35 @@
 <body class="bg-white text-gray-900">
     <!-- Navbar -->
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+<header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     
     <!-- Logo -->
-    <div class="text-xl font-semibold text-[#2A7A8C]" data-logo>
+    <div class="text-xl font-semibold text-[#2A7A8C]">
       MyPortfolio
     </div>
 
     <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600" data-nav>
-      <a href="#home" data-nav-link="home" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+      <a href="#home" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
         Home
       </a>
-      <a href="#profile" data-nav-link="profile" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+      <a href="#profile" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
         Profile
       </a>
-      <a href="#projects" data-nav-link="projects" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+      <a href="#projects" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
         Projects
       </a>
-      <a href="#activities" data-nav-link="activities" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+      <a href="#activities" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
         Activities
       </a>
-      <a href="#contact" data-nav-link="contact" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
+      <a href="#contact" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
         Contact
       </a>
     </nav>
 
-    <!-- Language Switch -->
-    <button id="lang-toggle" data-lang="en" class="hidden md:inline-block px-3 py-1 border border-[#2A7A8C] text-[#2A7A8C] rounded-full text-xs font-medium hover:bg-[#2A7A8C] hover:text-white transition">
-      EN
-    </button>
-
     <!-- Mobile Hamburger -->
-    <button id="menu-btn" data-menu-btn class="md:hidden text-gray-700 focus:outline-none">
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" 
            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" 
@@ -130,17 +125,12 @@
   </div>
 
   <!-- Mobile Menu (hidden by default) -->
-  <div id="mobile-menu" data-mobile-menu class="hidden flex-col space-y-4 px-6 pb-6 bg-white shadow-md md:hidden">
-    <a href="#home" data-mobile-link="home" class="block text-gray-700 hover:text-[#6DB5CA]">Home</a>
-    <a href="#profile" data-mobile-link="profile" class="block text-gray-700 hover:text-[#6DB5CA]">Profile</a>
-    <a href="#projects" data-mobile-link="projects" class="block text-gray-700 hover:text-[#6DB5CA]">Projects</a>
-    <a href="#activities" data-mobile-link="activities" class="block text-gray-700 hover:text-[#6DB5CA]">Activities</a>
-    <a href="#contact" data-mobile-link="contact" class="block text-gray-700 hover:text-[#6DB5CA]">Contact</a>
-
-    <!-- Mobile Language Switch -->
-    <button id="lang-toggle-mobile" data-lang="en" class="mt-4 px-3 py-1 border border-[#2A7A8C] text-[#2A7A8C] rounded-full text-xs font-medium hover:bg-[#2A7A8C] hover:text-white transition">
-      EN
-    </button>
+  <div id="mobile-menu" class="hidden flex-col space-y-4 px-6 pb-6 bg-white shadow-md md:hidden">
+    <a href="#home" class="block text-gray-700 hover:text-[#6DB5CA]">Home</a>
+    <a href="#profile" class="block text-gray-700 hover:text-[#6DB5CA]">Profile</a>
+    <a href="#projects" class="block text-gray-700 hover:text-[#6DB5CA]">Projects</a>
+    <a href="#activities" class="block text-gray-700 hover:text-[#6DB5CA]">Activities</a>
+    <a href="#contact" class="block text-gray-700 hover:text-[#6DB5CA]">Contact</a>
   </div>
 </header>
 
@@ -148,33 +138,16 @@
 <script>
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
-  const langBtn = document.getElementById('lang-toggle');
-  const langBtnMobile = document.getElementById('lang-toggle-mobile');
-
-  // Toggle mobile menu
+  
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
-
-  // Toggle language (desktop + mobile)
-  function toggleLang(buttons) {
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const currentLang = btn.getAttribute('data-lang');
-        const newLang = currentLang === 'en' ? 'th' : 'en';
-        btn.setAttribute('data-lang', newLang);
-        btn.textContent = newLang.toUpperCase();
-      });
-    });
-  }
-
-  toggleLang([langBtn, langBtnMobile]);
 </script>
 
-<!-- Wrapper -->
-<div class="site-frame">
+  <!-- Wrapper -->
+  <div class="site-frame">
 
-  <!-- Hero Section -->
+        <!-- Hero Section -->
 <section id="home" class="mt-12 px-8 grid md:grid-cols-2 gap-12 items-center font-['Roboto']">
   <!-- Text -->
   <div class="flex flex-col justify-start text-left">
@@ -725,26 +698,6 @@
       event.target.classList.add('active-tab');
     }
   </script>
-
-  <script>
-  let translations = {};
-
-  // โหลดไฟล์ JSON
-  fetch("lang.json")
-    .then(res => res.json())
-    .then(data => {
-      translations = data;
-      switchLanguage("en"); // ค่าเริ่มต้น
-    });
-
-  function switchLanguage(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        el.textContent = translations[lang][key];
-      }
-    });
-  }
-</script> 
 </body>
+
 </html>
