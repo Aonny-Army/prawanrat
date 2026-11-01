@@ -11,14 +11,67 @@
   <title>Project 3 - Pet Health Log</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "DM Sans", "Noto Sans Thai", sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", "Noto Sans Thai", sans-serif;
+    }
+
+    [class*="rounded"] {
+      border-radius: 0 !important;
+    }
+
+    .project-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+    }
+
+    .project-header-inner {
+      min-height: 74px;
+    }
+
+    .project-brand {
+      color: #151f4a;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+
+    .project-brand strong {
+      display: block;
+      font-family: "Manrope", "Noto Sans Thai", sans-serif;
+      font-size: .96rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .project-brand span {
+      display: block;
+      margin-top: 4px;
+      color: #62727a;
+      font-size: .68rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .project-nav a {
+      color: #62727a;
+      text-decoration: none;
+    }
+
+    .project-nav a:hover {
+      color: #6DBE45;
     }
 
     .site-frame {
@@ -65,11 +118,14 @@
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="w-full bg-white z-50 border-b border-gray-200">
-    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-10 py-4">
-      <div class="text-xl font-semibold text-[#6DBE45]">Portfolio</div>
-      <nav class="flex space-x-6 text-sm font-light pr-6">
-        <a href="index.html" class="hover:text-[#6DBE45] transition">Back to Home</a>
+  <header class="project-header w-full z-50 border-b border-gray-200">
+    <div class="project-header-inner max-w-[1280px] mx-auto flex justify-between items-center px-6 md:px-10 py-4">
+      <a class="project-brand" href="index.html" aria-label="Prawanrat Chaichanla, home">
+        <strong>PRAWANRAT CHAICHANLA</strong>
+        <span>Business Analyst · UX/UI</span>
+      </a>
+      <nav class="project-nav flex space-x-6 text-sm font-light">
+        <a href="index.html" class="transition">Back to Home <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -239,4 +295,3 @@
 
 </body>
 </html>
-
