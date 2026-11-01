@@ -2,704 +2,914 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prawanrat Portfolio</title>
-
-  <!-- Favicon -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prawanrat Chaichanla — Business Analyst and UX/UI Designer." id="page-description">
+  <meta name="theme-color" content="#f8faf9">
+  <title>Prawanrat Chaichanla — Business Analyst | UX/UI Design</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animate On Scroll CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      color-scheme: light;
+      --ink: #263238;
+      --muted: #687477;
+      --teal: #2a7a8c;
+      --teal-light: #78b9ad;
+      --navy: #263238;
+      --line: #d9e0dd;
+      --paper: #f8faf9;
+      --white: #fff;
+      --accent: #ff7235;
+      --content: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
-      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", "Noto Sans Thai", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
     }
-
-    .site-frame {
-      position: relative;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .site-frame::before,
-    .site-frame::after {
-      content: "";
+    body, button, a { -webkit-tap-highlight-color: transparent; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3, h4 { margin: 0; font-family: "Manrope", "Noto Sans Thai", sans-serif; line-height: 1.2; }
+    p { margin: 0; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-frame { position: relative; overflow: clip; }
+    .site-frame::before, .site-frame::after {
       position: fixed;
+      z-index: -1;
       top: 0;
       bottom: 0;
       width: 1px;
-      background: rgba(0, 0, 0, 0.05);
-      z-index: 0;
+      background: rgba(42, 122, 140, .10);
+      content: "";
+      pointer-events: none;
     }
-
-    .site-frame::before {
-      left: 80px;
+    .site-frame::before { left: max(24px, calc((100vw - 1280px) / 2)); }
+    .site-frame::after { right: max(24px, calc((100vw - 1280px) / 2)); }
+    .section { padding-block: 92px; border-top: 1px solid var(--line); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: var(--teal);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
-
-    .site-frame::after {
-      right: 80px;
+    .eyebrow::before { width: 28px; height: 1px; background: var(--accent); content: ""; }
+    .section-heading { max-width: 620px; margin-bottom: 40px; }
+    .section-heading h2 { margin-bottom: 12px; color: var(--navy); font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.045em; }
+    .section-heading p { color: var(--muted); }
+    .outlined { border: 1px solid var(--line); background: rgba(255,255,255,.82); }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 20px;
+      border: 1px solid var(--teal);
+      color: var(--teal);
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
     }
+    .button:hover, .button:focus-visible { background: var(--teal); color: var(--white); }
+    .button-primary { background: var(--teal); color: var(--white); }
+    .button-primary:hover, .button-primary:focus-visible { background: var(--navy); border-color: var(--navy); }
+    .text-link { color: var(--teal); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    :focus-visible { outline: 3px solid rgba(255, 114, 53, .55); outline-offset: 3px; }
 
-    @media (max-width: 1280px) {
-      .site-frame::before,
-      .site-frame::after {
+    .header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(248,250,249,.96);
+      backdrop-filter: blur(12px);
+    }
+    .nav-wrap { display: flex; min-height: 74px; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; flex-direction: column; color: var(--navy); line-height: 1.2; text-decoration: none; }
+    .brand strong { font-family: "Manrope", "Noto Sans Thai", sans-serif; font-size: .96rem; letter-spacing: .04em; }
+    .brand span { margin-top: 4px; color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); }
+    .nav-links a { color: var(--muted); font-size: .8rem; font-weight: 400; text-decoration: none; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-links .nav-resume { padding: 8px 12px; border: 1px solid var(--line); color: var(--teal); }
+    .language-switch { display: inline-flex; align-items: center; gap: 5px; margin-left: 2px; padding-left: 12px; border-left: 1px solid var(--line); }
+    .language-switch button { border: 0; background: transparent; padding: 5px 2px; color: var(--muted); font: inherit; font-size: .75rem; font-weight: 400; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { color: var(--teal); text-decoration: underline; text-underline-offset: 4px; }
+    .language-switch span { color: var(--line); }
+    .menu-button { display: none; border: 1px solid var(--line); background: transparent; color: var(--navy); padding: 8px 11px; font: inherit; cursor: pointer; }
+
+    .hero { display: grid; min-height: 650px; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 28px; padding-block: 88px 96px; }
+    .hero h1 { max-width: 680px; color: var(--navy); font-size: clamp(2.7rem, 6.3vw, 5.3rem); font-weight: 600; letter-spacing: -.025em; }
+    .hero h1 span { color: var(--teal); }
+    .hero-title { margin-top: 18px; color: var(--teal); font-family: "Manrope", "Noto Sans Thai", sans-serif; font-size: clamp(.85rem, 1.6vw, 1.05rem); font-weight: 700; letter-spacing: .025em; }
+    .hero-copy { max-width: 560px; margin-top: 24px; color: var(--muted); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero-aside { position: relative; max-width: 600px; margin-left: 0; padding: 18px; }
+    .hero-aside::before { position: absolute; top: -11px; right: -11px; width: 72px; height: 72px; border-top: 1px solid var(--accent); border-right: 1px solid var(--accent); content: ""; }
+    .hero-photo-frame { width: 100%; height: 600px; overflow: hidden; }
+    .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 80%; transform: scale(1.3); transform-origin: center 65%; }
+
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
+    .about-mark { padding: 28px; }
+    .about-mark img { width: 100%; max-height: 390px; object-fit: cover; object-position: center 35%; }
+    .about-copy p + p { margin-top: 18px; }
+    .about-copy { color: var(--muted); font-size: 1.03rem; }
+    .about-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .about-fact { padding: 14px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .about-fact strong { display: block; color: var(--navy); font-family: "Manrope", "Noto Sans Thai", sans-serif; font-size: .9rem; }
+    .about-fact span { color: var(--muted); font-size: .8rem; }
+
+    .experience-list { border-top: 1px solid var(--line); }
+    .experience { display: grid; grid-template-columns: 220px 1fr; gap: 38px; padding: 32px 0; border-bottom: 1px solid var(--line); }
+    .experience-date { color: var(--teal); font-size: .86rem; font-weight: 700; }
+    .experience h3 { color: var(--navy); font-size: 1.35rem; }
+    .experience-company { margin-top: 6px; color: var(--muted); font-weight: 600; }
+    .experience-body > p { margin-top: 18px; color: var(--muted); }
+    .responsibility-group { margin-top: 22px; }
+    .responsibility-group h4 { margin-bottom: 8px; color: var(--teal); font-size: .94rem; }
+    .responsibility-group ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .responsibility-group li + li { margin-top: 5px; }
+
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .project-card { display: flex; min-height: 300px; flex-direction: column; overflow: hidden; color: inherit; text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+    .project-card:hover { transform: translateY(-3px); border-color: var(--teal-light); }
+    .project-visual { display: grid; height: 240px; place-items: center; overflow: hidden; border-bottom: 1px solid var(--line); background: linear-gradient(135deg, #edf4f3, #f8faf9); }
+    .project-visual img { width: 100%; height: 100%; object-fit: contain; transition: transform .25s ease; }
+    .project-card:hover .project-visual img { transform: scale(1.04); }
+    .project-visual--business { padding: 18px; background: #edf4f3; }
+    .project-content { padding: 21px 23px 24px; }
+    .project-category { color: var(--teal); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .project-content h3 { margin-top: 8px; color: var(--navy); font-size: 1.2rem; }
+    .project-content p { margin-top: 9px; color: var(--muted); font-size: .9rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .tag { padding: 3px 9px; border: 1px solid var(--line); color: var(--muted); font-size: .73rem; }
+    .activities { margin-top: 44px; }
+    .activities-heading { max-width: none; margin-bottom: 20px; }
+    .activity-tabs { display: flex; justify-content: flex-start; gap: 10px; overflow-x: auto; }
+    .activity-tab { flex: 0 0 auto; padding: 10px 16px; border: 1px solid var(--line); border-radius: 0; background: var(--white); color: var(--muted); font: inherit; font-size: .88rem; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+    .activity-tab[aria-selected="true"] { border-color: var(--teal); background: var(--teal); color: var(--white); font-weight: 700; }
+    .activity-panel { margin-top: 22px; }
+    .activity-card { overflow: hidden; border: 1px solid var(--line); background: var(--white); }
+    .activity-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 0 22px 22px; background: var(--white); }
+    .activity-photos--trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .activity-photos img { width: 100%; height: 300px; border: 1px solid var(--line); object-fit: cover; }
+    .activity-caption { padding: 25px 28px; border-bottom: 1px solid var(--line); }
+    .activity-caption span { color: var(--teal); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .activity-caption h4 { margin-top: 5px; color: var(--navy); font-size: 1.15rem; }
+    .activity-description { max-width: 760px; margin-top: 14px; padding-left: 16px; border-left: 2px solid var(--teal); color: var(--muted); font-size: .9rem; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .skill-group { padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .skill-group h3 { margin-bottom: 15px; color: var(--navy); font-size: 1.05rem; }
+    .skill-group--business { grid-column: 1 / -1; }
+    .skill-group ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .skill-group li { padding: 5px 9px; border: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    .contact-card { display: flex; min-width: 0; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: border-color .2s ease, color .2s ease; }
+    .contact-card span { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-card strong { font-size: .9rem; font-weight: 500; overflow-wrap: anywhere; }
+    .contact-card:hover { border-color: var(--teal); color: var(--teal); }
+    .contact-card:focus-visible { outline-offset: 6px; }
+    .resume-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px 30px; border: 0; border-left: 2px solid var(--teal); background: #eef3f3; }
+    .resume-panel h3 { color: var(--navy); font-size: 1.2rem; }
+    .resume-panel p { margin-top: 6px; color: var(--muted); font-size: .9rem; }
+    .resume-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    footer { padding-block: 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .75rem; }
+      .hero { min-height: 0; gap: 32px; }
+      .hero-photo-frame { height: 500px; }
+      .about-grid { gap: 34px; }
+      .experience { grid-template-columns: 175px 1fr; gap: 25px; }
+    }
+    @media (max-width: 1000px) {
+      html { scroll-padding-top: 72px; }
+      .container { width: min(100% - 36px, var(--content)); }
+      .section { padding-block: 68px; }
+      .nav-wrap { min-height: 68px; }
+      .menu-button { display: inline-flex; align-items: center; gap: 8px; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
         display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 16px;
+        border-bottom: 1px solid var(--line);
+        background: var(--paper);
       }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 10px 0; font-size: .9rem; }
+      .nav-links .nav-resume { padding: 8px 10px; align-self: flex-start; }
+      .hero { grid-template-columns: 1fr; gap: 34px; padding-block: 68px 76px; }
+      .hero h1 { font-size: clamp(2.8rem, 13vw, 4.5rem); }
+      .hero-aside { width: min(100%, 560px); margin-inline: auto; padding: 18px; }
+      .hero-photo-frame { height: min(150vw, 600px); }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-mark { max-width: 400px; margin-inline: auto; }
+      .experience { grid-template-columns: 1fr; gap: 10px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .activity-photos img { height: 260px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-group--business { grid-column: auto; }
+      .resume-panel { align-items: flex-start; flex-direction: column; }
     }
-
-    .site-frame>* {
-      position: relative;
-      z-index: 10;
+    @media (max-width: 700px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 18px; max-width: 480px; margin-inline: auto; }
+      .activity-photos, .activity-photos--trio { grid-template-columns: 1fr; }
+      .activity-photos { padding: 0 14px 14px; }
+      .activity-photos img { height: min(72vw, 360px); }
+      .activity-caption { padding: 20px; }
+      .activity-description { margin-top: 12px; }
     }
-
-    .full-divider {
-      border: none;
-      border-bottom: 1px solid #E5E7EB;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+    @media (max-width: 420px) {
+      .container { width: min(100% - 28px, var(--content)); }
+      .hero-actions, .resume-actions { width: 100%; }
+      .hero-actions .button, .resume-actions .button { flex: 1 1 100%; }
+      .about-facts { grid-template-columns: 1fr; }
+      .project-visual--business { padding: 14px; }
+      .footer-inner { flex-direction: column; }
     }
-
-    /* Hover effect on cards */
-    .card-hover {
-      transition: transform 0.3s ease;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-8px) scale(1.02);
-    }
-
-    .active-tab {
-      background-color: #f3f4f6;
-      border-color: #6DB5CA;
-      font-weight: bold;
-      color: #6DB5CA;
+    html[lang="th"] .eyebrow,
+    html[lang="th"] .brand span { letter-spacing: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
   </style>
 </head>
 
-<body class="bg-white text-gray-900">
-    <!-- Navbar -->
-  <!-- Header -->
-<header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    
-    <!-- Logo -->
-    <div class="text-xl font-semibold text-[#2A7A8C]">
-      Portfolio
-    </div>
-
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-      <a href="#home" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
-        Home
+<body>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Prawanrat Chaichanla, home" data-i18n-aria-label="brand.aria">
+        <strong>PRAWANRAT CHAICHANLA</strong>
+        <span data-i18n="brand.subtitle">Business Analyst · UX/UI</span>
       </a>
-      <a href="#profile" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
-        Profile
-      </a>
-      <a href="#projects" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
-        Projects
-      </a>
-      <a href="#activities" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
-        Activities
-      </a>
-      <a href="#contact" class="hover:text-[#6DB5CA] relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-[#6DB5CA] hover:after:w-full after:transition-all">
-        Contact
-      </a>
-    </nav>
-
-    <!-- Mobile Hamburger -->
-    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" 
-           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" 
-              d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu (hidden by default) -->
-  <div id="mobile-menu" class="hidden flex-col space-y-4 px-6 pb-6 bg-white shadow-md md:hidden">
-    <a href="#home" class="block text-gray-700 hover:text-[#6DB5CA]">Home</a>
-    <a href="#profile" class="block text-gray-700 hover:text-[#6DB5CA]">Profile</a>
-    <a href="#projects" class="block text-gray-700 hover:text-[#6DB5CA]">Projects</a>
-    <a href="#activities" class="block text-gray-700 hover:text-[#6DB5CA]">Activities</a>
-    <a href="#contact" class="block text-gray-700 hover:text-[#6DB5CA]">Contact</a>
-  </div>
-</header>
-
-<!-- JS Toggle -->
-<script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
-
-  <!-- Wrapper -->
-  <div class="site-frame">
-
-        <!-- Hero Section -->
-<section id="home" class="mt-12 px-8 grid md:grid-cols-2 gap-12 items-center font-['Roboto']">
-  <!-- Text -->
-  <div class="flex flex-col justify-start text-left">
-    <h2 class="text-xl md:text-2xl font-light tracking-[0.15em] uppercase mb-3 text-[#2A7A8C]">
-      Portfolio
-    </h2>
-    <div class="h-0.5 w-12 bg-[#FF7235] mb-6"></div>
-
-    <h1 class="text-5xl md:text-6xl font-light leading-tight mb-6">
-      <span class="text-[#2A7A8C]">Prawanrat</span><br>
-      <span class="text-[#151f4a] pl-14">Chaichanla</span>
-    </h1>
-
-    <p class="text-lg leading-relaxed text-gray-600 font-light max-w-lg">
-      Welcome to my design journey. As a passionate UI/UX designer, 
-      I enjoy turning complex ideas into simple, elegant solutions. 
-      This portfolio showcases the projects that helped shape my skills and mindset.
-    </p>
-  </div>
-
-  <!-- Stylish Cards -->
-  <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-8 items-center">
-    
-<!-- Card 1 -->
-<div id="card1"
-  class="w-64 h-[24rem] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:-translate-y-2 md:mt-24 
-         bg-gradient-to-b from-[#6DB5CA] to-[#B8D8E0] relative">
-  <div class="absolute inset-0 bg-white/10"></div> <!-- overlay โปร่งแสง -->
-  <div class="relative z-10 p-5 flex flex-col h-full">
-    <h3 class="text-lg font-semibold mb-4 text-white leading-snug">
-      I'm<br>Prawanrat Chaichanla
-    </h3>
-    <div class="flex-1">
-      <img src="images/IMG_1693.JPG" alt="My Photo"
-        class="w-full h-full object-cover rounded-2xl shadow-md">
+      <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span aria-hidden="true">☰</span> <span data-i18n="nav.menu">Menu</span>
+      </button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation" data-i18n-aria-label="nav.aria">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a class="nav-resume" href="#resume" data-i18n="nav.resume">Resume</a>
+        <div class="language-switch" role="group" aria-label="Choose language" data-i18n-aria-label="language.label">
+          <button type="button" data-language="th" aria-pressed="false" aria-label="Switch to Thai">TH</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-language="en" aria-pressed="true" aria-label="Switch to English">EN</button>
+        </div>
+      </nav>
     </div>
-  </div>
-</div>
+  </header>
 
-<!-- Card 2 -->
-<div id="card2"
-  class="w-64 h-[24rem] rounded-3xl overflow-hidden transition-transform hover:-translate-y-2
-         bg-gradient-to-t from-[#6DB5CA] to-[#A7D8F0] mt-12">
-  <div class="flex flex-col h-full p-5">
-    <!-- Title -->
-    <h3 class="text-lg font-semibold mb-3 text-white leading-snug">
-      Design<br>Work
-    </h3>
-
-    <!-- Image (ใหญ่ขึ้น) -->
-    <div class="flex-1">
-      <img src="images/Mockup.png" alt="Design Work"
-        class="w-full h-full object-cover rounded-xl">
-    </div>
-  </div>
-  </div><!-- /Cards -->
-</section><!-- /Hero Section -->
-
-  </div><!-- /site-frame -->
-
-  <!-- Divider -->
-  <hr class="full-divider my-10">
-  
-<!-- Profile Section -->
-<section id="profile" class="px-8 max-w-6xl mx-auto my-24 font-['Roboto']">
-  <h2 class="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide text-[#2A7A8C]">
-    Profile
-  </h2>
-  <div class="w-16 h-1 bg-[#6DB5CA] mx-auto mb-12 rounded-full"></div>
-
-  <div class="grid md:grid-cols-2 gap-12 items-center">
-    
-    <!-- Profile Photo -->
-    <div class="flex justify-center relative">
-      <div class="absolute -z-10 w-72 h-72 bg-[#B8D8E0] rounded-full blur-3xl opacity-50 top-10 left-10"></div>
-      <img src="images/IMG_4467.jpg.jpg" alt="Profile Photo"
-        class="rounded-2xl w-72 h-72 md:w-80 md:h-80 object-cover shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-    </div>
-    
-    <!-- Text -->
-    <div>
-      <p class="text-lg leading-relaxed text-gray-700 font-light">
-        I’m an IT graduate with a passion for 
-        <span class="text-[#2A7A8C] font-medium">UX/UI design</span>. 
-        I enjoy creating user-centered interfaces using tools like 
-        <span class="text-[#6DB5CA] font-medium">Figma</span> and 
-        <span class="text-[#6DB5CA] font-medium">Adobe XD</span>. 
-        With a background in both design and programming, 
-        I’m eager to grow and turn ideas into meaningful experiences.
-      </p>
-      
-      <!-- Buttons -->
-      <div class="mt-8 flex flex-wrap gap-4">
-        <!-- Contact -->
-        <a href="#contact"
-          class="inline-block px-6 py-3 rounded-xl bg-[#6DB5CA] text-white font-light tracking-wide shadow-md hover:bg-[#2A7A8C] transition-all duration-300">
-          Contact Me
-        </a>
-        
-        <!-- Resume -->
-        <a href="resume.html" target="_blank"
-          class="inline-block px-6 py-3 rounded-xl border border-[#6DB5CA] text-[#2A7A8C] font-light tracking-wide hover:bg-[#6DB5CA] hover:text-white transition-all duration-300">
-          Resume
-        </a>
-        
-        <!-- CV -->
-        <a href="cv.html" target="_blank"
-          class="inline-block px-6 py-3 rounded-xl border border-[#6DB5CA] text-[#2A7A8C] font-light tracking-wide hover:bg-[#6DB5CA] hover:text-white transition-all duration-300">
-          CV
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Divider -->
-  <hr class="full-divider my-10">
-  
-  <!-- Design Tools Section -->
-<section id="design-tools" class="px-8 max-w-6xl mx-auto my-12">
-    
-<!-- Design Tools Section -->
-<section id="design-tools" class="px-6 md:px-12 my-20 font-['Roboto']">
-  <!-- Heading -->
-  <div class="flex items-center justify-center mb-12">
-    <div class="h-px w-16 bg-gray-200 mr-4"></div>
-    <h2 class="text-lg font-light tracking-[0.25em] uppercase text-[#6DB5CA]">
-      Design Tools
-    </h2>
-    <div class="h-px w-16 bg-gray-200 ml-4"></div>
-  </div>
-
-  <!-- Grid -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
-    <div class="flex flex-col items-center">
-      <img src="images/Figma-logo.png" alt="Figma" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Figma</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/XD-icon.png" alt="Adobe XD" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">XD</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/Illustrator-icon.png" alt="Illustrator" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Illustrator</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/Photoshop_icon.png" alt="Photoshop" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Photoshop</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/Visual_Studio_Code.png" alt="VS Code" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">VS Code</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/Microsoft_logo.png" alt="Microsoft" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Microsoft</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/Android_Studio_icon.png" alt="Android Studio" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Android Studio</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="images/githup.png" alt="Github" class="w-12 h-12 mb-2">
-      <span class="text-sm text-gray-600">Github</span>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Divider -->
-    <hr class="full-divider my-10">
-
-<!-- Skills Section -->
-<section id="skills" class="px-6 md:px-12 my-20 font-['Roboto']">
-  <!-- Heading -->
-  <div class="flex items-center justify-center mb-12">
-    <div class="h-px w-16 bg-gray-200 mr-4"></div>
-    <h2 class="text-xl font-light tracking-[0.25em] uppercase text-[#6DB5CA]">
-      Programming Languages
-    </h2>
-    <div class="h-px w-16 bg-gray-200 ml-4"></div>
-  </div>
-
-  <!-- Skill List -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-lg font-light text-gray-500">
-    <span class="hover:text-[#6DB5CA] transition">HTML</span>
-    <span class="hover:text-[#6DB5CA] transition">C</span>
-    <span class="hover:text-[#6DB5CA] transition">CSS</span>
-    <span class="hover:text-[#6DB5CA] transition">Java</span>
-    <span class="hover:text-[#6DB5CA] transition">Flutter</span>
-    <span class="hover:text-[#6DB5CA] transition">SQL</span>
-  </div>
-</section>
-
-  <!-- Divider -->
-  <hr class="full-divider my-10">
-  
-<!-- Latest Projects Section -->
-<section id="projects" class="px-8 max-w-6xl mx-auto my-20 font-['Roboto']">
-  <div class="mb-12 text-center">
-    <p class="text-sm uppercase tracking-wider font-medium text-gray-500 mb-2">
-      Latest Projects
-    </p>
-    <h2 class="text-2xl md:text-3xl font-light text-[#2A7A8C] mb-4">
-      Projects and Practice
-    </h2>
-    <div class="w-16 h-1 bg-[#6DB5CA] mx-auto mb-12 rounded-full"></div>
-  </div>
-
-  <!-- Project Cards -->
-  <div class="grid md:grid-cols-3 gap-10">
-    
-    <!-- Project 1 -->
-    <a href="project1.html" 
-       class="rounded-3xl p-8 flex flex-col card-hover cursor-pointer bg-white border border-[#B8D8E0] shadow-md hover:shadow-xl transition-all duration-300">
+  <main class="site-frame">
+    <section class="container hero" id="home" aria-labelledby="hero-title">
       <div>
-        <h3 class="text-lg font-semibold mb-2 text-[#6DB5CA]">01</h3>
-        <h4 class="text-xl font-semibold mb-6 text-[#6DB5CA]">ECM (eCoachManager) Mobile</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-[#B8D8E0]/20 text-gray-700 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-[#B8D8E0]/20 text-gray-700 rounded-full text-sm">Product Design</span>
+        <p class="eyebrow"><span data-i18n="hero.eyebrow">Portfolio</span> · 2026</p>
+        <h1 id="hero-title"><span>PRAWANRAT</span><br>CHAICHANLA</h1>
+        <p class="hero-title" data-i18n="hero.title">Business Analyst | UX/UI Design</p>
+        <p class="hero-copy" data-i18n="hero.copy">Welcome to my portfolio. I’m a Business Analyst with a background in UX/UI design, and I can turn complex ideas into clear, user-friendly digital experiences. Explore projects that reflect my skills and approach.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects"><span data-i18n="hero.projects">View Projects</span> <span aria-hidden="true">→</span></a>
+          <a class="button" href="#resume" data-i18n="hero.resume">View Resume</a>
+          <a class="button" href="#contact" data-i18n="hero.contact">Contact Me</a>
         </div>
       </div>
-      <div class="flex-1 flex items-center justify-center">
-        <img src="images/iPhone 11 Pro Free Premium Mockup PSD.png" alt="ECM Mobile" class="w-full h-full object-contain">
-      </div>
-    </a>
-
-    <!-- Project 2 -->
-    <a href="project2.html" 
-       class="rounded-3xl p-8 flex flex-col card-hover cursor-pointer bg-white border border-[#F9A26C] shadow-md hover:shadow-xl transition-all duration-300">
-      <div>
-        <h3 class="text-lg font-semibold mb-2 text-[#F9A26C]">02</h3>
-        <h4 class="text-xl font-semibold mb-6 text-[#F9A26C]">Omni Alarm</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-[#F9A26C]/20 text-gray-700 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-[#F9A26C]/20 text-gray-700 rounded-full text-sm">Product Design</span>
+      <div class="hero-aside outlined">
+        <div class="hero-photo-frame">
+          <img class="hero-photo" src="images/IMG_3714.JPG" alt="Prawanrat Chaichanla" data-i18n-alt="hero.photo">
         </div>
       </div>
-      <div class="flex-1 flex items-center justify-center">
-        <img src="images/iPhone 15 Pro.png" alt="Omni Alarm" class="w-full h-full object-contain">
-      </div>
-    </a>
+    </section>
 
-    <!-- Project 3 -->
-    <a href="project3.html" 
-       class="rounded-3xl p-8 flex flex-col card-hover cursor-pointer bg-white border border-[#A7CDBD] shadow-md hover:shadow-xl transition-all duration-300">
-      <div>
-        <h3 class="text-lg font-semibold mb-2 text-[#A7CDBD]">03</h3>
-        <h4 class="text-xl font-semibold mb-6 text-[#A7CDBD]">Pet Health Log</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-[#A7CDBD]/20 text-gray-700 rounded-full text-sm">UI-UX Designer</span>
-          <span class="px-3 py-1 bg-[#A7CDBD]/20 text-gray-700 rounded-full text-sm">Product Design</span>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="about.eyebrow">A little about me</p>
+          <h2 id="about-title" data-i18n="about.heading">Connecting people, processes, and systems.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-mark outlined">
+            <img src="images/IMG_4467.jpg.jpg" alt="Prawanrat at work" data-i18n-alt="about.photo">
+          </div>
+          <div class="about-copy">
+            <p data-i18n="about.p1">With an educational background in Information Technology and professional experience as a Business Analyst, I contribute to analyzing service requirements, defining business flows, and preparing system design documentation to support digital solution development.</p>
+            <p data-i18n="about.p2">My current work focuses on government digital services, including service integration, development progress tracking, and system testing in collaboration with government agencies and development teams. My foundation in UX/UI Design also helps me understand both user perspectives and underlying system functionality.</p>
+            <p data-i18n="about.p3">I value understanding business processes, organizing complex information, and communicating requirements clearly to help teams develop and deliver practical digital solutions.</p>
+            <div class="about-facts" aria-label="Professional focus" data-i18n-aria-label="about.facts">
+              <div class="about-fact"><strong data-i18n="about.fact1title">Business analysis</strong><span data-i18n="about.fact1">Requirements, processes, and testing</span></div>
+              <div class="about-fact"><strong data-i18n="about.fact2title">Digital services</strong><span data-i18n="about.fact2">Government service integration</span></div>
+              <div class="about-fact"><strong data-i18n="about.fact3title">UX/UI design</strong><span data-i18n="about.fact3">User flows, wireframes, and prototypes</span></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex-1 flex items-center justify-center">
-        <img src="images/Free_K_Mockups_iPhone_15_Pro.png" alt="Pet Health Log" class="w-full h-full object-contain">
-      </div>
-    </a>
-  </div>
-</section>
+    </section>
 
-
-  <!-- Divider -->
-  <hr class="full-divider my-10">
-<!-- Competitions and Activities Section -->
-<section id="activities" class="px-6 md:px-12 max-w-5xl mx-auto my-20 font-['Roboto']">
-  <!-- Heading -->
-  <h2 class="text-2xl md:text-3xl font-light text-center mb-4 tracking-wide text-[#151f4a]">
-    Competitions and Activities
-  </h2>
-  <div class="w-20 h-1 bg-[#FF7235] mx-auto mb-12 rounded-full"></div>
-
-  <!-- Tabs -->
-  <div class="flex justify-center gap-8 border-b border-gray-200 mb-12">
-    <button onclick="showTab('hackathon2023', event)" 
-            class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition active-tab font-light">
-      YEP Hackathon 2023
-    </button>
-    <button onclick="showTab('hackathon2024', event)" 
-            class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition font-light">
-      YEP Hackathon 2024
-    </button>
-    <button onclick="showTab('start2024', event)" 
-            class="pb-2 text-gray-500 hover:text-[#6DB5CA] transition font-light">
-      INFORMATICE START 2024 & BCG
-    </button>
-  </div>
-
-  <!-- Hackathon 2023 -->
-  <div id="hackathon2023" class="tab-content space-y-12">
-    <div class="bg-white rounded-xl shadow-sm border border-gray-200">
-      <!-- Header -->
-      <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
-        <div>
-          <p class="font-medium text-sm text-gray-800">YEP Hackathon 2023</p>
-          <p class="text-xs text-gray-500 font-light">Young Entrepreneur Project</p>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="experience.eyebrow">Work experience</p>
+          <h2 id="experience-title" data-i18n="experience.heading">Experience across the delivery lifecycle.</h2>
+          <p data-i18n="experience.intro">From understanding service needs to testing and refining digital products.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience">
+            <p class="experience-date" data-i18n="experience.date1">October 2025 – Present</p>
+            <div class="experience-body">
+              <h3 data-i18n="experience.role1">Business Analyst</h3>
+              <p class="experience-company">BIZA Enterprise Co., Ltd.</p>
+              <div class="responsibility-group">
+                <h4 data-i18n="experience.group1">Government digital service integration</h4>
+                <ul>
+                  <li data-i18n="experience.g1a">Support government agencies connecting digital services to the “ทางรัฐ” application.</li>
+                  <li data-i18n="experience.g1b">Gather, review, and prepare service information while monitoring project progress, timelines, and service readiness.</li>
+                  <li data-i18n="experience.g1c">Coordinate with service-owning agencies, agency development teams, and project developers to ensure smooth implementation.</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4 data-i18n="experience.group2">Government digital service testing</h4>
+                <ul>
+                  <li data-i18n="experience.g2a">Conduct UAT and Pre-Production testing based on Minimum Test Cases and End-to-End Testing, as applicable.</li>
+                  <li data-i18n="experience.g2b">Document test results, collect testing evidence, report failed test cases, and follow up on corrective actions with relevant agencies.</li>
+                  <li data-i18n="experience.g2c">Prepare user manuals and coordinate testing sessions with government agencies.</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4 data-i18n="experience.group3">Smart e-Office platform · BIZA project</h4>
+                <ul>
+                  <li data-i18n="experience.g3a">Work as Business Analyst and System Analyst on a municipal Smart e-Office Platform.</li>
+                  <li data-i18n="experience.g3b">Analyze system functions and prepare Business Flow and System Design documentation to guide prototype development.</li>
+                  <li data-i18n="experience.g3c">Support system design and the integration of multiple systems within the platform.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="experience">
+            <p class="experience-date" data-i18n="experience.date2">December 2024 – March 2025</p>
+            <div class="experience-body">
+              <h3 data-i18n="experience.role2">UX/UI Designer Intern</h3>
+              <p class="experience-company">PPCNSEO (Voova Group)</p>
+              <div class="responsibility-group">
+                <ul>
+                  <li data-i18n="experience.intern1">Designed user interfaces for eCoachManager Mobile, a bus management application for mobile and iPad.</li>
+                  <li data-i18n="experience.intern2">Created User Flows, Wireframes, User Journey Maps, and Workflow Diagrams to define user experience and application workflows.</li>
+                  <li data-i18n="experience.intern3">Developed UI designs and interactive prototypes using Adobe XD, incorporating feedback from the project team.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-      <!-- Carousel -->
-      <div class="relative group">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
-             data-carousel="hackathon2023" onscroll="updateDots('hackathon2023')">
-          <img src="images/Hackathon 20231.JPG" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-          <img src="images/Hackathon 2023.JPG" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
+          <h2 id="projects-title" data-i18n="projects.heading">Projects & practice</h2>
+          <p data-i18n="projects.intro">A selection of business analysis, UX/UI design, and community work.</p>
         </div>
-        <!-- Arrows -->
-        <button onclick="scrollCarousel('hackathon2023', -1)" 
-          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button onclick="scrollCarousel('hackathon2023', 1)" 
-          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        <!-- Dots -->
-        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
-          <span class="dot hackathon2023-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
-          <span class="dot hackathon2023-dot w-2 h-2 rounded-full bg-gray-300"></span>
+        <div class="project-grid">
+          <a class="project-card outlined" href="#experience">
+            <div class="project-visual project-visual--business">
+              <img src="images/e-Office.png" alt="Smart e-Office municipal platform concept" data-i18n-alt="projects.image1" loading="lazy">
+            </div>
+            <div class="project-content">
+              <span class="project-category" data-i18n="projects.category1">Business Analysis</span>
+              <h3 data-i18n="projects.title1">Service analysis & system design</h3>
+              <p data-i18n="projects.description1">Business Flow, Requirements Analysis, System Analysis, and System Design work, including municipal Smart e-Office project experience. Public project materials are not displayed.</p>
+              <div class="tag-list"><span class="tag">Business Flow</span><span class="tag" data-i18n="projects.tagRequirements">Requirements</span><span class="tag">System Analysis</span><span class="tag">System Design</span></div>
+            </div>
+          </a>
+          <a class="project-card outlined" href="project1.html">
+            <div class="project-visual contain"><img src="images/iPhone 11 Pro Free Premium Mockup PSD.png" alt="eCoachManager Mobile app mockup" data-i18n-alt="projects.image2" loading="lazy"></div>
+            <div class="project-content">
+              <span class="project-category" data-i18n="projects.category2">UX/UI Design</span>
+              <h3>eCoachManager Mobile</h3>
+              <p data-i18n="projects.description2">Bus management application design, from user flows and wireframes through responsive interface concepts and prototypes.</p>
+              <div class="tag-list"><span class="tag">User Flow</span><span class="tag">Wireframes</span><span class="tag">Adobe XD</span><span class="tag">Prototypes</span></div>
+            </div>
+          </a>
+          <a class="project-card outlined" href="project2.html">
+            <div class="project-visual contain"><img src="images/omni_mockup.png" alt="Omni Alarm accident reporting and notification application mockup" data-i18n-alt="projects.image3" loading="lazy"></div>
+            <div class="project-content">
+              <span class="project-category" data-i18n="projects.category3">UX/UI Design</span>
+              <h3 data-i18n="projects.title3">Mobile accident reporting & notifications</h3>
+              <p data-i18n="projects.description3">UX/UI design for a mobile accident-reporting and real-time notification application, including user flows and interface prototypes.</p>
+              <div class="tag-list"><span class="tag">UX/UI Design</span><span class="tag">User Flow</span><span class="tag">Prototyping</span><span class="tag">Real-time notifications</span></div>
+            </div>
+          </a>
+          <a class="project-card outlined" href="project3.html">
+            <div class="project-visual contain"><img src="images/Free_K_Mockups_iPhone_15_Pro.png" alt="Pet Health Log mobile app mockup" data-i18n-alt="projects.image4" loading="lazy"></div>
+            <div class="project-content">
+              <span class="project-category" data-i18n="projects.category4">UX/UI Design · Additional Project</span>
+              <h3>Pet Health Log</h3>
+              <p data-i18n="projects.description4">A conceptual personal note-taking app, designed with a structured approach to recording pet health information.</p>
+              <div class="tag-list"><span class="tag">Product Design</span><span class="tag">Wireframes</span><span class="tag">Prototyping</span></div>
+            </div>
+          </a>
         </div>
       </div>
-      <!-- Caption -->
-      <div class="px-4 py-3">
-        <p class="text-gray-700 text-sm leading-relaxed font-light">
-          <span class="font-medium">Prawanrat –</span> YEP Hackathon 2023: Competed in a business plan competition under the theme 
-          <span class="font-medium">"Creative Isaan"</span> with an innovation on furniture made from water hyacinths as an eco-friendly alternative.
-        </p>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+          <h2 id="skills-title" data-i18n="skills.heading">Tools for thoughtful delivery.</h2>
+          <p data-i18n="skills.intro">A practical mix of business analysis, UX/UI design, and development skills.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group skill-group--business">
+            <h3 data-i18n="skills.business">Business Analysis</h3>
+            <ul>
+              <li data-i18n="skills.requirements">Requirements Analysis</li><li>Business Flow</li><li>System Analysis</li>
+              <li>UAT Testing</li><li>End-to-End Testing</li><li data-i18n="skills.documentation">Documentation</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.design">UX/UI Design</h3>
+            <ul>
+              <li>Figma</li><li>Adobe XD</li><li data-i18n="skills.wireframing">Wireframing</li>
+              <li data-i18n="skills.prototyping">Prototyping</li><li>User Flow</li><li data-i18n="skills.uiDesign">UI Design</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.development">Development</h3>
+            <ul>
+              <li>HTML</li><li>CSS</li><li>PHP</li><li>Dart</li>
+              <li>Flutter</li><li>Tailwind CSS</li><li>Ionic</li><li>MySQL</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="activities" aria-labelledby="activities-heading">
+      <div class="container">
+        <div class="section-heading activities-heading">
+          <p class="eyebrow" data-i18n="projects.awardsLabel">Awards and activities</p>
+          <h2 id="activities-heading" data-i18n="projects.activitiesHeading">Competitions and Activities</h2>
+        </div>
+        <div class="activity-tabs" role="tablist" aria-label="Competitions and activities" data-i18n-aria-label="projects.activitiesHeading">
+          <button class="activity-tab" id="activity-tab-informatice" type="button" role="tab" aria-selected="true" aria-controls="activity-panel-informatice" tabindex="0" data-activity-tab="informatice">INFORMATICE START 2024 & BCG</button>
+          <button class="activity-tab" id="activity-tab-yep24" type="button" role="tab" aria-selected="false" aria-controls="activity-panel-yep24" tabindex="-1" data-activity-tab="yep24" data-i18n="projects.activityTab2">YEP Hackathon 2024</button>
+          <button class="activity-tab" id="activity-tab-yep23" type="button" role="tab" aria-selected="false" aria-controls="activity-panel-yep23" tabindex="-1" data-activity-tab="yep23" data-i18n="projects.activityTab1">YEP Hackathon 2023</button>
+        </div>
+        <div class="activity-panel" id="activity-panel-informatice" role="tabpanel" aria-labelledby="activity-tab-informatice" data-activity-panel="informatice">
+          <div class="activity-card">
+            <div class="activity-caption">
+              <span data-i18n="projects.participation">Participation</span>
+              <h4>INFORMATICE START 2024 & BCG: ECONOMY MODEL</h4>
+            </div>
+            <div class="activity-photos activity-photos--trio">
+              <img src="images/IT%20(1).jpg" alt="INFORMATICE START 2024 and BCG: Economy Model team" data-i18n-alt="projects.activityImage5" loading="lazy">
+              <img src="images/IT%20(2).jpg" alt="INFORMATICE START 2024 and BCG: Economy Model award team" data-i18n-alt="projects.activityImage6" loading="lazy">
+              <img src="images/IT%20(3).jpg" alt="INFORMATICE START 2024 and BCG: Economy Model team photo" data-i18n-alt="projects.activityImage7" loading="lazy">
+            </div>
+          </div>
+          <p class="activity-description" data-i18n="projects.activityDescription1">Joined a startup business plan competition and won first runner-up with the Mind LIFT AI mental health consultation service.</p>
+        </div>
+        <div class="activity-panel" id="activity-panel-yep24" role="tabpanel" aria-labelledby="activity-tab-yep24" data-activity-panel="yep24" hidden>
+          <div class="activity-card">
+            <div class="activity-caption">
+              <span data-i18n="projects.participation">Participation</span>
+              <h4>YEP Hackathon 2024</h4>
+            </div>
+            <div class="activity-photos">
+              <img src="images/Hackathon%202024.jpg" alt="YEP Hackathon 2024 presentation" data-i18n-alt="projects.activityImage3" loading="lazy">
+              <img src="images/Hackathon%2020241.jpg" alt="YEP Hackathon 2024 team" data-i18n-alt="projects.activityImage4" loading="lazy">
+            </div>
+          </div>
+          <p class="activity-description" data-i18n="projects.activityDescription2">Participated in a business plan competition under the theme "Digitalizing the Locals: Turning Dirt into Clouds", presenting Mind LIFT, an AI-based mental health consulting service.</p>
+        </div>
+        <div class="activity-panel" id="activity-panel-yep23" role="tabpanel" aria-labelledby="activity-tab-yep23" data-activity-panel="yep23" hidden>
+          <div class="activity-card">
+            <div class="activity-caption">
+              <span data-i18n="projects.participation">Participation</span>
+              <h4>YEP Hackathon 2023</h4>
+            </div>
+            <div class="activity-photos">
+              <img src="images/Hackathon%202023.JPG" alt="Prawanrat presenting at YEP Hackathon 2023" data-i18n-alt="projects.activityImage1" loading="lazy">
+              <img src="images/Hackathon%2020231.JPG" alt="YEP Hackathon 2023 presentation team" data-i18n-alt="projects.activityImage2" loading="lazy">
+            </div>
+          </div>
+          <p class="activity-description" data-i18n="projects.activityDescription3">Competed in a business plan competition under the theme "Creative Isaan" with an innovation on furniture made from water hyacinths as an eco-friendly alternative.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resume" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="resume.eyebrow">Resume</p>
+          <h2 id="resume-title" data-i18n="resume.heading">More about my experience.</h2>
+        </div>
+        <div class="resume-panel">
+          <div>
+            <h3><span data-i18n="resume.title">Resume</span> · Prawanrat Chaichanla</h3>
+            <p data-i18n="resume.intro">View the full resume online or download the PDF.</p>
+          </div>
+          <div class="resume-actions">
+            <a class="button" href="resume.html" data-i18n="resume.view">View Resume</a>
+            <a class="button button-primary" href="files/Resume Prawanrat Chaicahnal.pdf" download><span data-i18n="resume.download">Download Resume</span> <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 id="contact-title" data-i18n="contact.heading">Contact Information</h2>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:p.chaichanla@gmail.com">
+            <span data-i18n="contact.email">Email</span>
+            <strong>p.chaichanla@gmail.com</strong>
+          </a>
+          <a class="contact-card" href="tel:+66981977899">
+            <span data-i18n="contact.phone">Phone</span>
+            <strong>098-1977-899</strong>
+          </a>
+          <a class="contact-card" href="https://linkedin.com/in/prawanrat-chaichanla/" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="contact.linkedin">LinkedIn</span>
+            <strong>linkedin.com/in/prawanrat-chaichanla/</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span data-i18n="footer.copyright">© 2026 Prawanrat Chaichanla</span>
+      <a class="text-link" href="#home"><span data-i18n="footer.top">Back to top</span> ↑</a>
     </div>
-  </div>
+  </footer>
 
-  <!-- Hackathon 2024 -->
-  <div id="hackathon2024" class="tab-content hidden space-y-12">
-    <div class="bg-white rounded-xl shadow-sm border border-gray-200">
-      <!-- Header -->
-      <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
-        <div>
-          <p class="font-medium text-sm text-gray-800">YEP Hackathon 2024</p>
-          <p class="text-xs text-gray-500 font-light">Young Entrepreneur Project</p>
-        </div>
-      </div>
-      <!-- Carousel -->
-      <div class="relative group">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
-             data-carousel="hackathon2024" onscroll="updateDots('hackathon2024')">
-          <img src="images/Hackathon 20241.jpg" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-          <img src="images/Hackathon 2024.jpg" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-        </div>
-        <!-- Arrows -->
-        <button onclick="scrollCarousel('hackathon2024', -1)" 
-          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button onclick="scrollCarousel('hackathon2024', 1)" 
-          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        <!-- Dots -->
-        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
-          <span class="dot hackathon2024-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
-          <span class="dot hackathon2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
-        </div>
-      </div>
-      <!-- Caption -->
-      <div class="px-4 py-3">
-        <p class="text-gray-700 text-sm leading-relaxed font-light">
-          <span class="font-medium">Prawanrat –</span> YEP Hackathon 2024: Participated in a business plan competition under the theme 
-          <span class="font-medium">"Digitalizing the Locals: Turning Dirt into Clouds"</span>, presenting 
-          <span class="font-medium">Mind LIFT</span>, an AI-based mental health consulting service.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- INFORMATICE START 2024 -->
-  <div id="start2024" class="tab-content hidden space-y-12">
-    <div class="bg-white rounded-xl shadow-sm border border-gray-200">
-      <!-- Header -->
-      <div class="flex items-center px-4 py-3">
-        <img src="images/Profile.jpg.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover mr-3">
-        <div>
-          <p class="font-medium text-sm text-gray-800">INFORMATICE START 2024 & BCG</p>
-          <p class="text-xs text-gray-500 font-light">Startup & Business Plan Competition</p>
-        </div>
-      </div>
-      <!-- Carousel -->
-      <div class="relative group">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide carousel" 
-             data-carousel="start2024" onscroll="updateDots('start2024')">
-          <img src="images/IT (1).jpg" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-          <img src="images/IT (2).jpg" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-          <img src="images/IT (3).jpg" class="w-full h-64 md:h-96 lg:h-[32rem] object-cover snap-center flex-shrink-0">
-        </div>
-        <!-- Arrows -->
-        <button onclick="scrollCarousel('start2024', -1)" 
-          class="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button onclick="scrollCarousel('start2024', 1)" 
-          class="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow group-hover:flex">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        <!-- Dots -->
-        <div class="flex justify-center space-x-2 mt-2 absolute bottom-2 left-0 right-0">
-          <span class="dot start2024-dot w-2 h-2 rounded-full bg-[#6DB5CA]"></span>
-          <span class="dot start2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
-          <span class="dot start2024-dot w-2 h-2 rounded-full bg-gray-300"></span>
-        </div>
-      </div>
-      <!-- Caption -->
-      <div class="px-4 py-3">
-        <p class="text-gray-700 text-sm leading-relaxed font-light">
-          <span class="font-medium">Prawanrat –</span> INFORMATICE START 2024 & BCG: Joined a startup business plan competition and won 
-          <span class="font-medium">first runner-up</span> with the 
-          <span class="font-medium">Mind LIFT</span> AI mental health consultation service.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Tailwind helper -->
-<style>
-  .active-tab {
-    color: #6DB5CA !important;
-    border-bottom: 2px solid #6DB5CA;
-    font-weight: 500;
-  }
-  .scrollbar-hide::-webkit-scrollbar { display: none; }
-  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
-
-<script>
-  function showTab(tabId, e) {
-    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-    document.getElementById(tabId).classList.remove('hidden');
-    document.querySelectorAll('[onclick^="showTab"]').forEach(btn => btn.classList.remove('active-tab'));
-    e.currentTarget.classList.add('active-tab');
-  }
-
-  function scrollCarousel(id, direction) {
-    const container = document.querySelector(`[data-carousel="${id}"]`);
-    const width = container.clientWidth;
-    container.scrollBy({ left: direction * width, behavior: 'smooth' });
-  }
-
-  function updateDots(id) {
-    const container = document.querySelector(`[data-carousel="${id}"]`);
-    const dots = document.querySelectorAll(`.${id}-dot`);
-    const index = Math.round(container.scrollLeft / container.clientWidth);
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('bg-[#6DB5CA]', i === index);
-      dot.classList.toggle('bg-gray-300', i !== index);
-    });
-  }
-</script>
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-
-  <!-- Divider -->
-  <hr class="full-divider my-10">
- <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Contact Section -->
-<section id="contact" class="px-6 md:px-12 my-20 font-['Roboto']">
-  <!-- Heading -->
-  <div class="flex items-center justify-center mb-12">
-    <div class="h-px w-16 bg-gray-200 mr-4"></div>
-    <h2 class="text-xl font-light tracking-[0.25em] uppercase text-[#6DB5CA]">
-      Contact Information
-    </h2>
-    <div class="h-px w-16 bg-gray-200 ml-4"></div>
-  </div>
-
-  <!-- Contact Links -->
-  <div class="flex flex-wrap justify-center gap-10 text-lg font-light text-gray-500">
-    <a href="javascript:void(0)" onclick="showEmail()" class="hover:text-[#6DB5CA] transition">Email</a>
-    <a href="https://www.facebook.com/AonnyIArmy/" target="_blank" class="hover:text-[#6DB5CA] transition">Facebook</a>
-    <a href="https://www.linkedin.com/in/prawanrat-chaichanla-83a5a3327/" target="_blank" class="hover:text-[#6DB5CA] transition">LinkedIn</a>
-    <a href="https://www.instagram.com/aonny_army_/" target="_blank" class="hover:text-[#6DB5CA] transition">Instagram</a>
-    <a href="javascript:void(0)" onclick="showPhone()" class="hover:text-[#6DB5CA] transition">Phone</a>
-  </div>
-</section>
-
-<!-- Email Popup -->
-<div id="emailModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 hidden">
-  <div class="bg-white rounded-xl shadow-lg p-8 text-center max-w-sm w-full border border-gray-100">
-    <h3 class="text-sm font-light text-gray-500 mb-2 tracking-widest uppercase">My Email</h3>
-    <p class="text-lg font-medium text-[#6DB5CA]">p.chaichanla@gmail.com</p>
-    <button onclick="closeEmail()" class="mt-6 text-sm tracking-wider text-gray-400 hover:text-[#6DB5CA] transition">
-      Close
-    </button>
-  </div>
-</div>
-
-<!-- Phone Popup -->
-<div id="phoneModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 hidden">
-  <div class="bg-white rounded-xl shadow-lg p-8 text-center max-w-sm w-full border border-gray-100">
-    <h3 class="text-sm font-light text-gray-500 mb-2 tracking-widest uppercase">My Phone Number</h3>
-    <p class="text-lg font-medium text-[#6DB5CA]">098-197-7899</p>
-    <button onclick="closePhone()" class="mt-6 text-sm tracking-wider text-gray-400 hover:text-[#6DB5CA] transition">
-      Close
-    </button>
-  </div>
-</div>
-
-<!-- Script -->
-<script>
-  function showEmail() {
-    document.getElementById('emailModal').classList.remove('hidden');
-  }
-  function closeEmail() {
-    document.getElementById('emailModal').classList.add('hidden');
-  }
-  function showPhone() {
-    document.getElementById('phoneModal').classList.remove('hidden');
-  }
-  function closePhone() {
-    document.getElementById('phoneModal').classList.add('hidden');
-  }
-</script>
-
-  <!-- AOS Animate On Scroll JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
+    const menuButton = document.getElementById("menu-button");
+    const navigation = document.getElementById("primary-navigation");
+    const translations = {
+      en: {
+        "page.title": "Prawanrat Chaichanla — Business Analyst | UX/UI Design",
+        "page.description": "Prawanrat Chaichanla — Business Analyst and UX/UI Designer.",
+        "brand.aria": "Prawanrat Chaichanla, home",
+        "brand.subtitle": "Business Analyst · UX/UI",
+        "nav.aria": "Primary navigation",
+        "nav.menu": "Menu",
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.experience": "Experience",
+        "nav.projects": "Projects",
+        "nav.skills": "Skills",
+        "nav.contact": "Contact",
+        "nav.resume": "Resume",
+        "language.label": "Choose language",
+        "language.switchThai": "Switch to Thai",
+        "language.switchEnglish": "Switch to English",
+        "hero.eyebrow": "Portfolio",
+        "hero.title": "Business Analyst | UX/UI Design",
+        "hero.copy": "Welcome to my portfolio. I’m a Business Analyst with a background in UX/UI design, and I can turn complex ideas into clear, user-friendly digital experiences. Explore projects that reflect my skills and approach.",
+        "hero.projects": "View Projects",
+        "hero.resume": "View Resume",
+        "hero.contact": "Contact Me",
+        "hero.photo": "Prawanrat Chaichanla",
+        "about.eyebrow": "A little about me",
+        "about.heading": "Connecting people, processes, and systems.",
+        "about.photo": "Prawanrat at work",
+        "about.p1": "With an educational background in Information Technology and professional experience as a Business Analyst, I contribute to analyzing service requirements, defining business flows, and preparing system design documentation to support digital solution development.",
+        "about.p2": "My current work focuses on government digital services, including service integration, development progress tracking, and system testing in collaboration with government agencies and development teams. My foundation in UX/UI Design also helps me understand both user perspectives and underlying system functionality.",
+        "about.p3": "I value understanding business processes, organizing complex information, and communicating requirements clearly to help teams develop and deliver practical digital solutions.",
+        "about.facts": "Professional focus",
+        "about.fact1title": "Business analysis",
+        "about.fact1": "Requirements, processes, and testing",
+        "about.fact2title": "Digital services",
+        "about.fact2": "Government service integration",
+        "about.fact3title": "UX/UI design",
+        "about.fact3": "User flows, wireframes, and prototypes",
+        "experience.eyebrow": "Work experience",
+        "experience.heading": "Experience across the delivery lifecycle.",
+        "experience.intro": "From understanding service needs to testing and refining digital products.",
+        "experience.date1": "October 2025 – Present",
+        "experience.role1": "Business Analyst",
+        "experience.group1": "Government digital service integration",
+        "experience.g1a": "Support government agencies connecting digital services to the “ทางรัฐ” application.",
+        "experience.g1b": "Gather, review, and prepare service information while monitoring project progress, timelines, and service readiness.",
+        "experience.g1c": "Coordinate with service-owning agencies, agency development teams, and project developers to ensure smooth implementation.",
+        "experience.group2": "Government digital service testing",
+        "experience.g2a": "Conduct UAT and Pre-Production testing based on Minimum Test Cases and End-to-End Testing, as applicable.",
+        "experience.g2b": "Document test results, collect testing evidence, report failed test cases, and follow up on corrective actions with relevant agencies.",
+        "experience.g2c": "Prepare user manuals and coordinate testing sessions with government agencies.",
+        "experience.group3": "Smart e-Office platform · BIZA project",
+        "experience.g3a": "Work as Business Analyst and System Analyst on a municipal Smart e-Office Platform.",
+        "experience.g3b": "Analyze system functions and prepare Business Flow and System Design documentation to guide prototype development.",
+        "experience.g3c": "Support system design and the integration of multiple systems within the platform.",
+        "experience.date2": "December 2024 – March 2025",
+        "experience.role2": "UX/UI Designer Intern",
+        "experience.intern1": "Designed user interfaces for eCoachManager Mobile, a bus management application for mobile and iPad.",
+        "experience.intern2": "Created User Flows, Wireframes, User Journey Maps, and Workflow Diagrams to define user experience and application workflows.",
+        "experience.intern3": "Developed UI designs and interactive prototypes using Adobe XD, incorporating feedback from the project team.",
+        "projects.eyebrow": "Selected work",
+        "projects.heading": "Projects & practice",
+        "projects.intro": "A selection of business analysis, UX/UI design, and community work.",
+        "projects.image1": "Smart e-Office municipal platform concept",
+        "projects.category1": "Business Analysis",
+        "projects.title1": "Service analysis & system design",
+        "projects.description1": "Business Flow, Requirements Analysis, System Analysis, and System Design work, including municipal Smart e-Office project experience. Public project materials are not displayed.",
+        "projects.tagRequirements": "Requirements",
+        "projects.image2": "eCoachManager Mobile app mockup",
+        "projects.category2": "UX/UI Design",
+        "projects.description2": "Bus management application design, from user flows and wireframes through responsive interface concepts and prototypes.",
+        "projects.image3": "Omni Alarm accident reporting and notification application mockup",
+        "projects.category3": "UX/UI Design",
+        "projects.title3": "Mobile accident reporting & notifications",
+        "projects.description3": "UX/UI design for a mobile accident-reporting and real-time notification application, including user flows and interface prototypes.",
+        "projects.image4": "Pet Health Log mobile app mockup",
+        "projects.category4": "UX/UI Design · Additional Project",
+        "projects.description4": "A conceptual personal note-taking app, designed with a structured approach to recording pet health information.",
+        "projects.awardsLabel": "Awards and activities",
+        "projects.activitiesHeading": "Competitions and Activities",
+        "projects.activityTab1": "YEP Hackathon 2023",
+        "projects.activityTab2": "YEP Hackathon 2024",
+        "projects.activityImage1": "Prawanrat presenting at YEP Hackathon 2023",
+        "projects.activityImage2": "YEP Hackathon 2023 presentation team",
+        "projects.activityImage3": "YEP Hackathon 2024 presentation",
+        "projects.activityImage4": "YEP Hackathon 2024 team",
+        "projects.activityDescription1": "Joined a startup business plan competition and won first runner-up with the Mind LIFT AI mental health consultation service.",
+        "projects.activityDescription2": "Participated in a business plan competition under the theme \"Digitalizing the Locals: Turning Dirt into Clouds\", presenting Mind LIFT, an AI-based mental health consulting service.",
+        "projects.activityDescription3": "Competed in a business plan competition under the theme \"Creative Isaan\" with an innovation on furniture made from water hyacinths as an eco-friendly alternative.",
+        "projects.activityImage5": "INFORMATICE START 2024 and BCG: Economy Model team",
+        "projects.activityImage6": "INFORMATICE START 2024 and BCG: Economy Model award team",
+        "projects.activityImage7": "INFORMATICE START 2024 and BCG: Economy Model team photo",
+        "projects.participation": "Participation",
+        "skills.eyebrow": "Skills",
+        "skills.heading": "Tools for thoughtful delivery.",
+        "skills.intro": "A practical mix of business analysis, UX/UI design, and development skills.",
+        "skills.business": "Business Analysis",
+        "skills.requirements": "Requirements Analysis",
+        "skills.documentation": "Documentation",
+        "skills.design": "UX/UI Design",
+        "skills.development": "Development",
+        "skills.wireframing": "Wireframing",
+        "skills.prototyping": "Prototyping",
+        "skills.uiDesign": "UI Design",
+        "contact.eyebrow": "Contact",
+        "contact.heading": "Contact Information",
+        "contact.email": "Email",
+        "contact.phone": "Phone",
+        "contact.linkedin": "LinkedIn",
+        "resume.eyebrow": "Resume",
+        "resume.heading": "More about my experience.",
+        "resume.title": "Resume",
+        "resume.intro": "View the full resume online or download the PDF.",
+        "resume.view": "View Resume",
+        "resume.download": "Download Resume",
+        "footer.copyright": "© 2026 Prawanrat Chaichanla",
+        "footer.top": "Back to top"
+      },
+      th: {
+        "page.title": "ประวัติผลงาน Prawanrat Chaichanla — Business Analyst | UX/UI Design",
+        "page.description": "Prawanrat Chaichanla — Business Analyst และ UX/UI Designer",
+        "brand.aria": "หน้าแรกของ Prawanrat Chaichanla",
+        "brand.subtitle": "Business Analyst · UX/UI",
+        "nav.aria": "เมนูหลัก",
+        "nav.menu": "เมนู",
+        "nav.home": "หน้าแรก",
+        "nav.about": "เกี่ยวกับฉัน",
+        "nav.experience": "ประสบการณ์",
+        "nav.projects": "ผลงาน",
+        "nav.skills": "ทักษะ",
+        "nav.contact": "ติดต่อ",
+        "nav.resume": "เรซูเม่",
+        "language.label": "เลือกภาษา",
+        "language.switchThai": "เลือกภาษาไทย",
+        "language.switchEnglish": "เลือกภาษาอังกฤษ",
+        "hero.eyebrow": "ผลงาน",
+        "hero.title": "Business Analyst | ออกแบบ UX/UI",
+        "hero.copy": "ยินดีต้อนรับสู่พอร์ตโฟลิโอของฉัน ฉันทำงานด้าน Business Analyst และมีพื้นฐานด้าน UX/UI Design สามารถเปลี่ยนแนวคิดที่ซับซ้อนให้เป็นประสบการณ์ดิจิทัลที่เข้าใจง่ายและตอบโจทย์ผู้ใช้ได้ ที่นี่รวบรวมผลงานที่สะท้อนทักษะและแนวทางการทำงานของฉัน",
+        "hero.projects": "ดูผลงาน",
+        "hero.resume": "ดูเรซูเม่",
+        "hero.contact": "ติดต่อฉัน",
+        "hero.photo": "Prawanrat Chaichanla",
+        "about.eyebrow": "เกี่ยวกับฉัน",
+        "about.heading": "เชื่อมโยงผู้คน กระบวนการ และระบบเข้าด้วยกัน",
+        "about.photo": "Prawanrat กำลังทำงาน",
+        "about.p1": "มีพื้นฐานด้านเทคโนโลยีสารสนเทศและประสบการณ์ทำงานในตำแหน่ง Business Analyst โดยมีส่วนร่วมในการวิเคราะห์ความต้องการของบริการ จัดทำข้อกำหนด Business Flow และเอกสารออกแบบระบบ เพื่อสนับสนุนการพัฒนาโซลูชันดิจิทัล",
+        "about.p2": "ปัจจุบันทำงานเกี่ยวกับบริการดิจิทัลภาครัฐ ทั้งด้านการเชื่อมโยงบริการ การติดตามความคืบหน้าการพัฒนา และการทดสอบระบบ ร่วมกับหน่วยงานที่เกี่ยวข้องและทีมพัฒนา นอกจากนี้ยังมีพื้นฐานด้าน UX/UI Design ซึ่งช่วยให้เข้าใจทั้งมุมมองของผู้ใช้งานและการทำงานของระบบ",
+        "about.p3": "ให้ความสำคัญกับการทำความเข้าใจกระบวนการทำงาน การจัดการรายละเอียดที่ซับซ้อน และการสื่อสารความต้องการให้ชัดเจน เพื่อให้ทีมสามารถพัฒนาและส่งมอบระบบที่ตอบโจทย์การใช้งานจริง",
+        "about.facts": "ด้านงานที่สนใจและมีประสบการณ์",
+        "about.fact1title": "Business Analysis",
+        "about.fact1": "ความต้องการ กระบวนการ และการทดสอบ",
+        "about.fact2title": "บริการดิจิทัล",
+        "about.fact2": "การเชื่อมต่อบริการภาครัฐ",
+        "about.fact3title": "การออกแบบ UX/UI",
+        "about.fact3": "User Flow, Wireframe และ Prototype",
+        "experience.eyebrow": "ประสบการณ์ทำงาน",
+        "experience.heading": "ประสบการณ์ด้านบริการดิจิทัลและการวิเคราะห์ระบบ",
+        "experience.intro": "ตั้งแต่ทำความเข้าใจความต้องการของบริการ ไปจนถึงทดสอบและปรับปรุงผลิตภัณฑ์ดิจิทัล",
+        "experience.date1": "ตุลาคม 2568 – ปัจจุบัน",
+        "experience.role1": "Business Analyst",
+        "experience.group1": "การเชื่อมต่อบริการดิจิทัลภาครัฐ",
+        "experience.g1a": "สนับสนุนหน่วยงานภาครัฐในการเชื่อมต่อบริการดิจิทัลเข้ากับแอปพลิเคชัน “ทางรัฐ”",
+        "experience.g1b": "รวบรวม ตรวจสอบ และจัดเตรียมข้อมูลบริการ พร้อมติดตามความคืบหน้า กำหนดการ และความพร้อมก่อนเปิดให้บริการ",
+        "experience.g1c": "ประสานการทำงานระหว่างหน่วยงานเจ้าของบริการ ทีมพัฒนาของหน่วยงาน และทีมพัฒนาโครงการ",
+        "experience.group2": "การทดสอบบริการดิจิทัลภาครัฐ",
+        "experience.g2a": "ดำเนินการทดสอบ UAT และ Pre-Production ตาม Minimum Test Cases และ End-to-End Testing ตามขอบเขตบริการ",
+        "experience.g2b": "บันทึกผลและรวบรวมหลักฐานการทดสอบ รายงานข้อผิดพลาด และติดตามการแก้ไขร่วมกับหน่วยงานที่เกี่ยวข้อง",
+        "experience.g2c": "จัดทำคู่มือผู้ใช้และประสานงานการทดสอบร่วมกับหน่วยงานภาครัฐ",
+        "experience.group3": "แพลตฟอร์ม Smart e-Office · โครงการของ BIZA",
+        "experience.g3a": "ปฏิบัติงานในบทบาท Business Analyst และ System Analyst สำหรับโครงการแพลตฟอร์ม Smart e-Office ของเทศบาล",
+        "experience.g3b": "วิเคราะห์ฟังก์ชันและจัดทำเอกสาร Business Flow และ System Design เพื่อใช้เป็นแนวทางในการพัฒนาต้นแบบระบบ",
+        "experience.g3c": "สนับสนุนการออกแบบระบบและการเชื่อมโยงระบบต่าง ๆ ภายในแพลตฟอร์ม",
+        "experience.date2": "ธันวาคม 2567 – มีนาคม 2568",
+        "experience.role2": "UX/UI Designer Intern",
+        "experience.intern1": "ออกแบบ UX/UI สำหรับ eCoachManager Mobile แอปพลิเคชันบริหารจัดการรถโดยสาร รองรับการใช้งานบนมือถือและ iPad",
+        "experience.intern2": "จัดทำ User Flow, Wireframe, User Journey Map และ Workflow Diagram เพื่อกำหนดประสบการณ์และลำดับการใช้งานของระบบ",
+        "experience.intern3": "ออกแบบหน้าจอและสร้าง Interactive Prototype ด้วย Adobe XD พร้อมปรับปรุงตามข้อเสนอแนะจากทีมโครงการ",
+        "projects.eyebrow": "ผลงานที่คัดสรร",
+        "projects.heading": "ผลงานและประสบการณ์",
+        "projects.intro": "ตัวอย่างงานด้าน Business Analysis การออกแบบ UX/UI และกิจกรรมที่เข้าร่วม",
+        "projects.image1": "ภาพแนวคิดแพลตฟอร์ม Smart e-Office สำหรับเทศบาล",
+        "projects.category1": "Business Analysis",
+        "projects.title1": "วิเคราะห์บริการและออกแบบระบบ",
+        "projects.description1": "ประสบการณ์ด้าน Business Flow, Requirements Analysis, System Analysis และ System Design รวมถึงโครงการ Smart e-Office ของเทศบาล โดยไม่มีการเผยแพร่เอกสารโครงการที่เป็นข้อมูลภายใน",
+        "projects.tagRequirements": "Requirements",
+        "projects.image2": "ภาพตัวอย่างแอป eCoachManager Mobile",
+        "projects.category2": "ออกแบบ UX/UI",
+        "projects.description2": "ออกแบบแอปพลิเคชันบริหารจัดการรถโดยสาร ตั้งแต่ User Flow และ Wireframe ไปจนถึงแนวทางหน้าจอที่รองรับหลายขนาดและ Prototype",
+        "projects.image3": "ภาพตัวอย่างแอปแจ้งอุบัติเหตุและแจ้งเตือน Omni Alarm",
+        "projects.category3": "ออกแบบ UX/UI",
+        "projects.title3": "แอปมือถือสำหรับแจ้งอุบัติเหตุและส่งการแจ้งเตือน",
+        "projects.description3": "การออกแบบ UX/UI สำหรับแอปมือถือแจ้งอุบัติเหตุและส่งการแจ้งเตือนแบบเรียลไทม์ ครอบคลุม User Flow และต้นแบบหน้าจอ",
+        "projects.image4": "ภาพตัวอย่างแอปมือถือ Pet Health Log",
+        "projects.category4": "ออกแบบ UX/UI · ผลงานเพิ่มเติม",
+        "projects.description4": "แนวคิดแอปจดบันทึกส่วนตัวที่ออกแบบให้จัดเก็บและติดตามข้อมูลสุขภาพสัตว์เลี้ยงได้อย่างเป็นระบบ",
+        "projects.awardsLabel": "รางวัลและกิจกรรม",
+        "projects.activitiesHeading": "การแข่งขันและกิจกรรม",
+        "projects.activityTab1": "YEP Hackathon 2023",
+        "projects.activityTab2": "YEP Hackathon 2024",
+        "projects.activityImage1": "Prawanrat กำลังนำเสนอผลงานใน YEP Hackathon 2023",
+        "projects.activityImage2": "ทีมที่นำเสนอผลงานใน YEP Hackathon 2023",
+        "projects.activityImage3": "การนำเสนอผลงานใน YEP Hackathon 2024",
+        "projects.activityImage4": "ทีม YEP Hackathon 2024",
+        "projects.activityImage5": "ทีม INFORMATICE START 2024 และ BCG: ECONOMY MODEL",
+        "projects.activityImage6": "ทีมรับรางวัล INFORMATICE START 2024 และ BCG: ECONOMY MODEL",
+        "projects.activityImage7": "ภาพทีม INFORMATICE START 2024 และ BCG: ECONOMY MODEL",
+        "projects.activityDescription1": "เข้าร่วมการแข่งขันแผนธุรกิจสตาร์ตอัป และได้รับรางวัลรองชนะเลิศอันดับ 1 จากผลงาน Mind LIFT บริการให้คำปรึกษาด้านสุขภาพจิตด้วย AI",
+        "projects.activityDescription2": "เข้าร่วมการแข่งขันแผนธุรกิจภายใต้หัวข้อ \"Digitalizing the Locals: Turning Dirt into Clouds\" โดยนำเสนอ Mind LIFT บริการให้คำปรึกษาด้านสุขภาพจิตด้วย AI",
+        "projects.activityDescription3": "เข้าร่วมการแข่งขันแผนธุรกิจภายใต้หัวข้อ \"Creative Isaan\" ด้วยนวัตกรรมเฟอร์นิเจอร์จากผักตบชวา ซึ่งเป็นทางเลือกที่เป็นมิตรต่อสิ่งแวดล้อม",
+        "projects.participation": "การเข้าร่วมกิจกรรม",
+        "skills.eyebrow": "ทักษะ",
+        "skills.heading": "ทักษะที่ช่วยขับเคลื่อนงานให้เป็นรูปธรรม",
+        "skills.intro": "ผสานทักษะด้าน Business Analysis, UX/UI Design และ Development",
+        "skills.business": "Business Analysis",
+        "skills.requirements": "Requirements Analysis",
+        "skills.documentation": "การจัดทำเอกสาร",
+        "skills.design": "ออกแบบ UX/UI",
+        "skills.development": "Development",
+        "skills.wireframing": "การทำ Wireframe",
+        "skills.prototyping": "การทำ Prototype",
+        "skills.uiDesign": "การออกแบบ UI",
+        "contact.eyebrow": "ติดต่อ",
+        "contact.heading": "ช่องทางติดต่อ",
+        "contact.email": "อีเมล",
+        "contact.phone": "โทรศัพท์",
+        "contact.linkedin": "LinkedIn",
+        "resume.eyebrow": "เรซูเม่",
+        "resume.heading": "ดูข้อมูลประสบการณ์เพิ่มเติม",
+        "resume.title": "เรซูเม่",
+        "resume.intro": "ดูเรซูเม่ฉบับเต็มออนไลน์หรือดาวน์โหลดไฟล์ PDF",
+        "resume.view": "ดูเรซูเม่",
+        "resume.download": "ดาวน์โหลดเรซูเม่",
+        "footer.copyright": "© 2569 Prawanrat Chaichanla",
+        "footer.top": "กลับไปด้านบน"
+      }
+    };
 
-    // parallax effect for card1
-    const card1 = document.getElementById("card1");
-    window.addEventListener("scroll", () => {
-      let scrollY = window.scrollY;
-      if (window.innerWidth >= 768) {
-        card1.style.transform = `translateY(${scrollY * 0.05}px)`;
-      } else {
-        card1.style.transform = "translateY(0)";
+    function setLanguage(language) {
+      const dictionary = translations[language];
+      if (!dictionary) return;
+
+      document.documentElement.lang = language;
+      document.title = dictionary["page.title"];
+      document.getElementById("page-description").content = dictionary["page.description"];
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const translation = dictionary[element.dataset.i18n];
+        if (translation !== undefined) element.textContent = translation;
+      });
+
+      document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+        const translation = dictionary[element.dataset.i18nAlt];
+        if (translation !== undefined) element.alt = translation;
+      });
+
+      document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+        const translation = dictionary[element.dataset.i18nAriaLabel];
+        if (translation !== undefined) element.setAttribute("aria-label", translation);
+      });
+
+      document.querySelectorAll("[data-language]").forEach((button) => {
+        const isSelected = button.dataset.language === language;
+        button.setAttribute("aria-pressed", String(isSelected));
+        button.setAttribute("aria-label", button.dataset.language === "th"
+          ? dictionary["language.switchThai"]
+          : dictionary["language.switchEnglish"]);
+      });
+
+      try {
+        localStorage.setItem("prawanrat-portfolio-language", language);
+      } catch (error) {
+        // Language switching still works when browser storage is unavailable.
+      }
+    }
+
+    document.querySelectorAll("[data-language]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.language));
+    });
+
+    const activityTabs = Array.from(document.querySelectorAll("[data-activity-tab]"));
+    const activityPanels = Array.from(document.querySelectorAll("[data-activity-panel]"));
+
+    function selectActivityTab(tab, moveFocus = false) {
+      const selectedActivity = tab.dataset.activityTab;
+      activityTabs.forEach((activityTab) => {
+        const isSelected = activityTab === tab;
+        activityTab.setAttribute("aria-selected", String(isSelected));
+        activityTab.tabIndex = isSelected ? 0 : -1;
+      });
+      activityPanels.forEach((panel) => {
+        panel.hidden = panel.dataset.activityPanel !== selectedActivity;
+      });
+      if (moveFocus) tab.focus();
+    }
+
+    activityTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => selectActivityTab(tab));
+      tab.addEventListener("keydown", (event) => {
+        let nextIndex;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % activityTabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + activityTabs.length) % activityTabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = activityTabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        selectActivityTab(activityTabs[nextIndex], true);
+      });
+    });
+
+    let savedLanguage = "en";
+    try {
+      const preferredLanguage = localStorage.getItem("prawanrat-portfolio-language");
+      if (preferredLanguage === "th" || preferredLanguage === "en") savedLanguage = preferredLanguage;
+    } catch (error) {
+      // English remains the default when browser storage is unavailable.
+    }
+    setLanguage(savedLanguage);
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement && window.matchMedia("(max-width: 1000px)").matches) {
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.classList.remove("is-open");
       }
     });
-
-    function showTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('button').forEach(btn => btn.classList.remove('active-tab'));
-      document.getElementById(tabId).classList.remove('hidden');
-      event.target.classList.add('active-tab');
-    }
   </script>
 </body>
 
