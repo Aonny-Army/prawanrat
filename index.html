@@ -107,7 +107,7 @@
     .nav-links { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); }
     .nav-links a { color: var(--muted); font-size: .8rem; font-weight: 400; text-decoration: none; }
     .nav-links a:hover { color: var(--teal); }
-    .nav-links .nav-resume { padding: 8px 12px; border: 1px solid var(--line); color: var(--teal); }
+    .nav-links .nav-resume { padding: 8px 12px; color: var(--teal); }
     .language-switch { display: inline-flex; align-items: center; gap: 5px; margin-left: 2px; padding-left: 12px; border-left: 1px solid var(--line); }
     .language-switch button { border: 0; background: transparent; padding: 5px 2px; color: var(--muted); font: inherit; font-size: .75rem; font-weight: 400; cursor: pointer; }
     .language-switch button[aria-pressed="true"] { color: var(--teal); text-decoration: underline; text-underline-offset: 4px; }
@@ -206,6 +206,7 @@
       html { scroll-padding-top: 72px; }
       .container { width: min(100% - 36px, var(--content)); }
       .section { padding-block: 68px; }
+      .site-frame::before, .site-frame::after { display: none; }
       .nav-wrap { min-height: 68px; }
       .menu-button { display: inline-flex; align-items: center; gap: 8px; }
       .nav-links {
